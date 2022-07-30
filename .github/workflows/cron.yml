@@ -37,9 +37,6 @@
          {
             "cron" : "38 13 * * *"
          }
-      ],
-      "repository_dispatch": {
-        "types": ["upstreamchange"]
-      }
+      ]
    }
 }
