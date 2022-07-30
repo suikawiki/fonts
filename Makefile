@@ -6,16 +6,14 @@ all: data
 
 clean:
 
-updatenightly: updatenightly-env updatenightly-data
-
-updatenightly-env:
+updatenightly: 
 	$(CURL) -s -S -L https://gist.githubusercontent.com/wakaba/34a71d3137a52abb562d/raw/gistfile1.txt | sh
 	$(GIT) add bin/modules
 	perl local/bin/pmbp.pl --update
 	$(GIT) add config
 	$(CURL) -sSLf https://raw.githubusercontent.com/wakaba/ciconfig/master/ciconfig | RUN_GIT=1 REMOVE_UNUSED=1 perl
 
-updatenightly-data: data
+updatebyhook: data
 	$(GIT) add images/
 
 ## ------ Setup ------
@@ -58,5 +56,6 @@ test: test-main test-deps
 test-deps: deps
 
 test-main:
+	$(PERL) -c bin/generate-images.pl
 
 ## License: Public Domain.
