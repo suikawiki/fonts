@@ -48,6 +48,9 @@ glyph-images: bin/generate-images.pl local/glyphs.json
 local/glyphs.json:
 	$(WGET) -O $@ https://raw.githubusercontent.com/suikawiki/extracted/master/data/extracted/data-glyph-.json
 
+build-github-pages: git-submodules
+	rm -fr ./bin/modules ./modules
+
 ## ------ Tests ------
 
 test: test-main test-deps

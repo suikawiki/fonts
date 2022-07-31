@@ -16,7 +16,7 @@
                "uses" : "actions/checkout@v3"
             },
             {
-               "run" : "git submodule update --init"
+               "run" : "make build-github-pages"
             },
             {
                "name" : "Setup pages",
