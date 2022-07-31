@@ -1,6 +1,7 @@
 {
   "github": {
     "pmbp": "latest",
+    "pages": true,
     "merger": 1,
     "gaa": true,
     "updatebyhook": true
