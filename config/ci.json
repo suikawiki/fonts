@@ -1,6 +1,12 @@
 {
   "github": {
     "pmbp": "latest",
+    "build": [
+      {"docker_build": "quay.io/suikawiki/swfonts"}
+    ],
+    "tests": {"~deploy": [
+      {"docker_push": "quay.io/suikawiki/swfonts"}
+    ]},
     "pages": true,
     "merger": 1,
     "gaa": true,
