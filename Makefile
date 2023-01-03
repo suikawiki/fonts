@@ -62,11 +62,10 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/haranoajitw-20220220 \
     local/opentype/haranoajikr-20220220 \
     local/opentype/haranoajik1-20220220 \
+    local/opentype/SourceHanSerifAKR9-20190729 \
     local/opentype/cns11643-20221114 \
     local/bdf/intlfonts-1.4.2
 	chmod ugo+r -R local/opentype local/bdf
-	#XXX
-	rm -fr local/opentype/opentype
 
 build-for-docker-from-old:
 	mkdir -p local
@@ -98,6 +97,9 @@ local/opentype/haranoajik1-20220220:
 	mkdir -p $@
 	$(WGET) -O LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/LICENSE
 	$(WGET) -O HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/HaranoAjiGothicK1-ExtraLight.otf
+local/opentype/SourceHanSerifAKR9-20190729:
+	mkdir -p $@
+	$(WGET) -O $@/SourceHanSerifAKR9-Regular.otf https://github.com/adobe-type-tools/Adobe-KR/releases/download/20190729/SourceHanSerifAKR9-Regular.otf
 
 local/opentype/cns11643-20221114:
 	$(WGET) -O local/cns.zip https://www.cns11643.gov.tw/AIDB/Open_Data.zip
