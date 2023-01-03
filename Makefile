@@ -57,24 +57,46 @@ build-github-pages: git-submodules
 
 build-for-docker: build-for-docker-from-old \
     local/opentype/ipamjm00601 \
-    local/opentype/haranoaji-20200220 \
+    local/opentype/haranoaji-20220220 \
+    local/opentype/haranoajicn-20220220 \
+    local/opentype/haranoajitw-20220220 \
+    local/opentype/haranoajikr-20220220 \
+    local/opentype/haranoajik1-20220220 \
     local/bdf/intlfonts-1.4.2
 	chmod ugo+r -R local/opentype local/bdf
+	#XXX
+	rm -fr local/opentype/haranoaji-20200220
 
 build-for-docker-from-old:
 	mkdir -p local/opentype
-	-docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
-	-docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
+	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
+	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
 
 local/opentype/ipamjm00601:
 	$(WGET) -O local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
 	mkdir -p $@
 	cd $@ && unzip ../../ipamjm00601.zip
 
-local/opentype/haranoaji-20200220:
+local/opentype/haranoaji-20220220:
 	mkdir -p $@
 	$(WGET) -O LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFonts/44a23f1296c892d63f54265cf127fae73f0837a8/LICENSE
 	$(WGET) -O HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFonts/44a23f1296c892d63f54265cf127fae73f0837a8/HaranoAjiGothic-ExtraLight.otf
+local/opentype/haranoajicn-20220220:
+	mkdir -p $@
+	$(WGET) -O LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsCN/a99536d0ec64e6c0e1ece276064136a15dd41b87/LICENSE
+	$(WGET) -O HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsCN/a99536d0ec64e6c0e1ece276064136a15dd41b87/HaranoAjiGothicCN-ExtraLight.otf
+local/opentype/haranoajitw-20220220:
+	mkdir -p $@
+	$(WGET) -O LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsTW/d48499ce7b819817046d23e1bb9b469e43bafd65/LICENSE
+	$(WGET) -O HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsTW/d48499ce7b819817046d23e1bb9b469e43bafd65/HaranoAjiGothicTW-ExtraLight.otf
+local/opentype/haranoajikr-20220220:
+	mkdir -p $@
+	$(WGET) -O LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsKR/1937089673c70826c05e7c792f37b13436c61cd7/LICENSE
+	$(WGET) -O HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsKR/1937089673c70826c05e7c792f37b13436c61cd7/HaranoAjiGothicKR-ExtraLight.otf
+local/opentype/haranoajik1-20220220:
+	mkdir -p $@
+	$(WGET) -O LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/LICENSE
+	$(WGET) -O HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/HaranoAjiGothicK1-ExtraLight.otf
 
 local/bdf/intlfonts-1.4.2:
 	$(WGET) -O local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
