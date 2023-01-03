@@ -101,7 +101,7 @@ local/opentype/haranoajik1-20220220:
 
 local/opentype/cns11643-20221114:
 	$(WGET) -O local/cns.zip https://www.cns11643.gov.tw/AIDB/Open_Data.zip
-	cd local && unzip cns.zip
+	-cd local && unzip cns.zip
 	mv local/Open_Data/Fonts $@
 	$(WGET) -O $@/license.html https://data.gov.tw/license
 
