@@ -63,6 +63,9 @@
                "run" : "mkdir -p $CIRCLE_ARTIFACTS"
             },
             {
+               "run" : "make build-for-docker"
+            },
+            {
                "run" : "docker build -t quay\u005C.io\u005C/suikawiki\u005C/swfonts \u005C."
             },
             {

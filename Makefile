@@ -51,6 +51,16 @@ local/glyphs.json:
 build-github-pages: git-submodules
 	rm -fr ./bin/modules ./modules
 
+build-for-docker: build-for-docker-from-old
+
+build-for-docker-from-old:
+	docker run -v `pwd`/local:/local quay.io/suikawiki/swfonts cp /app/fonts/opentype /local/opentype
+
+local/opentype/ipamjm00601:
+	$(WGET) -O local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
+	mkdir -p $@
+	cd $@ && unzip ../../ipamjm00601.zip
+
 ## ------ Tests ------
 
 test: test-main test-deps
