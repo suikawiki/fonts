@@ -54,10 +54,11 @@ build-github-pages: git-submodules
 build-for-docker: build-for-docker-from-old \
     local/opentype/ipamjm00601 \
     local/bdf/intlfonts-1.4.2
+	chown ugo+r -R local/opentype local/bdf
 
 build-for-docker-from-old:
 	mkdir -p local/opentype
-	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
+	-docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
 	-docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
 
 local/opentype/ipamjm00601:
