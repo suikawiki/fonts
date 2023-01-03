@@ -51,16 +51,24 @@ local/glyphs.json:
 build-github-pages: git-submodules
 	rm -fr ./bin/modules ./modules
 
-build-for-docker: build-for-docker-from-old local/opentype/ipamjm00601
+build-for-docker: build-for-docker-from-old \
+    local/opentype/ipamjm00601 \
+    local/bdf/intlfonts-1.4.2
 
 build-for-docker-from-old:
 	mkdir -p local/opentype
-	-docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp /app/fonts/opentype /local/opentype
+	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
+	-docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
 
 local/opentype/ipamjm00601:
 	$(WGET) -O local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
 	mkdir -p $@
 	cd $@ && unzip ../../ipamjm00601.zip
+
+local/bdf/intlfonts-1.4.2:
+	$(WGET) -O local/intlfonts-1.4.2.tar.tz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
+	mkdir -p $@
+	cd local/bdf && tar zxf ../intlfonts-1.4.2.tar.gz
 
 ## ------ Tests ------
 
