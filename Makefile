@@ -62,13 +62,14 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/haranoajitw-20220220 \
     local/opentype/haranoajikr-20220220 \
     local/opentype/haranoajik1-20220220 \
+    local/opentype/cns11643-20221114 \
     local/bdf/intlfonts-1.4.2
 	chmod ugo+r -R local/opentype local/bdf
 	#XXX
-	rm -fr local/opentype/haranoaji-20200220
+	rm -fr local/opentype/opentype
 
 build-for-docker-from-old:
-	mkdir -p local/opentype
+	mkdir -p local
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
 
@@ -97,6 +98,12 @@ local/opentype/haranoajik1-20220220:
 	mkdir -p $@
 	$(WGET) -O LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/LICENSE
 	$(WGET) -O HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/HaranoAjiGothicK1-ExtraLight.otf
+
+local/opentype/cns11643-20221114:
+	$(WGET) -O local/cns.zip https://www.cns11643.gov.tw/AIDB/Open_Data.zip
+	cd local && unzip cns.zip Open_Data/Fonts
+	mv local/Open_Data/Fonts $@
+	$(WGET) -O $@/license.html https://data.gov.tw/license
 
 local/bdf/intlfonts-1.4.2:
 	$(WGET) -O local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
