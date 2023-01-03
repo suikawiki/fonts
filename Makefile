@@ -49,13 +49,15 @@ local/glyphs.json:
 	$(WGET) -O $@ https://raw.githubusercontent.com/suikawiki/extracted/master/data/extracted/data-glyph-.json
 
 build-github-pages: git-submodules
-	rm -fr ./bin/modules ./modules
+	mkdir -p local
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
 	mv local/opentype local/bdf ./
+	rm -fr ./bin/modules ./modules ./local
 
 build-for-docker: build-for-docker-from-old \
     local/opentype/ipamjm00601 \
+    local/opentype/haranoaji-20200220 \
     local/bdf/intlfonts-1.4.2
 	chmod ugo+r -R local/opentype local/bdf
 
@@ -68,6 +70,11 @@ local/opentype/ipamjm00601:
 	$(WGET) -O local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
 	mkdir -p $@
 	cd $@ && unzip ../../ipamjm00601.zip
+
+local/opentype/haranoaji-20200220:
+	mkdir -p $@
+	$(WGET) -O LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFonts/44a23f1296c892d63f54265cf127fae73f0837a8/LICENSE
+	$(WGET) -O HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFonts/44a23f1296c892d63f54265cf127fae73f0837a8/HaranoAjiGothic-ExtraLight.otf
 
 local/bdf/intlfonts-1.4.2:
 	$(WGET) -O local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
