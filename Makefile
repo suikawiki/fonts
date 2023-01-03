@@ -51,7 +51,7 @@ local/glyphs.json:
 build-github-pages: git-submodules
 	rm -fr ./bin/modules ./modules
 
-build-for-docker: build-for-docker-from-old
+build-for-docker: build-for-docker-from-old local/opentype/ipamjm00601
 
 build-for-docker-from-old:
 	-docker run -v `pwd`/local:/local quay.io/suikawiki/swfonts cp /app/fonts/opentype /local/opentype
