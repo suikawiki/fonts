@@ -54,7 +54,7 @@ build-github-pages: git-submodules
 build-for-docker: build-for-docker-from-old
 
 build-for-docker-from-old:
-	docker run -v `pwd`/local:/local quay.io/suikawiki/swfonts cp /app/fonts/opentype /local/opentype
+	-docker run -v `pwd`/local:/local quay.io/suikawiki/swfonts cp /app/fonts/opentype /local/opentype
 
 local/opentype/ipamjm00601:
 	$(WGET) -O local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
