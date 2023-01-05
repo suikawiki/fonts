@@ -64,16 +64,15 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/haranoajik1-20220220 \
     local/opentype/SourceHanSerifAKR9-20190729 \
     local/opentype/cns11643-20221114 \
-    local/bdf/intlfonts-1.4.2
+    local/bdf/intlfonts-1.4.2 \
+    local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
+    local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat
 	chmod ugo+r -R local/opentype local/bdf
 
 build-for-docker-from-old:
 	mkdir -p local
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
-
-	#XXX
-	rm -fr local/opentype/haranoaji* local/opentype/cns11643-20221114
 
 local/opentype/ipamjm00601:
 	$(WGET) -O local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
@@ -115,6 +114,12 @@ local/bdf/intlfonts-1.4.2:
 	$(WGET) -O local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
 	mkdir -p $@
 	cd local/bdf && tar zxf ../intlfonts-1.4.2.tar.gz
+local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
+:: %.dat: bin/bdf2dat.pl %.bdf
+	$(PERL) $< $@ 16
+local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
+:: %.dat: bin/bdf2dat.pl %.bdf
+	$(PERL) $< $@ 24
 
 ## ------ Tests ------
 
