@@ -115,11 +115,11 @@ local/bdf/intlfonts-1.4.2:
 	mkdir -p $@
 	cd local/bdf && tar zxf ../intlfonts-1.4.2.tar.gz
 local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
-:: %.dat: bin/bdftodat.pl %.bdf
-	$(PERL) $< $@ 16
+:: %.dat: %.bdf bin/bdftodat.pl
+	$(PERL) bin/bdftodat.pl $< $@ 16
 local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
-:: %.dat: bin/bdftodat.pl %.bdf
-	$(PERL) $< $@ 24
+:: %.dat: %.bdf bin/bdftodat.pl
+	$(PERL) bin/bdftodat.pl $< $@ 24
 
 ## ------ Tests ------
 
