@@ -74,6 +74,9 @@ build-for-docker-from-old:
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
 
+	#XXX
+	rm -fr local/opentype/haranoaji*
+
 local/opentype/ipamjm00601:
 	$(WGET) -O local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
 	mkdir -p $@
@@ -86,19 +89,19 @@ local/opentype/haranoaji-20220220:
 local/opentype/haranoajicn-20220220:
 	mkdir -p $@
 	$(WGET) -O $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsCN/a99536d0ec64e6c0e1ece276064136a15dd41b87/LICENSE
-	$(WGET) -O $@/HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsCN/a99536d0ec64e6c0e1ece276064136a15dd41b87/HaranoAjiGothicCN-ExtraLight.otf
+	$(WGET) -O $@/HaranoAjiGothicCN-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsCN/a99536d0ec64e6c0e1ece276064136a15dd41b87/HaranoAjiGothicCN-ExtraLight.otf
 local/opentype/haranoajitw-20220220:
 	mkdir -p $@
 	$(WGET) -O $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsTW/d48499ce7b819817046d23e1bb9b469e43bafd65/LICENSE
-	$(WGET) -O $@/HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsTW/d48499ce7b819817046d23e1bb9b469e43bafd65/HaranoAjiGothicTW-ExtraLight.otf
+	$(WGET) -O $@/HaranoAjiGothicTW-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsTW/d48499ce7b819817046d23e1bb9b469e43bafd65/HaranoAjiGothicTW-ExtraLight.otf
 local/opentype/haranoajikr-20220220:
 	mkdir -p $@
 	$(WGET) -O $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsKR/1937089673c70826c05e7c792f37b13436c61cd7/LICENSE
-	$(WGET) -O $@/HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsKR/1937089673c70826c05e7c792f37b13436c61cd7/HaranoAjiGothicKR-ExtraLight.otf
+	$(WGET) -O $@/HaranoAjiGothicKR-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsKR/1937089673c70826c05e7c792f37b13436c61cd7/HaranoAjiGothicKR-ExtraLight.otf
 local/opentype/haranoajik1-20220220:
 	mkdir -p $@
 	$(WGET) -O $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/LICENSE
-	$(WGET) -O $@/HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/HaranoAjiGothicK1-ExtraLight.otf
+	$(WGET) -O $@/HaranoAjiGothicK1-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/HaranoAjiGothicK1-ExtraLight.otf
 local/opentype/SourceHanSerifAKR9-20190729:
 	mkdir -p $@
 	$(WGET) -O $@/SourceHanSerifAKR9-Regular.otf https://github.com/adobe-type-tools/Adobe-KR/releases/download/20190729/SourceHanSerifAKR9-Regular.otf
