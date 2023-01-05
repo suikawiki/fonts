@@ -2,7 +2,7 @@
   "github": {
     "pmbp": "latest",
     "build": [
-      "make build-for-docker",
+      "make deps build-for-docker",
       {"docker_build": "quay.io/suikawiki/swfonts"}
     ],
     "tests": {"~deploy": [
