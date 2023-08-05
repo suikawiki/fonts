@@ -50,7 +50,9 @@ glyph-images: bin/generate-images.pl local/glyphs.json
 local/glyphs.json:
 	$(WGET) -O $@ https://raw.githubusercontent.com/suikawiki/extracted/master/data/extracted/data-glyph-.json
 
-build-github-pages: git-submodules
+build-github-pages: git-submodules build-gp-main build-gp-index
+
+build-gp-main:
 	mkdir -p local
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
@@ -161,14 +163,17 @@ local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
 	$(PERL) bin/bdftodat.pl $< $@ 9494 24
 
 
-build-index: local/opentype/index/all.css
-
-local/opentype/index/all.css: generated/fonts.css
-	cp $< $@
+build-index: generated/fonts.css
 
 generated/fonts.css: bin/generate-index.pl \
     config/fonts.json
 	$(PERL) $<
+
+build-gp-index: local/opentype/index/all.css
+
+opentype/index/all.css: generated/fonts.css
+	mkdir -p opentype/index
+	cp $< $@
 
 ## ------ Tests ------
 
