@@ -1,18 +1,61 @@
 {
   "IRGN2107": {
     "type": "opentype",
-    "path": "uk/IRGN2107.ttf"
+    "path": "uk/IRGN2107.ttf",
+    "license_path": "uk/LICENSE.md",
+    "sw_url": "https://wiki.suikawiki.org/n/UK-Source%20Ideographs"
   },
   "IRGN2232": {
     "type": "opentype",
-    "path": "uk/IRGN2232.ttf"
+    "path": "uk/IRGN2232.ttf",
+    "license_path": "uk/LICENSE.md",
+    "sw_url": "https://wiki.suikawiki.org/n/UK-Source%20Ideographs"
   },
   "JIS-Engraving-080803": {
     "type": "opentype",
-    "path": "jis-engraving-080803/JIS-Engraving.ttf"
+    "path": "jis-engraving-080803/JIS-Engraving.ttf",
+    "license_path": "jis-engraving-080803/readme.doc",
+    "sw_url": "https://wiki.suikawiki.org/n/%E6%A9%9F%E6%A2%B0%E5%BD%AB%E5%88%BB%E7%94%A8%E6%A8%99%E6%BA%96%E6%9B%B8%E4%BD%93"
   },
   "NomNaTong": {
     "type": "opentype",
-    "path": "nom-506/NomNaTong-Regular.ttf"
+    "path": "nom-506/NomNaTong-Regular.ttf",
+    "license_path": "nom-506/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/N%C3%B4m%20Na%20T%E1%BB%91ng"
+  },
+
+  "jiskan16": {
+    "type": "bitmap",
+    "dat_path": "bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat",
+    "bdf_path": "bdf/intlfonts-1.4.2/Japanese.X/jiskan16.bdf",
+    "license_path": "bdf/intlfonts-1.4.2/Japanese.X/README",
+    "sw_url": "https://wiki.suikawiki.org/n/jiskan"
+  },
+  "jiskan24": {
+    "type": "bitmap",
+    "dat_path": "bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat",
+    "bdf_path": "bdf/intlfonts-1.4.2/Japanese.X/jiskan24.bdf",
+    "license_path": "bdf/intlfonts-1.4.2/Japanese.X/README",
+    "sw_url": "https://wiki.suikawiki.org/n/jiskan"
+  },
+  "sish16-etl": {
+    "type": "bitmap",
+    "dat_path": "bdf/intlfonts-1.4.2/Chinese/sish16-etl.dat",
+    "bdf_path": "bdf/intlfonts-1.4.2/Chinese/sish16-etl.bdf",
+    "license_path": "bdf/intlfonts-1.4.2/Chinese/README",
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+  },
+  "guob16": {
+    "type": "bitmap",
+    "dat_path": "bdf/intlfonts-1.4.2/Chinese/guob16.dat",
+    "bdf_path": "bdf/intlfonts-1.4.2/Chinese/guob16.bdf",
+    "license_path": "bdf/intlfonts-1.4.2/Chinese/README",
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+  },
+
+  "swc": {
+    "type": "images",
+    "index_path": "glyphs/",
+    "sw_url": "https://wiki.suikawiki.org/n/Wiki%2F%2F%E5%A4%96%E5%AD%97"
   }
 }

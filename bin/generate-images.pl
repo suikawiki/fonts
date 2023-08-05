@@ -46,6 +46,7 @@ sub bits_to_svg ($) {
 
 my $doc = new Web::DOM::Document;
 my $el = $doc->create_element ('p');
+my $items = [];
 for my $data (@$Data) {
   my $id = $data->{id}->[0]->{text} // '';
   next unless $id =~ /\A(?:swc|sandbox)[1-9][0-9]*\z/;
@@ -59,8 +60,60 @@ for my $data (@$Data) {
 
     my $path = $OutPath->child ("$id.svg");
     $path->spew (bits_to_svg $bits);
+
+    push @$items, {id => $id, url => "$id.svg"};
   }
   $el->inner_html ('');
+}
+
+{
+  my $path = $OutPath->child ('index.html');
+  $path->parent->mkpath;
+
+  my $html = q{
+<!DOCTYPE HTML>
+<html lang=en>
+<title>Glyphs</title>
+<link rel=license href="https://suika.suikawiki.org/c/pd" title="Public Domain.">
+<link rel=stylesheet href="https://wiki.suikawiki.org/styles/sw">
+<link rel=icon href="https://wiki.suikawiki.org/favicon.ico">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<h1>Glyphs</h1>
+<style>
+  figure {
+    display: inline-block;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+  }
+  img {
+    width: 5em;
+    height: 5em;
+    vertical-align: middle;
+  }
+</style>
+  };
+
+  for my $item (@$items) {
+    $html .= sprintf q{
+      <figure>
+        <img src="%s">
+        <figcaption>
+          <a href="https://wiki.suikawiki.org/n/%s"><code>%s</code></a>
+        </figcaption>
+      </figure>
+    }, $item->{url}, $item->{id}, $item->{id};
+  }
+
+  $html .= q{
+
+<footer class=footer>
+<a href=https://suikawiki.org rel=top>SuikaWiki.org</a>
+</footer>
+
+<script src="https://manakai.github.io/js/global.js" async></script>
+  };
+  $path->spew ($html);
 }
 
 ## License: Public Domain.
