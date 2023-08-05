@@ -2,13 +2,13 @@ CURL = curl
 WGET = wget
 GIT = git
 
-all: data
+all: data build
 
 clean:
 
-updatenightly: 
+updatenightly: build-index
 	$(CURL) -s -S -L https://gist.githubusercontent.com/wakaba/34a71d3137a52abb562d/raw/gistfile1.txt | sh
-	$(GIT) add bin/modules
+	$(GIT) add bin/modules generated
 	perl local/bin/pmbp.pl --update
 	$(GIT) add config
 	$(CURL) -sSLf https://raw.githubusercontent.com/wakaba/ciconfig/master/ciconfig | RUN_GIT=1 REMOVE_UNUSED=1 perl
@@ -38,6 +38,8 @@ pmbp-install: pmbp-upgrade
 
 ## ------ Build ------
 
+build: build-index data
+
 data: deps data-main
 
 data-main: glyph-images
@@ -64,6 +66,9 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/haranoajik1-20220220 \
     local/opentype/SourceHanSerifAKR9-20190729 \
     local/opentype/cns11643-20221114 \
+    local/opentype/uk \
+    local/opentype/nom-506 \
+    local/opentype/jis-engraving-080803 \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
@@ -112,6 +117,34 @@ local/opentype/cns11643-20221114:
 	mv local/Open_Data/Fonts $@
 	$(WGET) -O $@/license.html https://data.gov.tw/license
 
+local/opentype/uk:
+	mkdir -p local/opentype/uk
+	$(WGET) -O $@/IRGN2107.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2107.ttf
+	$(WGET) -O $@/IRGN2232.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2232.ttf
+	$(WGET) -O $@/LICENSE.md https://github.com/unicode-org/uk-source-ideographs/blob/main/LICENSE.md
+
+local/opentype/nom-506:
+	mkdir -p $@
+	$(WGET) -O $@/NomNaTong-Regular.ttf https://github.com/nomfoundation/font/releases/download/v5.06/NomNaTong-Regular.ttf
+	$(WGET) -O $@/LICENSE https://github.com/nomfoundation/font/blob/master/LICENSE
+
+local/bin/lhasa: local/lhasa-0.2.0.tar.gz
+	mkdir -p local/bin
+	cd local && tar zxf lhasa-0.2.0.tar.gz
+	cd local/lhasa-0.2.0 && ./configure && make
+	cp local/lhasa-0.2.0/src/lha local/bin/lhasa
+local/lhasa-0.2.0.tar.gz:
+	mkdir -p local
+	$(WGET) -O $@ https://soulsphere.org/projects/lhasa/lhasa-0.2.0.tar.gz
+
+local/JIS-Engraving-080803.lzh:
+	$(WGET) -O $@ http://izumilib.web.fc2.com/jis-engraving/JIS-Engraving-080803.lzh
+local/opentype/jis-engraving-080803: local/JIS-Engraving-080803.lzh \
+    local/bin/lhasa
+	mkdir -p $@
+	cd $@ && ../../../local/lhasa-0.2.0/src/lha xf ../../../$<
+	rm $@/*.sfd
+
 local/bdf/intlfonts-1.4.2:
 	$(WGET) -O local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
 	mkdir -p $@
@@ -126,6 +159,16 @@ local/bdf/intlfonts-1.4.2/Chinese/guob16.dat \
 local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
 :: %.dat: %.bdf bin/bdftodat.pl
 	$(PERL) bin/bdftodat.pl $< $@ 9494 24
+
+
+build-index: local/opentype/index/all.css
+
+local/opentype/index/all.css: generated/fonts.css
+	cp $< $@
+
+generated/fonts.css: bin/generate-index.pl \
+    config/fonts.json
+	$(PERL) $<
 
 ## ------ Tests ------
 

@@ -1,0 +1,18 @@
+{
+  "IRGN2107": {
+    "type": "opentype",
+    "path": "uk/IRGN2107.ttf"
+  },
+  "IRGN2232": {
+    "type": "opentype",
+    "path": "uk/IRGN2232.ttf"
+  },
+  "JIS-Engraving-080803": {
+    "type": "opentype",
+    "path": "jis-engraving-080803/JIS-Engraving.ttf"
+  },
+  "NomNaTong": {
+    "type": "opentype",
+    "path": "nom-506/NomNaTong-Regular.ttf"
+  }
+}
