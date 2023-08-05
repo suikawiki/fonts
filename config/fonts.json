@@ -1,27 +1,92 @@
 {
   "IRGN2107": {
     "type": "opentype",
+    "webfont": true,
     "path": "uk/IRGN2107.ttf",
     "license_path": "uk/LICENSE.md",
     "sw_url": "https://wiki.suikawiki.org/n/UK-Source%20Ideographs"
   },
   "IRGN2232": {
     "type": "opentype",
+    "webfont": true,
     "path": "uk/IRGN2232.ttf",
     "license_path": "uk/LICENSE.md",
     "sw_url": "https://wiki.suikawiki.org/n/UK-Source%20Ideographs"
   },
   "JIS-Engraving-080803": {
     "type": "opentype",
+    "webfont": true,
     "path": "jis-engraving-080803/JIS-Engraving.ttf",
     "license_path": "jis-engraving-080803/readme.doc",
     "sw_url": "https://wiki.suikawiki.org/n/%E6%A9%9F%E6%A2%B0%E5%BD%AB%E5%88%BB%E7%94%A8%E6%A8%99%E6%BA%96%E6%9B%B8%E4%BD%93"
   },
   "NomNaTong": {
     "type": "opentype",
+    "webfont": true,
     "path": "nom-506/NomNaTong-Regular.ttf",
     "license_path": "nom-506/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/N%C3%B4m%20Na%20T%E1%BB%91ng"
+  },
+
+  "IPAmj明朝": {
+    "type": "opentype",
+    "path": "ipamjm00601/ipamjm.ttf",
+    "license_path": "ipamjm00601/IPA_Font_License_Agreement_v1.0.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/IPAmj%E6%98%8E%E6%9C%9D"
+  },
+  "原ノ味角ゴシック": {
+    "type": "opentype",
+    "path": "haranoaji-20220220/HaranoAjiGothic-ExtraLight.otf",
+    "license_path": "haranoaji-20220220/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "原ノ味角ゴシック (CN)": {
+    "type": "opentype",
+    "path": "haranoajicn-20220220/HaranoAjiGothicCN-ExtraLight.otf",
+    "license_path": "haranoajicn-20220220/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "原ノ味角ゴシック (TW)": {
+    "type": "opentype",
+    "path": "haranoajitw-20220220/HaranoAjiGothicTW-ExtraLight.otf",
+    "license_path": "haranoajitw-20220220/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "原ノ味角ゴシック (KR)": {
+    "type": "opentype",
+    "path": "haranoajikr-20220220/HaranoAjiGothicKR-ExtraLight.otf",
+    "license_path": "haranoajikr-20220220/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "原ノ味角ゴシック (K1)": {
+    "type": "opentype",
+    "path": "haranoajik1-20220220/HaranoAjiGothicK1-ExtraLight.otf",
+    "license_path": "haranoajik1-20220220/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "Source Han Serif (AKR9)": {
+    "type": "opentype",
+    "path": "SourceHanSerifAKR9-20190729/SourceHanSerifAKR9-Regular.otf",
+    "license_path": "SourceHanSerifAKR9-20190729/SourceHanSerifAKR9-Regular.otf",
+    "sw_url": "https://wiki.suikawiki.org/n/Adobe-KR"
+  },
+  "全字庫正宋體 (BMP)": {
+    "type": "opentype",
+    "path": "cns11643-20221114/TW-Sung-98_1.ttf",
+    "license_path": "cns11643-20221114/license.html",
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
+  },
+  "全字庫正宋體 (SIP)": {
+    "type": "opentype",
+    "path": "cns11643-20221114/TW-Sung-Ext-B-98_1.ttf",
+    "license_path": "cns11643-20221114/license.html",
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
+  },
+  "全字庫正宋體 (PUP)": {
+    "type": "opentype",
+    "path": "cns11643-20221114/TW-Sung-Plus-98_1.ttf",
+    "license_path": "cns11643-20221114/license.html",
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
   },
 
   "jiskan16": {

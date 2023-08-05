@@ -19,12 +19,16 @@ my $Fonts;
   my $css = join "\n", map {
     my $v = $Fonts->{$_};
     if ($v->{type} eq 'opentype') {
-      sprintf q{
-        @font-face {
-          font-family: '%s';
-          src: url(../%s);
-        }
-      }, $_, $v->{path};
+      if ($v->{webfont}) {
+        sprintf q{
+          @font-face {
+            font-family: '%s';
+            src: url(../%s);
+          }
+        }, $_, $v->{path};
+      } else {
+        '';
+      }
     } elsif ($v->{type} eq 'images' or $v->{type} eq 'bitmap') {
       '';
     } else {
@@ -32,7 +36,7 @@ my $Fonts;
     }
   } sort { $a cmp $b } keys %$Fonts;
   $css .= q{/* License: Public Domain. */};
-  $path->spew ($css);
+  $path->spew_utf8 ($css);
 }
 
 {
@@ -42,6 +46,7 @@ my $Fonts;
   my $html = q{
 <!DOCTYPE HTML>
 <html lang=en>
+<meta charset=utf-8>
 <title>Fonts</title>
 <link rel=license href="https://suika.suikawiki.org/c/pd" title="Public Domain.">
 <link rel=stylesheet href="https://wiki.suikawiki.org/styles/sw">
@@ -85,7 +90,7 @@ my $Fonts;
 
 <script src="https://manakai.github.io/js/global.js" async></script>
   };
-  $path->spew ($html);
+  $path->spew_utf8 ($html);
 }
 
 ## License: Public Domain.
