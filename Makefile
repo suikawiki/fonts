@@ -74,8 +74,39 @@ build-for-docker: build-for-docker-from-old \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
+    local/bdf/intlfonts-1.4.2/Japanese/j78-16.dat \
+    local/bdf/intlfonts-1.4.2/Japanese/j90-16.dat \
+    local/bdf/intlfonts-1.4.2/Japanese/jksp16.dat \
+    local/bdf/intlfonts-1.4.2/Japanese/j00-1-16.dat \
+    local/bdf/intlfonts-1.4.2/Japanese/j00-2-16.dat \
     local/bdf/intlfonts-1.4.2/Chinese/sish16-etl.dat \
-    local/bdf/intlfonts-1.4.2/Chinese/guob16.dat
+    local/bdf/intlfonts-1.4.2/Chinese/guob16.dat \
+    local/bdf/intlfonts-1.4.2/Chinese.X/gb16fs.dat \
+    local/bdf/intlfonts-1.4.2/Chinese/taipei16.dat \
+    local/bdf/intlfonts-1.4.2/Korean.X/hanglg16.bdf \
+    local/bdf/intlfonts-1.4.2/Asian/ind1c24-mule.dat \
+    local/bdf/intlfonts-1.4.2/Asian/ind24-mule.dat \
+    local/bdf/intlfonts-1.4.2/Asian/isci24-mule.dat \
+    local/bdf/intlfonts-1.4.2/Asian/lao16-mule.dat \
+    local/bdf/intlfonts-1.4.2/Asian/thai16.dat \
+    local/bdf/intlfonts-1.4.2/Asian/xtis24.dat \
+    local/bdf/intlfonts-1.4.2/Asian/visc16-etl.dat \
+    local/bdf/intlfonts-1.4.2/Asian/tib24-mule.dat \
+    local/bdf/intlfonts-1.4.2/Asian/tib1c24-mule.dat \
+    local/bdf/intlfonts-1.4.2/Misc/ipa16-etl.dat \
+    local/bdf/intlfonts-1.4.2/European/cyr16-etl.dat \
+    local/bdf/intlfonts-1.4.2/European/grk16-etl.dat \
+    local/bdf/intlfonts-1.4.2/European/koi16-etl.dat \
+    local/bdf/intlfonts-1.4.2/European/lt1-16-etl.dat \
+    local/bdf/intlfonts-1.4.2/European/lt2-16-etl.dat \
+    local/bdf/intlfonts-1.4.2/European/lt3-16-etl.dat \
+    local/bdf/intlfonts-1.4.2/European/lt4-16-etl.dat \
+    local/bdf/intlfonts-1.4.2/European/lt5-16-etl.dat \
+    local/bdf/intlfonts-1.4.2/Misc/heb16-etl.dat \
+    local/bdf/intlfonts-1.4.2/Misc/arab16-0-etl.dat \
+    local/bdf/intlfonts-1.4.2/Misc/arab16-1-etl.dat \
+    local/bdf/intlfonts-1.4.2/Misc/arab16-2-etl.dat \
+    local/glyphwiki/dump.tar.gz
 	chmod ugo+r -R local/opentype local/bdf
 
 build-for-docker-from-old:
@@ -152,15 +183,62 @@ local/bdf/intlfonts-1.4.2:
 	mkdir -p $@
 	cd local/bdf && tar zxf ../intlfonts-1.4.2.tar.gz
 local/bdf/intlfonts-1.4.2/Chinese/sish16-etl.dat \
+local/bdf/intlfonts-1.4.2/Asian/lao16-mule.dat \
+local/bdf/intlfonts-1.4.2/Asian/thai16.dat \
+local/bdf/intlfonts-1.4.2/Asian/visc16-etl.dat \
+local/bdf/intlfonts-1.4.2/Misc/ipa16-etl.dat \
+local/bdf/intlfonts-1.4.2/Misc/bmp16-etl.dat \
+local/bdf/intlfonts-1.4.2/Misc/heb16-etl.dat \
+local/bdf/intlfonts-1.4.2/Misc/arab16-0-etl.dat \
+local/bdf/intlfonts-1.4.2/Misc/arab16-1-etl.dat \
+local/bdf/intlfonts-1.4.2/European/cyr16-etl.dat \
+local/bdf/intlfonts-1.4.2/European/grk16-etl.dat \
+local/bdf/intlfonts-1.4.2/European/koi16-etl.dat \
+local/bdf/intlfonts-1.4.2/European/lt1-16-etl.dat \
+local/bdf/intlfonts-1.4.2/European/lt2-16-etl.dat \
+local/bdf/intlfonts-1.4.2/European/lt3-16-etl.dat \
+local/bdf/intlfonts-1.4.2/European/lt4-16-etl.dat \
+local/bdf/intlfonts-1.4.2/European/lt5-16-etl.dat \
 :: %.dat: %.bdf bin/bdftodat.pl
 	$(PERL) bin/bdftodat.pl $< $@ raw 16/2
+local/bdf/intlfonts-1.4.2/Misc/arab16-2-etl.dat \
+:: %.dat: %.bdf bin/bdftodat.pl
+	$(PERL) bin/bdftodat.pl $< $@ raw 16
+local/bdf/intlfonts-1.4.2/Asian/isci24-mule.dat \
+:: %.dat: %.bdf bin/bdftodat.pl
+	$(PERL) bin/bdftodat.pl $< $@ raw 24
 local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
+local/bdf/intlfonts-1.4.2/Japanese/j78-16.dat \
+local/bdf/intlfonts-1.4.2/Japanese/j90-16.dat \
+local/bdf/intlfonts-1.4.2/Japanese/jksp16.dat \
+local/bdf/intlfonts-1.4.2/Japanese/j00-1-16.dat \
+local/bdf/intlfonts-1.4.2/Japanese/j00-2-16.dat \
 local/bdf/intlfonts-1.4.2/Chinese/guob16.dat \
+local/bdf/intlfonts-1.4.2/Chinese.X/gb16fs.dat \
+local/bdf/intlfonts-1.4.2/Korean.X/hanglg16.dat \
 :: %.dat: %.bdf bin/bdftodat.pl
 	$(PERL) bin/bdftodat.pl $< $@ 9494 16
+local/bdf/intlfonts-1.4.2/Chinese/taipei16.dat \
+:: %.dat: %.bdf bin/bdftodat.pl
+	$(PERL) bin/bdftodat.pl $< $@ dbcs 16
 local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
+local/bdf/intlfonts-1.4.2/Asian/ind24-mule.dat \
+local/bdf/intlfonts-1.4.2/Asian/tib24-mule.dat \
 :: %.dat: %.bdf bin/bdftodat.pl
 	$(PERL) bin/bdftodat.pl $< $@ 9494 24
+local/bdf/intlfonts-1.4.2/Asian/ind1c24-mule.dat \
+local/bdf/intlfonts-1.4.2/Asian/xtis24.dat \
+local/bdf/intlfonts-1.4.2/Asian/tib1c24-mule.dat \
+:: %.dat: %.bdf bin/bdftodat.pl
+	$(PERL) bin/bdftodat.pl $< $@ 9494 24/2
+
+local/glyphwiki/dump.tar.gz: local/glyphwiki/dump-1.tar.gz
+	rm -fr $@
+	cd local/glyphwiki && ln -s dump-1.tar.gz dump.tar.gz
+
+local/glyphwiki/dump-1.tar.gz:
+	mkdir -p local/glyphwiki
+	$(WGET) -O $@ https://glyphwiki.org/dump.tar.gz
 
 
 build-index: generated/fonts.css
