@@ -71,6 +71,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/uk \
     local/opentype/nom-506 \
     local/opentype/jis-engraving-080803 \
+    local/opentype/unifont-15006 \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
@@ -106,6 +107,8 @@ build-for-docker: build-for-docker-from-old \
     local/bdf/intlfonts-1.4.2/Misc/arab16-0-etl.dat \
     local/bdf/intlfonts-1.4.2/Misc/arab16-1-etl.dat \
     local/bdf/intlfonts-1.4.2/Misc/arab16-2-etl.dat \
+    local/bdf/cgreek/cgreek.dat \
+    local/bdf/wqy-unibit110/wqy-unibit.dat \
     local/glyphwiki/dump.tar.gz
 	chmod ugo+r -R local/opentype local/bdf
 
@@ -160,6 +163,13 @@ local/opentype/nom-506:
 	mkdir -p $@
 	$(WGET) -O $@/NomNaTong-Regular.ttf https://github.com/nomfoundation/font/releases/download/v5.06/NomNaTong-Regular.ttf
 	$(WGET) -O $@/LICENSE https://github.com/nomfoundation/font/blob/master/LICENSE
+
+local/opentype/unifont-15006:
+	mkdir -p $@
+	$(WGET) -O $@/unifont.ttf https://unifoundry.com/pub/unifont/unifont-15.0.06/font-builds/unifont-15.0.06.ttf
+	$(WGET) -O $@/unifont_upper.ttf https://unifoundry.com/pub/unifont/unifont-15.0.06/font-builds/unifont_upper-15.0.06.ttf
+	$(WGET) -O $@/unifont_csur.ttf https://unifoundry.com/pub/unifont/unifont-15.0.06/font-builds/unifont_csur-15.0.06.ttf
+	$(WGET) -O $@/index.html.txt https://unifoundry.com/unifont/index.html
 
 local/bin/lhasa: local/lhasa-0.2.0.tar.gz
 	mkdir -p local/bin
@@ -232,6 +242,32 @@ local/bdf/intlfonts-1.4.2/Asian/tib1c24-mule.dat \
 :: %.dat: %.bdf bin/bdftodat.pl
 	$(PERL) bin/bdftodat.pl $< $@ 9494 24/2
 
+local/cgreek-2.tar.gz:
+	$(WGET) -O $@ http://ring.ix.oita-u.ac.jp/archives/pc/meadow/2.00/packages/cgreek-2-pkg.tar.gz
+local/cgreek-2: local/cgreek-2.tar.gz
+	mkdir -p $@
+	cd $@ && tar zxf ../../$<
+local/cgreek-2/fonts/cgreek/cgreek16.bdf: local/cgreek-2
+
+local/bdf/cgreek/cgreek16.bdf: local/cgreek-2/fonts/cgreek/cgreek16.bdf
+	mkdir -p local/bdf/cgreek
+	cp $< $@
+local/bdf/cgreek/cgreek16.dat: local/bdf/cgreek/cgreek16.bdf bin/bdftodat.pl
+	$(PERL) bin/bdftodat.pl $< $@ raw 16/2
+
+local/unibit110.tar.gz:
+	$(WGET) -O $@ https://master.dl.sourceforge.net/project/wqy/wqy-unibit/1.1.0/wqy-unibit-bdf-1.1.0-1.tar.gz?viasf=1
+local/wqy-unibit: local/unibit110.tar.gz
+	cd local && tar zxf ../$<
+local/bdf/wqy-unibit110: local/wqy-unibit
+	mkdir -p $@
+	cp local/wqy-unibit/wqy-unibit.bdf $@/wqy-unibit.bdf
+	cp local/wqy-unibit/README $@/README
+local/bdf/wqy-unibit110/wqy-unibit.bdf: local/bdf/wqy-unibit110
+local/bdf/wqy-unibit110/wqy-unibit.dat: \
+    local/bdf/wqy-unibit110/wqy-unibit.bdf  bin/bdftodat.pl
+	$(PERL) bin/bdftodat.pl $< $@ raw 16
+
 local/glyphwiki/dump.tar.gz: local/glyphwiki/dump-1.tar.gz
 	rm -fr $@
 	cd local/glyphwiki && ln -s dump-1.tar.gz dump.tar.gz
@@ -241,17 +277,20 @@ local/glyphwiki/dump-1.tar.gz:
 	$(WGET) -O $@ https://glyphwiki.org/dump.tar.gz
 
 
-build-index: generated/fonts.css
+build-index: generated/fonts.css local/opentype/index/all.css
 
 generated/fonts.css: bin/generate-index.pl \
     config/fonts.json
 	$(PERL) $<
 
-build-gp-index: local/opentype/index/all.css
+build-gp-index: opentype/index/all.css
 
 opentype/index/all.css: generated/fonts.css
 	mkdir -p opentype/index
 	cp $< $@
+local/opentype/index/all.css: generated/fonts.css
+	mkdir -p local/opentype/index
+	cp generated/fonts.css $@
 
 ## ------ Tests ------
 
@@ -261,5 +300,7 @@ test-deps: deps
 
 test-main:
 	$(PERL) -c bin/generate-images.pl
+
+always:
 
 ## License: Public Domain.

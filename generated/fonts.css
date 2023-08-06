@@ -1,28 +1,54 @@
 
+          @font-face {
+            font-family: 'GNU Unifont';
+            src: url(../unifont-15006/unifont.ttf);
+            unicode-range: U+0000-FFFF;
+          }
+        
+
+          @font-face {
+            font-family: 'GNU Unifont';
+            src: url(../unifont-15006/unifont_csur.ttf);
+            unicode-range: U+E000-F8FF, U+F0000-U+10FFFF;
+          }
+        
+
+          @font-face {
+            font-family: 'GNU Unifont';
+            src: url(../unifont-15006/unifont_upper.ttf);
+            unicode-range: U+10000-10FFFF;
+          }
+        
+
 
           @font-face {
             font-family: 'IRGN2107';
             src: url(../uk/IRGN2107.ttf);
+            
           }
         
 
           @font-face {
             font-family: 'IRGN2232';
             src: url(../uk/IRGN2232.ttf);
+            
           }
         
 
           @font-face {
             font-family: 'JIS-Engraving-080803';
             src: url(../jis-engraving-080803/JIS-Engraving.ttf);
+            
           }
         
 
           @font-face {
             font-family: 'NomNaTong';
             src: url(../nom-506/NomNaTong-Regular.ttf);
+            
           }
         
+
 
 
 

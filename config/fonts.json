@@ -88,6 +88,33 @@
     "license_path": "cns11643-20221114/license.html",
     "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
   },
+  "GNU Unifont": {
+    "type": "opentype",
+    "font_family": "GNU Unifont",
+    "unicode_range": "U+0000-FFFF",
+    "webfont": true,
+    "path": "unifont-15006/unifont.ttf",
+    "license_path": "unifont-15006/index.html.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Unifont"
+  },
+  "GNU Unifont (upper)": {
+    "type": "opentype",
+    "font_family": "GNU Unifont",
+    "unicode_range": "U+10000-10FFFF",
+    "webfont": true,
+    "path": "unifont-15006/unifont_upper.ttf",
+    "license_path": "unifont-15006/index.html.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Unifont"
+  },
+  "GNU Unifont (CSUR)": {
+    "type": "opentype",
+    "font_family": "GNU Unifont",
+    "unicode_range": "U+E000-F8FF, U+F0000-U+10FFFF",
+    "webfont": true,
+    "path": "unifont-15006/unifont_csur.ttf",
+    "license_path": "unifont-15006/index.html.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Unifont"
+  },
 
   "jiskan16": {
     "type": "bitmap",
@@ -333,6 +360,20 @@
     "bdf_path": "bdf/intlfonts-1.4.2/Misc/arab16-2-etl.bdf",
     "license_path": "bdf/intlfonts-1.4.2/Asian/README",
     "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+  },
+  "cgreek16": {
+    "type": "bitmap",
+    "dat_path": "bdf/cgreek/cgreek16.dat",
+    "bdf_path": "bdf/cgreek/cgreek16.bdf",
+    "license_path": "bdf/cgreek/cgreek16.bdf",
+    "sw_url": "https://wiki.suikawiki.org/n/cgreek"
+  },
+  "wqy-unibit110": {
+    "type": "bitmap",
+    "dat_path": "bdf/wqy-unibit110/wqy-unibit.dat",
+    "bdf_path": "bdf/wqy-unibit110/wqy-unibit.bdf",
+    "license_path": "bdf/wqy-unibit110/README",
+    "sw_url": "https://wiki.suikawiki.org/n/Unibit"
   },
 
   "swc": {

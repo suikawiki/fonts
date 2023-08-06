@@ -24,8 +24,12 @@ my $Fonts;
           @font-face {
             font-family: '%s';
             src: url(../%s);
+            %s
           }
-        }, $_, $v->{path};
+        },
+            $v->{font_family} // $_, $v->{path},
+            ($v->{unicode_range} ? 'unicode-range: ' . $v->{unicode_range} . ';' : ''),
+        ;
       } else {
         '';
       }
