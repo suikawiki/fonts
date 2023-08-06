@@ -107,7 +107,7 @@ build-for-docker: build-for-docker-from-old \
     local/bdf/intlfonts-1.4.2/Misc/arab16-0-etl.dat \
     local/bdf/intlfonts-1.4.2/Misc/arab16-1-etl.dat \
     local/bdf/intlfonts-1.4.2/Misc/arab16-2-etl.dat \
-    local/bdf/cgreek/cgreek.dat \
+    local/bdf/cgreek/cgreek16.dat \
     local/bdf/wqy-unibit110/wqy-unibit.dat \
     local/glyphwiki/dump.tar.gz
 	chmod ugo+r -R local/opentype local/bdf
