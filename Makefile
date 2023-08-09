@@ -68,10 +68,13 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/haranoajik1-20220220 \
     local/opentype/SourceHanSerifAKR9-20190729 \
     local/opentype/cns11643-20221114 \
+    local/opentype/cns11643-20221114/license.html.txt \
     local/opentype/uk \
     local/opentype/nom-506 \
     local/opentype/jis-engraving-080803 \
     local/opentype/unifont-15006 \
+    local/opentype/GenEiKoburiMin-61 \
+    local/opentype/hentaigana-r50630 \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
@@ -151,7 +154,9 @@ local/opentype/cns11643-20221114:
 	-cd local && unzip cns.zip
 	rm -f local/Open_Data/Fonts/*.txt
 	mv local/Open_Data/Fonts $@
-	$(WGET) -O $@/license.html https://data.gov.tw/license
+local/opentype/cns11643-20221114/license.html.txt:
+	rm -fr local/opentype/cns11643-20221114/license.html
+	$(WGET) -O $@/license.html.txt https://data.gov.tw/license
 
 local/opentype/uk:
 	mkdir -p local/opentype/uk
@@ -171,6 +176,16 @@ local/opentype/unifont-15006:
 	$(WGET) -O $@/unifont_csur.ttf https://unifoundry.com/pub/unifont/unifont-15.0.06/font-builds/unifont_csur-15.0.06.ttf
 	$(WGET) -O $@/index.html.txt https://unifoundry.com/unifont/index.html
 
+local/GenEiKoburiMin_v6.1.zip:
+	$(WGET) -O $@.gz https://okoneya.jp/font/GenEiKoburiMin_v6.1.zip
+	gzip -d $@.gz
+local/GenEiKoburiMin_v6.1a: local/GenEiKoburiMin_v6.1.zip
+	cd local && unzip GenEiKoburiMin_v6.1.zip
+local/opentype/GenEiKoburiMin-61: local/GenEiKoburiMin_v6.1a
+	mkdir -p $@
+	cp local/GenEiKoburiMin_v6.1a/GenEiKoburiMin6-R.ttf $@/
+	cp local/GenEiKoburiMin_v6.1a/OFLicense.txt $@/
+
 local/bin/lhasa: local/lhasa-0.2.0.tar.gz
 	mkdir -p local/bin
 	cd local && tar zxf lhasa-0.2.0.tar.gz
@@ -187,6 +202,11 @@ local/opentype/jis-engraving-080803: local/JIS-Engraving-080803.lzh \
 	mkdir -p $@
 	cd $@ && ../../../local/lhasa-0.2.0/src/lha xf ../../../$<
 	rm $@/*.sfd
+
+local/opentype/hentaigana-r50630:
+	mkdir -p $@
+	$(WGET) -O $@/hentaigana-r50630.ttf https://wakaba.github.io/nemui/local/data/hentaigana-r50630.ttf
+	$(WGET) -O $@/4889029.html.txt https://hentaigana.booth.pm/items/4889029
 
 local/bdf/intlfonts-1.4.2:
 	$(WGET) -O local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz

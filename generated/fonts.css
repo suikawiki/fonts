@@ -92,4 +92,19 @@
 
 
 
-/* License: Public Domain. */
+
+
+
+          @font-face {
+            font-family: '字躰帳変体仮名';
+            src: url(../hentaigana-r50630/hentaigana-r50630.ttf);
+            
+          }
+        
+
+          @font-face {
+            font-family: '源暎こぶり明朝';
+            src: url(../GenEiKoburiMin-61/GenEiKoburiMin6-R.ttf);
+            
+          }
+        /* License: Public Domain. */

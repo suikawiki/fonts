@@ -73,19 +73,19 @@
   "全字庫正宋體 (BMP)": {
     "type": "opentype",
     "path": "cns11643-20221114/TW-Sung-98_1.ttf",
-    "license_path": "cns11643-20221114/license.html",
+    "license_path": "cns11643-20221114/license.html.txt",
     "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
   },
   "全字庫正宋體 (SIP)": {
     "type": "opentype",
     "path": "cns11643-20221114/TW-Sung-Ext-B-98_1.ttf",
-    "license_path": "cns11643-20221114/license.html",
+    "license_path": "cns11643-20221114/license.html.txt",
     "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
   },
   "全字庫正宋體 (PUP)": {
     "type": "opentype",
     "path": "cns11643-20221114/TW-Sung-Plus-98_1.ttf",
-    "license_path": "cns11643-20221114/license.html",
+    "license_path": "cns11643-20221114/license.html.txt",
     "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
   },
   "GNU Unifont": {
@@ -114,6 +114,22 @@
     "path": "unifont-15006/unifont_csur.ttf",
     "license_path": "unifont-15006/index.html.txt",
     "sw_url": "https://wiki.suikawiki.org/n/GNU%20Unifont"
+  },
+  "源暎こぶり明朝": {
+    "type": "opentype",
+    "font_family": "源暎こぶり明朝",
+    "webfont": true,
+    "path": "GenEiKoburiMin-61/GenEiKoburiMin6-R.ttf",
+    "license_path": "GenEiKoburiMin-61/OFLicense.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/%E6%BA%90%E6%9A%8E%E3%81%93%E3%81%B6%E3%82%8A%E6%98%8E%E6%9C%9D"
+  },
+  "字躰帳変体仮名": {
+    "type": "opentype",
+    "font_family": "字躰帳変体仮名",
+    "webfont": true,
+    "path": "hentaigana-r50630/hentaigana-r50630.ttf",
+    "license_path": "hentaigana-r50630/4889029.html.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%AD%97%E8%BA%B0%E5%B8%B3%E5%A4%89%E4%BD%93%E4%BB%AE%E5%90%8D"
   },
 
   "jiskan16": {

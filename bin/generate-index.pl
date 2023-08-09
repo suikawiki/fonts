@@ -64,15 +64,15 @@ my $Fonts;
     my $v = $Fonts->{$_};
     if ($v->{type} eq 'opentype') {
       sprintf q{
-        <li><a href="local/opentype/%s">%s</a>
-        (<a href="local/opentype/%s">license</a>, 
+        <li><a href="opentype/%s">%s</a>
+        (<a href="opentype/%s">license</a>, 
          <a href="%s">SuikaWiki</a>)
       }, $v->{path}, $_, $v->{license_path}, $v->{sw_url};
     } elsif ($v->{type} eq 'bitmap') {
       sprintf q{
-        <li><a href="local/%s">%s</a>
-        (<a href="local/%s">BDF</a>, 
-         <a href="local/%s">license</a>, 
+        <li><a href="%s">%s</a>
+        (<a href="%s">BDF</a>, 
+         <a href="%s">license</a>, 
          <a href="%s">SuikaWiki</a>)
       }, $v->{dat_path}, $_, $v->{bdf_path}, $v->{license_path}, $v->{sw_url};
     } elsif ($v->{type} eq 'images') {
