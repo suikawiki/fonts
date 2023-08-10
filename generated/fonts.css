@@ -107,4 +107,11 @@
             src: url(../GenEiKoburiMin-61/GenEiKoburiMin6-R.ttf);
             
           }
+        
+
+          @font-face {
+            font-family: '霧明朝';
+            src: url(../opentype/KiriMinL4002/KiriMinL.otf);
+            
+          }
         /* License: Public Domain. */

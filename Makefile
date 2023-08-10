@@ -75,6 +75,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/unifont-15006 \
     local/opentype/GenEiKoburiMin-61 \
     local/opentype/hentaigana-r50630 \
+    local/opentype/KiriMinL4002 \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
@@ -154,9 +155,9 @@ local/opentype/cns11643-20221114:
 	-cd local && unzip cns.zip
 	rm -f local/Open_Data/Fonts/*.txt
 	mv local/Open_Data/Fonts $@
-local/opentype/cns11643-20221114/license.html.txt:
+local/opentype/cns11643-20221114/license.html.txt: #XXX
 	rm -fr local/opentype/cns11643-20221114/license.html
-	$(WGET) -O $@/license.html.txt https://data.gov.tw/license
+	$(WGET) -O $@ https://data.gov.tw/license
 
 local/opentype/uk:
 	mkdir -p local/opentype/uk
@@ -207,6 +208,16 @@ local/opentype/hentaigana-r50630:
 	mkdir -p $@
 	$(WGET) -O $@/hentaigana-r50630.ttf https://wakaba.github.io/nemui/local/data/hentaigana-r50630.ttf
 	$(WGET) -O $@/4889029.html.txt https://hentaigana.booth.pm/items/4889029
+
+local/kml.zip:
+	$(WGET) -O $@ http://www.akenotsuki.com/eyeben/fonts/files/KiriMinL4_002.zip
+local/KiriMinL.otf: local/kml.zip
+	cd local && unzip kml.zip
+	touch $@
+local/opentype/KiriMinL4002: local/KiriMinL.otf
+	mkdir -p $@
+	cp local/KiriMinL.otf $@/KiriMinL.otf
+	$(WGET) -O $@/kirimin.html.txt http://www.akenotsuki.com/eyeben/fonts/kirimin.html 
 
 local/bdf/intlfonts-1.4.2:
 	$(WGET) -O local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz

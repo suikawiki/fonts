@@ -131,6 +131,14 @@
     "license_path": "hentaigana-r50630/4889029.html.txt",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%AD%97%E8%BA%B0%E5%B8%B3%E5%A4%89%E4%BD%93%E4%BB%AE%E5%90%8D"
   },
+  "霧明朝": {
+    "type": "opentype",
+    "font_family": "霧明朝",
+    "webfont": true,
+    "path": "opentype/KiriMinL4002/KiriMinL.otf",
+    "license_path": "opentype/KiriMinL4002/kirimin.html.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/%E9%9C%A7%E6%98%8E%E6%9C%9D"
+  },
 
   "jiskan16": {
     "type": "bitmap",

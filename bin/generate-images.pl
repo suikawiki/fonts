@@ -74,7 +74,7 @@ for my $data (@$Data) {
 <!DOCTYPE HTML>
 <html lang=en>
 <title>Glyphs</title>
-<link rel=license href="https://suika.suikawiki.org/c/pd" title="Public Domain.">
+<link rel=license href="https://wiki.suikawiki.org/n/WikiPageLicense">
 <link rel=stylesheet href="https://wiki.suikawiki.org/styles/sw">
 <link rel=icon href="https://wiki.suikawiki.org/favicon.ico">
 <meta name="viewport" content="width=device-width,initial-scale=1">
