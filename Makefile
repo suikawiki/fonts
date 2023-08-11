@@ -69,7 +69,6 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/haranoajik1-20220220 \
     local/opentype/SourceHanSerifAKR9-20190729 \
     local/opentype/cns11643-20221114 \
-    local/opentype/cns11643-20221114/license.html.txt \
     local/opentype/uk \
     local/opentype/nom-506 \
     local/opentype/jis-engraving-080803 \
@@ -114,8 +113,11 @@ build-for-docker: build-for-docker-from-old \
     local/bdf/intlfonts-1.4.2/Misc/arab16-2-etl.dat \
     local/bdf/cgreek/cgreek16.dat \
     local/bdf/wqy-unibit110/wqy-unibit.dat \
-    local/glyphwiki/dump.tar.gz
-	chmod ugo+r -R local/opentype local/bdf
+    local/glyphwiki
+	#XXX
+	rm -fr local/glyphwiki/dump.tar.gz
+	#
+	chmod ugo+r -R local/opentype local/bdf local/glyphwiki
 
 build-for-docker-from-old:
 	mkdir -p local
@@ -156,7 +158,6 @@ local/opentype/cns11643-20221114:
 	-cd local && unzip cns.zip
 	rm -f local/Open_Data/Fonts/*.txt
 	mv local/Open_Data/Fonts $@
-local/opentype/cns11643-20221114/license.html.txt: #XXX
 	rm -fr local/opentype/cns11643-20221114/license.html
 	$(WGET) -O $@ https://data.gov.tw/license
 
@@ -183,7 +184,8 @@ local/GenEiKoburiMin_v6.1.zip:
 	gzip -d $@.gz
 local/GenEiKoburiMin_v6.1a: local/GenEiKoburiMin_v6.1.zip
 	cd local && unzip GenEiKoburiMin_v6.1.zip
-local/opentype/GenEiKoburiMin-61: local/GenEiKoburiMin_v6.1a
+local/opentype/GenEiKoburiMin-61:
+	$(MAKE) local/GenEiKoburiMin_v6.1a
 	mkdir -p $@
 	cp local/GenEiKoburiMin_v6.1a/GenEiKoburiMin6-R.ttf $@/
 	cp local/GenEiKoburiMin_v6.1a/OFLicense.txt $@/
@@ -199,8 +201,8 @@ local/lhasa-0.2.0.tar.gz:
 
 local/JIS-Engraving-080803.lzh:
 	$(WGET) -O $@ http://izumilib.web.fc2.com/jis-engraving/JIS-Engraving-080803.lzh
-local/opentype/jis-engraving-080803: local/JIS-Engraving-080803.lzh \
-    local/bin/lhasa
+local/opentype/jis-engraving-080803:
+	$(MAKE) local/bin/lhasa local/JIS-Engraving-080803.lzh
 	mkdir -p $@
 	cd $@ && ../../../local/lhasa-0.2.0/src/lha xf ../../../$<
 	rm $@/*.sfd
@@ -215,7 +217,8 @@ local/kml.zip:
 local/KiriMinL.otf: local/kml.zip
 	cd local && unzip kml.zip
 	touch $@
-local/opentype/KiriMinL4002: local/KiriMinL.otf
+local/opentype/KiriMinL4002:
+	$(MAKE) local/KiriMinL.otf
 	mkdir -p $@
 	cp local/KiriMinL.otf $@/KiriMinL.otf
 	$(WGET) -O $@/kirimin.html.txt http://www.akenotsuki.com/eyeben/fonts/kirimin.html
@@ -285,22 +288,26 @@ local/bdf/intlfonts-1.4.2/Asian/tib1c24-mule.dat \
 
 local/cgreek-2.tar.gz:
 	$(WGET) -O $@ http://ring.ix.oita-u.ac.jp/archives/pc/meadow/2.00/packages/cgreek-2-pkg.tar.gz
-local/cgreek-2: local/cgreek-2.tar.gz
+local/cgreek-2:
+	$(MAKE) local/cgreek-2.tar.gz
 	mkdir -p $@
 	cd $@ && tar zxf ../../$<
 local/cgreek-2/fonts/cgreek/cgreek16.bdf: local/cgreek-2
 
-local/bdf/cgreek/cgreek16.bdf: local/cgreek-2/fonts/cgreek/cgreek16.bdf
+local/bdf/cgreek/cgreek16.bdf:
+	$(MAKE) local/cgreek-2/fonts/cgreek/cgreek16.bdf
 	mkdir -p local/bdf/cgreek
 	cp $< $@
-local/bdf/cgreek/cgreek16.dat: local/bdf/cgreek/cgreek16.bdf bin/bdftodat.pl
+local/bdf/cgreek/cgreek16.dat:
+	$(MAKE) local/bdf/cgreek/cgreek16.bdf bin/bdftodat.pl
 	$(PERL) bin/bdftodat.pl $< $@ raw 16/2
 
 local/unibit110.tar.gz:
 	$(WGET) -O $@ https://master.dl.sourceforge.net/project/wqy/wqy-unibit/1.1.0/wqy-unibit-bdf-1.1.0-1.tar.gz?viasf=1
 local/wqy-unibit: local/unibit110.tar.gz
 	cd local && tar zxf ../$<
-local/bdf/wqy-unibit110: local/wqy-unibit
+local/bdf/wqy-unibit110:
+	$(MAKE) local/wqy-unibit
 	mkdir -p $@
 	cp local/wqy-unibit/wqy-unibit.bdf $@/wqy-unibit.bdf
 	cp local/wqy-unibit/README $@/README
@@ -309,14 +316,9 @@ local/bdf/wqy-unibit110/wqy-unibit.dat: \
     local/bdf/wqy-unibit110/wqy-unibit.bdf  bin/bdftodat.pl
 	$(PERL) bin/bdftodat.pl $< $@ raw 16
 
-local/glyphwiki/dump.tar.gz: local/glyphwiki/dump-1.tar.gz
-	rm -fr $@
-	cd local/glyphwiki && ln -s dump-1.tar.gz dump.tar.gz
-
-local/glyphwiki/dump-1.tar.gz:
+local/glyphwiki:
 	mkdir -p local/glyphwiki
-	$(WGET) -O $@ https://glyphwiki.org/dump.tar.gz
-
+	$(WGET) -O $@/dump-1.tar.gz https://glyphwiki.org/dump.tar.gz
 
 build-index: generated/fonts.css local/opentype/index/all.css
 
