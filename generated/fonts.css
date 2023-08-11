@@ -1,21 +1,21 @@
 
           @font-face {
             font-family: 'DroidSansFallback';
-            src: url(../opentype/DroidSansFallback/DroidSansFallback-aosp.ttf);
+            src: url(../DroidSansFallback/DroidSansFallback-aosp.ttf);
             
           }
         
 
           @font-face {
             font-family: 'DroidSansFallback (free-fonts)';
-            src: url(../opentype/DroidSansFallback/DroidSansFallback-ff.ttf);
+            src: url(../DroidSansFallback/DroidSansFallback-ff.ttf);
             
           }
         
 
           @font-face {
             font-family: 'DroidSansFallbackFull';
-            src: url(../opentype/DroidSansFallback/DroidSansFallbackFull-aosp.ttf);
+            src: url(../DroidSansFallback/DroidSansFallbackFull-aosp.ttf);
             
           }
         
