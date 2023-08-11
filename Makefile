@@ -76,6 +76,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/GenEiKoburiMin-61 \
     local/opentype/hentaigana-r50630 \
     local/opentype/KiriMinL4002 \
+    local/opentype/DroidSansFallback \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
