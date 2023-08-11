@@ -139,6 +139,30 @@
     "license_path": "opentype/KiriMinL4002/kirimin.html.txt",
     "sw_url": "https://wiki.suikawiki.org/n/%E9%9C%A7%E6%98%8E%E6%9C%9D"
   },
+  "DroidSansFallback (free-fonts)": {
+    "type": "opentype",
+    "font_family": "DroidSansFallback (free-fonts)",
+    "webfont": true,
+    "path": "opentype/DroidSansFallback/DroidSansFallback-ff.ttf",
+    "license_path": "opentype/DroidSansFallback/LICENSE-ff.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/Droid%20Sans%20Fallback"
+  },
+  "DroidSansFallback": {
+    "type": "opentype",
+    "font_family": "DroidSansFallback",
+    "webfont": true,
+    "path": "opentype/DroidSansFallback/DroidSansFallback-aosp.ttf",
+    "license_path": "opentype/DroidSansFallback/LICENSE-aosp.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/Droid%20Sans%20Fallback"
+  },
+  "DroidSansFallbackFull": {
+    "type": "opentype",
+    "font_family": "DroidSansFallbackFull",
+    "webfont": true,
+    "path": "opentype/DroidSansFallback/DroidSansFallbackFull-aosp.ttf",
+    "license_path": "opentype/DroidSansFallback/LICENSE-aosp.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/Droid%20Sans%20Fallback"
+  },
 
   "jiskan16": {
     "type": "bitmap",

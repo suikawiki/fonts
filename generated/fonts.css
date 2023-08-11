@@ -1,5 +1,26 @@
 
           @font-face {
+            font-family: 'DroidSansFallback';
+            src: url(../opentype/DroidSansFallback/DroidSansFallback-aosp.ttf);
+            
+          }
+        
+
+          @font-face {
+            font-family: 'DroidSansFallback (free-fonts)';
+            src: url(../opentype/DroidSansFallback/DroidSansFallback-ff.ttf);
+            
+          }
+        
+
+          @font-face {
+            font-family: 'DroidSansFallbackFull';
+            src: url(../opentype/DroidSansFallback/DroidSansFallbackFull-aosp.ttf);
+            
+          }
+        
+
+          @font-face {
             font-family: 'GNU Unifont';
             src: url(../unifont-15006/unifont.ttf);
             unicode-range: U+0000-FFFF;

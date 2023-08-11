@@ -217,7 +217,16 @@ local/KiriMinL.otf: local/kml.zip
 local/opentype/KiriMinL4002: local/KiriMinL.otf
 	mkdir -p $@
 	cp local/KiriMinL.otf $@/KiriMinL.otf
-	$(WGET) -O $@/kirimin.html.txt http://www.akenotsuki.com/eyeben/fonts/kirimin.html 
+	$(WGET) -O $@/kirimin.html.txt http://www.akenotsuki.com/eyeben/fonts/kirimin.html
+
+local/opentype/DroidSansFallback:
+	mkdir -p $@
+	$(WGET) -O $@/DroidSansFallback-ff.ttf https://raw.githubusercontent.com/jenskutilek/free-fonts/master/Droid/Droid%20Sans%20Fallback/DroidSansFallback.ttf
+	$(WGET) -O $@/LICENSE-ff.txt https://raw.githubusercontent.com/jenskutilek/free-fonts/master/LICENSE.txt
+	$(WGET) -O $@/DroidSansFallback-aosp.ttf https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/master/data/fonts/DroidSansFallback.ttf
+	$(WGET) -O $@/DroidSansFallbackFull-aosp.ttf https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/master/data/fonts/DroidSansFallbackFull.ttf
+	$(WGET) -O $@/LICENSE-aosp.txt https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/master/data/fonts/README.txt
+
 
 local/bdf/intlfonts-1.4.2:
 	$(WGET) -O local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
