@@ -33,7 +33,8 @@ my $Fonts;
       } else {
         '';
       }
-    } elsif ($v->{type} eq 'images' or $v->{type} eq 'bitmap') {
+    } elsif ($v->{type} eq 'images' or $v->{type} eq 'bitmap' or
+             $v->{type} eq 'imageset') {
       '';
     } else {
       die $v->{type};
@@ -70,16 +71,21 @@ my $Fonts;
       }, $v->{path}, $_, $v->{license_path}, $v->{sw_url};
     } elsif ($v->{type} eq 'bitmap') {
       sprintf q{
-        <li><a href="%s">%s</a>
-        (<a href="%s">BDF</a>, 
-         <a href="%s">license</a>, 
+        <li><a href="bdf/%s">%s</a>
+        (<a href="bdf/%s">BDF</a>, 
+         <a href="bdf/%s">license</a>, 
          <a href="%s">SuikaWiki</a>)
       }, $v->{dat_path}, $_, $v->{bdf_path}, $v->{license_path}, $v->{sw_url};
+    } elsif ($v->{type} eq 'imageset') {
+      sprintf q{
+        <li><a href="imageset/%s">%s</a>
+        (<a href="imageset/%s">license</a>, <a href="%s">SuikaWiki</a>)
+      }, $v->{index_path}, $_, $v->{license_path}, $v->{sw_url};
     } elsif ($v->{type} eq 'images') {
       sprintf q{
         <li><a href="images/%s">%s</a>
-        (<a href="%s">SuikaWiki</a>)
-      }, $v->{index_path}, $_, $v->{sw_url};
+        (<a href="%s">license</a>, <a href="%s">SuikaWiki</a>)
+      }, $v->{index_path}, $_, $v->{license_url}, $v->{sw_url};
     } else {
       die $v->{type};
     }

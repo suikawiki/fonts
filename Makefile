@@ -57,7 +57,8 @@ build-gp-main:
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/glyphwiki /local/glyphwiki
-	mv local/opentype local/bdf local/glyphwiki ./
+	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/imageset /local/imageset
+	mv local/opentype local/bdf local/glyphwiki local/imageset ./
 	rm -fr ./bin/modules ./modules ./local
 
 build-for-docker: build-for-docker-from-old \
@@ -114,16 +115,19 @@ build-for-docker: build-for-docker-from-old \
     local/bdf/intlfonts-1.4.2/Misc/arab16-2-etl.dat \
     local/bdf/cgreek/cgreek16.dat \
     local/bdf/wqy-unibit110/wqy-unibit.dat \
-    local/glyphwiki
+    local/glyphwiki \
+    local/imageset/wakan
 	#XXX
 	rm -fr local/glyphwiki/dump.tar.gz
 	#
-	chmod ugo+r -R local/opentype local/bdf local/glyphwiki
+	chmod ugo+r -R local/opentype local/bdf local/glyphwiki local/imageset
 
 build-for-docker-from-old:
 	mkdir -p local
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
+	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/glyphwiki /local/glyphwiki
+	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/imageset /local/imageset
 
 local/opentype/ipamjm00601:
 	$(WGET) -O local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
@@ -320,6 +324,11 @@ local/bdf/wqy-unibit110/wqy-unibit.dat: \
 local/glyphwiki:
 	mkdir -p local/glyphwiki
 	$(WGET) -O $@/dump-1.tar.gz https://glyphwiki.org/dump.tar.gz
+
+local/imageset/wakan:
+	cd local && $(WGET) -r -l 1 -np https://wakaba.github.io/nemui/local/data/wakan/index.html
+	mv local/wakaba.github.io/nemui/local/data/wakan/ $@
+	$(WGET) -O $@/wakan.html.txt https://kana.aa-ken.jp/wakan/
 
 build-index: generated/fonts.css local/opentype/index/all.css
 
