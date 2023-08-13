@@ -9,8 +9,8 @@
             "name" : "github-pages",
             "url" : "${{ steps.deployment.outputs.page_url }}"
          },
+         "if" : "${{ github.event.workflow_run.conclusion == 'success' }}",
          "runs-on" : "ubuntu-latest",
-         "if": "${{ github.event.workflow_run.conclusion == 'success' }}",
          "steps" : [
             {
                "name" : "Checkout",
@@ -44,8 +44,12 @@
          "branches" : [
             "master"
          ],
-         "workflows": ["test"],
-         "types": ["completed"]
+         "types" : [
+            "completed"
+         ],
+         "workflows" : [
+            "test"
+         ]
       }
    },
    "permissions" : {
