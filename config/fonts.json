@@ -135,8 +135,8 @@
     "type": "opentype",
     "font_family": "霧明朝",
     "webfont": true,
-    "path": "opentype/KiriMinL4002/KiriMinL.otf",
-    "license_path": "opentype/KiriMinL4002/kirimin.html.txt",
+    "path": "KiriMinL4002/KiriMinL.otf",
+    "license_path": "KiriMinL4002/kirimin.html.txt",
     "sw_url": "https://wiki.suikawiki.org/n/%E9%9C%A7%E6%98%8E%E6%9C%9D"
   },
   "DroidSansFallback (free-fonts)": {
@@ -429,6 +429,13 @@
     "index_path": "wakan/",
     "license_path": "wakan/wakan.html.txt",
     "sw_url": "https://wiki.suikawiki.org/n/%E3%80%8E%E5%92%8C%E7%BF%B0%E5%90%8D%E8%8B%91%E3%80%8F%E4%BB%AE%E5%90%8D%E5%AD%97%E4%BD%93%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9"
+  },
+  "tensho": {
+    "type": "imageset",
+    "desc": "『篆書字体データセット』収録ファイルに画像処理を加えたもの。",
+    "index_path": "tensho/image-index.json",
+    "license_url": "https://github.com/manakai/data-chars/blob/master/intermediate/jp/LICENSE#:~:text=%E7%AF%86%E6%9B%B8%E5%AD%97%E4%BD%93%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88",
+    "sw_url": "https://wiki.suikawiki.org/n/%E7%AF%86%E6%9B%B8%E5%AD%97%E4%BD%93%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88"
   },
 
   "swc": {

@@ -63,32 +63,39 @@ my $Fonts;
 
   $html .= join "\n", map {
     my $v = $Fonts->{$_};
+    my $r;
     if ($v->{type} eq 'opentype') {
-      sprintf q{
+      $r = sprintf q{
         <li><a href="opentype/%s">%s</a>
         (<a href="opentype/%s">license</a>, 
          <a href="%s">SuikaWiki</a>)
       }, $v->{path}, $_, $v->{license_path}, $v->{sw_url};
     } elsif ($v->{type} eq 'bitmap') {
-      sprintf q{
+      $r = sprintf q{
         <li><a href="bdf/%s">%s</a>
         (<a href="bdf/%s">BDF</a>, 
          <a href="bdf/%s">license</a>, 
          <a href="%s">SuikaWiki</a>)
       }, $v->{dat_path}, $_, $v->{bdf_path}, $v->{license_path}, $v->{sw_url};
     } elsif ($v->{type} eq 'imageset') {
-      sprintf q{
+      $r = sprintf q{
         <li><a href="imageset/%s">%s</a>
-        (<a href="imageset/%s">license</a>, <a href="%s">SuikaWiki</a>)
-      }, $v->{index_path}, $_, $v->{license_path}, $v->{sw_url};
+        (<a href="%s">license</a>, <a href="%s">SuikaWiki</a>)
+      }, $v->{index_path}, $_,
+          $v->{license_url} // ('imageset/' . $v->{license_path}),
+          $v->{sw_url};
     } elsif ($v->{type} eq 'images') {
-      sprintf q{
+      $r = sprintf q{
         <li><a href="images/%s">%s</a>
         (<a href="%s">license</a>, <a href="%s">SuikaWiki</a>)
       }, $v->{index_path}, $_, $v->{license_url}, $v->{sw_url};
     } else {
       die $v->{type};
     }
+    if (defined $v->{desc}) {
+      $r .= sprintf ' <small class=sw-weak>(%s)</small>', $v->{desc};
+    }
+    $r;
   } sort { $a cmp $b } keys %$Fonts;
 
   $html .= q{

@@ -117,10 +117,7 @@ build-for-docker: build-for-docker-from-old \
     local/bdf/wqy-unibit110/wqy-unibit.dat \
     local/glyphwiki \
     local/imageset/wakan \
-    local/imageset/wakan/image-index.json
-	#XXX
-	rm -fr local/glyphwiki/dump.tar.gz
-	#
+    local/imageset/tensho
 	chmod ugo+r -R local/opentype local/bdf local/glyphwiki local/imageset
 
 build-for-docker-from-old:
@@ -330,8 +327,11 @@ local/imageset/wakan:
 	cd local && $(WGET) -r -l 1 -np https://wakaba.github.io/nemui/local/data/wakan/index.html
 	mv local/wakaba.github.io/nemui/local/data/wakan/ $@
 	$(WGET) -O $@/wakan.html.txt https://kana.aa-ken.jp/wakan/
-local/imageset/wakan/image-index.json: # XXX
-	$(WGET) -O $@ https://wakaba.github.io/nemui/local/data/wakan/image-index.json
+	#$(WGET) -O $@ https://wakaba.github.io/nemui/local/data/wakan/image-index.json
+
+local/imageset/tensho:
+	mkdir -p $@
+	$(WGET) -O $@/tensho-images.json https://x0.at/sdve.json
 
 build-index: generated/fonts.css local/opentype/index/all.css
 

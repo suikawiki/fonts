@@ -117,6 +117,7 @@
 
 
 
+
           @font-face {
             font-family: '字躰帳変体仮名';
             src: url(../hentaigana-r50630/hentaigana-r50630.ttf);
@@ -133,7 +134,7 @@
 
           @font-face {
             font-family: '霧明朝';
-            src: url(../opentype/KiriMinL4002/KiriMinL.otf);
+            src: url(../KiriMinL4002/KiriMinL.otf);
             
           }
         /* License: Public Domain. */
