@@ -437,6 +437,13 @@
     "license_url": "https://github.com/manakai/data-chars/blob/master/intermediate/jp/LICENSE#:~:text=%E7%AF%86%E6%9B%B8%E5%AD%97%E4%BD%93%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88",
     "sw_url": "https://wiki.suikawiki.org/n/%E7%AF%86%E6%9B%B8%E5%AD%97%E4%BD%93%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88"
   },
+  "modmag": {
+    "type": "imageset",
+    "desc": "『近代雑誌OCR学習用データセット』収録ファイルに画像処理を加えたもの。",
+    "index_path": "modmag/image-index/part-0.json",
+    "license_url": "https://github.com/manakai/data-chars/blob/master/intermediate/jp/LICENSE#:~:text=%E8%BF%91%E4%BB%A3%E9%9B%91%E8%AA%8COCR%E5%AD%A6%E7%BF%92%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88",
+    "sw_url": "https://wiki.suikawiki.org/n/%E8%BF%91%E4%BB%A3%E9%9B%91%E8%AA%8COCR%E5%AD%A6%E7%BF%92%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88$15174"
+  },
 
   "swc": {
     "type": "images",

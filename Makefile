@@ -117,8 +117,12 @@ build-for-docker: build-for-docker-from-old \
     local/bdf/wqy-unibit110/wqy-unibit.dat \
     local/glyphwiki \
     local/imageset/wakan \
-    local/imageset/tensho
+    local/imageset/tensho \
+    local/imageset/modmag
 	chmod ugo+r -R local/opentype local/bdf local/glyphwiki local/imageset
+
+	#XXX
+	mv local/imageset/tensho/tensho-images.json local/imageset/tensho/image-index.json
 
 build-for-docker-from-old:
 	mkdir -p local
@@ -331,7 +335,13 @@ local/imageset/wakan:
 
 local/imageset/tensho:
 	mkdir -p $@
-	$(WGET) -O $@/tensho-images.json https://x0.at/sdve.json
+	$(WGET) -O $@/image-index.json https://x0.at/sdve.json
+
+local/imageset/modmag:
+	mkdir -p $@
+	$(WGET) -O local/modmag-images.tar.gz https://wakaba.github.io/nemui/modmag-image.tar.gz
+	cd $@ && tar zxf ../../modmag-image.tar.gz
+	mv modmag-images image-index
 
 build-index: generated/fonts.css local/opentype/index/all.css
 
