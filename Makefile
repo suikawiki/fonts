@@ -340,7 +340,7 @@ local/imageset/tensho:
 local/imageset/modmag:
 	mkdir -p $@
 	$(WGET) -O local/modmag-images.tar.gz https://wakaba.github.io/nemui/modmag-image.tar.gz
-	cd $@ && tar zxf ../../modmag-image.tar.gz
+	cd $@ && tar zxf ../../modmag-images.tar.gz
 	mv modmag-images image-index
 
 build-index: generated/fonts.css local/opentype/index/all.css
