@@ -118,11 +118,9 @@ build-for-docker: build-for-docker-from-old \
     local/glyphwiki \
     local/imageset/wakan \
     local/imageset/tensho \
-    local/imageset/modmag
+    local/imageset/modmag \
+    local/imageset/kuzushiji
 	chmod ugo+r -R local/opentype local/bdf local/glyphwiki local/imageset
-
-	#XXX
-	mv local/imageset/tensho/tensho-images.json local/imageset/tensho/image-index.json
 
 build-for-docker-from-old:
 	mkdir -p local
@@ -336,6 +334,12 @@ local/imageset/wakan:
 local/imageset/tensho:
 	mkdir -p $@
 	$(WGET) -O $@/image-index.json https://x0.at/sdve.json
+
+local/imageset/kuzushiji:
+	mkdir -p $@
+	$(WGET) -O local/kuzushiji-images.tar.gz https://x0.at/Pzis.tar.gz
+	cd $@ && tar zxf ../../kuzushiji-images.tar.gz
+	mv $@/kuzushiji-images $@/image-index
 
 local/imageset/modmag:
 	mkdir -p $@

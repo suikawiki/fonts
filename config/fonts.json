@@ -437,6 +437,13 @@
     "license_url": "https://github.com/manakai/data-chars/blob/master/intermediate/jp/LICENSE#:~:text=%E7%AF%86%E6%9B%B8%E5%AD%97%E4%BD%93%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88",
     "sw_url": "https://wiki.suikawiki.org/n/%E7%AF%86%E6%9B%B8%E5%AD%97%E4%BD%93%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88"
   },
+  "kuzushiji": {
+    "type": "imageset",
+    "desc": "『日本古典籍くずし字データセット』収録ファイルに画像処理を加えたもの。",
+    "index_path": "kuzushiji/image-index/part-0.json",
+    "license_url": "https://github.com/manakai/data-chars/blob/master/intermediate/jp/LICENSE#:~:text=%E6%97%A5%E6%9C%AC%E5%8F%A4%E5%85%B8%E7%B1%8D%E3%81%8F%E3%81%9A%E3%81%97%E5%AD%97%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88",
+    "sw_url": "https://wiki.suikawiki.org/n/%E6%97%A5%E6%9C%AC%E5%8F%A4%E5%85%B8%E7%B1%8D%E3%81%8F%E3%81%9A%E3%81%97%E5%AD%97%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88"
+  },
   "modmag": {
     "type": "imageset",
     "desc": "『近代雑誌OCR学習用データセット』収録ファイルに画像処理を加えたもの。",
