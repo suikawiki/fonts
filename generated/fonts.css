@@ -55,6 +55,13 @@
           }
         
 
+          @font-face {
+            font-family: 'I.Ming';
+            src: url(../iming-800/IMing.ttf);
+            
+          }
+        
+
 
           @font-face {
             font-family: 'IRGN2107';

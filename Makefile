@@ -79,6 +79,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/KiriMinL4002 \
     local/opentype/DroidSansFallback \
     local/opentype/hannomrcv \
+    local/opentype/iming-800 \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
@@ -243,6 +244,11 @@ local/opentype/hannomrcv:
 	$(WGET) -O $@/HanNomKhaiRegular300623.ttf https://x0.at/XLFz.ttf
 	$(WGET) -O $@/README.md.minh https://github.com/TKYKmori/Minh-Nguyen/raw/main/README.md
 	$(WGET) -O $@/README.md.gothic https://github.com/TKYKmori/Gothic-Nguyen/blob/main/README.md
+
+local/opentype/iming-800:
+	mkdir -p $@
+	$(WGET) -O $@/IMing.ttf https://github.com/ichitenfont/I.Ming/raw/master/8.00/I.Ming-8.00.ttf
+	$(WGET) -O $@/LICENSE.md.txt https://github.com/ichitenfont/I.Ming/raw/master/8.00/IPA_Font_License_Agreement_v1.0.md
 
 local/bdf/intlfonts-1.4.2:
 	$(WGET) -O local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
