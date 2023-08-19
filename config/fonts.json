@@ -74,37 +74,55 @@
     "type": "opentype",
     "path": "cns11643-20221114/TW-Sung-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
-    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643",
+    "font_family": "全字庫正宋體",
+    "unicode_range": "U+0000-FFFF",
+    "webfont": true
   },
   "全字庫正宋體 (SIP)": {
     "type": "opentype",
     "path": "cns11643-20221114/TW-Sung-Ext-B-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
-    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643",
+    "font_family": "全字庫正宋體",
+    "unicode_range": "U+20000-3FFFF",
+    "webfont": true
   },
   "全字庫正宋體 (PUP)": {
     "type": "opentype",
     "path": "cns11643-20221114/TW-Sung-Plus-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
-    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643",
+    "font_family": "全字庫正宋體",
+    "unicode_range": "U+F0000-10FFFF",
+    "webfont": true
   },
   "全字庫正楷體 (BMP)": {
     "type": "opentype",
     "path": "cns11643-20221114/TW-Kai-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
-    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643",
+    "font_family": "全字庫正楷體",
+    "unicode_range": "U+0000-FFFF",
+    "webfont": true
   },
   "全字庫正楷體 (SIP)": {
     "type": "opentype",
     "path": "cns11643-20221114/TW-Kai-Ext-B-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
-    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643",
+    "font_family": "全字庫正楷體",
+    "unicode_range": "U+20000-3FFFF",
+    "webfont": true
   },
   "全字庫正楷體 (PUP)": {
     "type": "opentype",
     "path": "cns11643-20221114/TW-Kai-Plus-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
-    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643",
+    "font_family": "全字庫正楷體",
+    "unicode_range": "U+F0000-10FFFF",
+    "webfont": true
   },
   "GNU Unifont": {
     "type": "opentype",
