@@ -164,8 +164,7 @@ local/opentype/cns11643-20221114:
 	-cd local && unzip cns.zip
 	rm -f local/Open_Data/Fonts/*.txt
 	mv local/Open_Data/Fonts $@
-	rm -fr local/opentype/cns11643-20221114/license.html
-	$(WGET) -O $@ https://data.gov.tw/license
+	$(WGET) -O $@/license.html.txt https://data.gov.tw/license
 
 local/opentype/uk:
 	mkdir -p local/opentype/uk
@@ -238,6 +237,7 @@ local/opentype/DroidSansFallback:
 	$(WGET) -O $@/LICENSE-aosp.txt https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/master/data/fonts/README.txt
 
 local/opentype/hannomrcv:
+	mkdir -p $@
 	$(WGET) -O $@/MinhNguyenExtraLight.ttf https://github.com/TKYKmori/Minh-Nguyen/raw/main/Minh%20Nguyen%20ExtraLight.ttf
 	$(WGET) -O $@/GothicNguyenRegular.ttf https://github.com/TKYKmori/Gothic-Nguyen/raw/main/Gothic%20Nguyen%20Regular.ttf
 	$(WGET) -O $@/HanNomKhaiRegular300623.ttf https://x0.at/XLFz.ttf
