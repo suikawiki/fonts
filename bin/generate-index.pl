@@ -55,6 +55,7 @@ my $Fonts;
 <title>Fonts</title>
 <link rel=license href="https://suika.suikawiki.org/c/pd" title="Public Domain.">
 <link rel=stylesheet href="https://wiki.suikawiki.org/styles/sw">
+<link rel=stylesheet href=generated/fonts.css>
 <link rel=icon href="https://wiki.suikawiki.org/favicon.ico">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <h1>Fonts</h1>

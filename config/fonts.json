@@ -88,6 +88,24 @@
     "license_path": "cns11643-20221114/license.html.txt",
     "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
   },
+  "全字庫正楷體 (BMP)": {
+    "type": "opentype",
+    "path": "cns11643-20221114/TW-Kai-98_1.ttf",
+    "license_path": "cns11643-20221114/license.html.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
+  },
+  "全字庫正楷體 (SIP)": {
+    "type": "opentype",
+    "path": "cns11643-20221114/TW-Kai-Ext-B-98_1.ttf",
+    "license_path": "cns11643-20221114/license.html.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
+  },
+  "全字庫正楷體 (PUP)": {
+    "type": "opentype",
+    "path": "cns11643-20221114/TW-Kai-Plus-98_1.ttf",
+    "license_path": "cns11643-20221114/license.html.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/CNS%2011643"
+  },
   "GNU Unifont": {
     "type": "opentype",
     "font_family": "GNU Unifont",
@@ -163,251 +181,310 @@
     "license_path": "DroidSansFallback/LICENSE-aosp.txt",
     "sw_url": "https://wiki.suikawiki.org/n/Droid%20Sans%20Fallback"
   },
-
+  "Han-Nom Khai": {
+    "type": "opentype",
+    "font_family": "Han-Nom Khai",
+    "webfont": true,
+    "path": "hannomrcv/HanNomKhaiRegular300623.ttf",
+    "license_path": "hannomrcv/HanNomKhaiRegular300623.ttf",
+    "sw_url": "https://wiki.suikawiki.org/n/%E6%BC%A2%E5%96%83%E5%BE%A9%E6%B4%BB%E5%A7%94%E5%93%A1%E4%BC%9A%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "Gothic Nguyen": {
+    "type": "opentype",
+    "font_family": "Gothic Nguyen",
+    "webfont": true,
+    "path": "hannomrcv/GothicNguyenRegular.ttf",
+    "license_path": "hannomrcv/README.md.gothic",
+    "sw_url": "https://wiki.suikawiki.org/n/%E6%BC%A2%E5%96%83%E5%BE%A9%E6%B4%BB%E5%A7%94%E5%93%A1%E4%BC%9A%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "Minh Nguyen ExtraLight": {
+    "type": "opentype",
+    "font_family": "Minh Nguyen ExtraLight",
+    "webfont": true,
+    "path": "hannomrcv/MinhNguyenExtraLight.ttf",
+    "license_path": "hannomrcv/README.md.minh",
+    "sw_url": "https://wiki.suikawiki.org/n/%E6%BC%A2%E5%96%83%E5%BE%A9%E6%B4%BB%E5%A7%94%E5%93%A1%E4%BC%9A%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  
   "jiskan16": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese.X/jiskan16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese.X/jiskan16.bdf",
     "license_path": "intlfonts-1.4.2/Japanese.X/README",
-    "sw_url": "https://wiki.suikawiki.org/n/jiskan"
+    "sw_url": "https://wiki.suikawiki.org/n/jiskan",
+    "desc": "GNU Intlfonts"
   },
   "j78-16": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese/j78-16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese/j78-16.bdf",
     "license_path": "intlfonts-1.4.2/Japanese/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "j90-16": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese/j90-16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese/j90-16.bdf",
     "license_path": "intlfonts-1.4.2/Japanese/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "jksp16": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese/jksp16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese/jksp16.bdf",
     "license_path": "intlfonts-1.4.2/Japanese/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "j00-1-16": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese/j00-1-16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese/j00-1-16.bdf",
     "license_path": "intlfonts-1.4.2/Japanese/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "j00-2-16": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese/j00-2-16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese/j00-2-16.bdf",
     "license_path": "intlfonts-1.4.2/Japanese/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "jiskan24": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese.X/jiskan24.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese.X/jiskan24.bdf",
     "license_path": "intlfonts-1.4.2/Japanese.X/README",
-    "sw_url": "https://wiki.suikawiki.org/n/jiskan"
+    "sw_url": "https://wiki.suikawiki.org/n/jiskan",
+    "desc": "GNU Intlfonts"
   },
   "sish16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Chinese/sish16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Chinese/sish16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Chinese/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "guob16": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Chinese/guob16.dat",
     "bdf_path": "intlfonts-1.4.2/Chinese/guob16.bdf",
     "license_path": "intlfonts-1.4.2/Chinese/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "gb16fs": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Chinese.X/gb16fs.dat",
     "bdf_path": "intlfonts-1.4.2/Chinese.X/gb16fs.bdf",
     "license_path": "intlfonts-1.4.2/Chinese.X/gb16fs.bdf",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "hanglg16": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Korean.X/hanglg16.dat",
     "bdf_path": "intlfonts-1.4.2/Korean.X/hanglg16.bdf",
     "license_path": "intlfonts-1.4.2/Korean.X/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "taipei16": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Chinese/taipei16.dat",
     "bdf_path": "intlfonts-1.4.2/Chinese/taipei16.bdf",
     "license_path": "intlfonts-1.4.2/Chinese/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "sish16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Chinese/sish16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Chinese/sish16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Chinese/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "ind1c24-mule": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/ind1c24-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/ind1c24-mule.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "ind24-mule": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/ind24-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/ind24-mule.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "isci24-mule": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/isci24-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/isci24-mule.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "lao16-mule": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lao16-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lao16-mule.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "thai16": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/thai16.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/thai16.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "xtis24": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/xtis24.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/xtis24.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "visc16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/visc16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/visc16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "tib24-mule": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/tib24-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/tib24-mule.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "tib1c24-mule": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/tib1c24-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/tib1c24-mule.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "ipa16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/ipa16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/ipa16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "cyr16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/cyr16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/cyr16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "grk16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/grk16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/grk16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "koi16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/koi16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/koi16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "lt1-16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lt1-16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lt1-16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "lt2-16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lt2-16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lt2-16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "lt3-16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lt3-16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lt3-16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "lt4-16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lt4-16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lt4-16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "lt5-16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lt5-16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lt5-16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "heb16-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Misc/heb16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Misc/heb16-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "arab16-0-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Misc/arab16-0-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Misc/arab16-0-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "arab16-1-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Misc/arab16-1-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Misc/arab16-1-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "arab16-2-etl": {
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Misc/arab16-2-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Misc/arab16-2-etl.bdf",
     "license_path": "intlfonts-1.4.2/Asian/README",
-    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts"
+    "sw_url": "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+    "desc": "GNU Intlfonts"
   },
   "cgreek16": {
     "type": "bitmap",
@@ -434,21 +511,21 @@
     "type": "imageset",
     "desc": "『篆書字体データセット』収録ファイルに画像処理を加えたもの。",
     "index_path": "tensho/image-index.json",
-    "license_url": "https://github.com/manakai/data-chars/blob/master/intermediate/jp/LICENSE#:~:text=%E7%AF%86%E6%9B%B8%E5%AD%97%E4%BD%93%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88",
+    "license_url": "https://github.com/manakai/data-chars/blob/master/intermediate/mj/LICENSE#:~:text=%E7%AF%86%E6%9B%B8%E5%AD%97%E4%BD%93%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88",
     "sw_url": "https://wiki.suikawiki.org/n/%E7%AF%86%E6%9B%B8%E5%AD%97%E4%BD%93%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88"
   },
   "kuzushiji": {
     "type": "imageset",
     "desc": "『日本古典籍くずし字データセット』収録ファイルに画像処理を加えたもの。",
     "index_path": "kuzushiji/image-index/part-0.json",
-    "license_url": "https://github.com/manakai/data-chars/blob/master/intermediate/jp/LICENSE#:~:text=%E6%97%A5%E6%9C%AC%E5%8F%A4%E5%85%B8%E7%B1%8D%E3%81%8F%E3%81%9A%E3%81%97%E5%AD%97%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88",
+    "license_url": "https://github.com/manakai/data-chars/blob/master/intermediate/mj/LICENSE#:~:text=%E6%97%A5%E6%9C%AC%E5%8F%A4%E5%85%B8%E7%B1%8D%E3%81%8F%E3%81%9A%E3%81%97%E5%AD%97%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88",
     "sw_url": "https://wiki.suikawiki.org/n/%E6%97%A5%E6%9C%AC%E5%8F%A4%E5%85%B8%E7%B1%8D%E3%81%8F%E3%81%9A%E3%81%97%E5%AD%97%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88"
   },
   "modmag": {
     "type": "imageset",
     "desc": "『近代雑誌OCR学習用データセット』収録ファイルに画像処理を加えたもの。",
     "index_path": "modmag/image-index/part-0.json",
-    "license_url": "https://github.com/manakai/data-chars/blob/master/intermediate/jp/LICENSE#:~:text=%E8%BF%91%E4%BB%A3%E9%9B%91%E8%AA%8COCR%E5%AD%A6%E7%BF%92%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88",
+    "license_url": "https://github.com/manakai/data-chars/blob/master/intermediate/mj/LICENSE#:~:text=%E8%BF%91%E4%BB%A3%E9%9B%91%E8%AA%8COCR%E5%AD%A6%E7%BF%92%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88",
     "sw_url": "https://wiki.suikawiki.org/n/%E8%BF%91%E4%BB%A3%E9%9B%91%E8%AA%8COCR%E5%AD%A6%E7%BF%92%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88$15174"
   },
 

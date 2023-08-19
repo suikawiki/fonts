@@ -41,6 +41,20 @@
           }
         
 
+          @font-face {
+            font-family: 'Gothic Nguyen';
+            src: url(../hannomrcv/GothicNguyenRegular.ttf);
+            
+          }
+        
+
+          @font-face {
+            font-family: 'Han-Nom Khai';
+            src: url(../hannomrcv/HanNomKhaiRegular300623.ttf);
+            
+          }
+        
+
 
           @font-face {
             font-family: 'IRGN2107';
@@ -64,11 +78,21 @@
         
 
           @font-face {
+            font-family: 'Minh Nguyen ExtraLight';
+            src: url(../hannomrcv/MinhNguyenExtraLight.ttf);
+            
+          }
+        
+
+          @font-face {
             font-family: 'NomNaTong';
             src: url(../nom-506/NomNaTong-Regular.ttf);
             
           }
         
+
+
+
 
 
 
