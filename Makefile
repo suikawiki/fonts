@@ -1,5 +1,6 @@
 CURL = curl
 WGET = wget
+SAVEURL = $(WGET) -O
 GIT = git
 
 all: data build
@@ -48,7 +49,7 @@ glyph-images: bin/generate-images.pl local/glyphs.json
 	$(PERL) $<
 
 local/glyphs.json:
-	$(WGET) -O $@ https://raw.githubusercontent.com/suikawiki/extracted/master/data/extracted/data-glyph-.json
+	$(SAVEURL) $@ https://raw.githubusercontent.com/suikawiki/extracted/master/data/extracted/data-glyph-.json
 
 build-github-pages: git-submodules build-gp-main build-gp-index
 
@@ -80,6 +81,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/DroidSansFallback \
     local/opentype/hannomrcv \
     local/opentype/iming-800 \
+    local/opentype/fallback-question/fallback-question.ttf \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
@@ -132,61 +134,61 @@ build-for-docker-from-old:
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/imageset /local/imageset || mkdir -p local/imageset
 
 local/opentype/ipamjm00601:
-	$(WGET) -O local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
+	$(SAVEURL) local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
 	mkdir -p $@
 	cd $@ && unzip ../../ipamjm00601.zip
 
 local/opentype/haranoaji-20220220:
 	mkdir -p $@
-	$(WGET) -O $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFonts/44a23f1296c892d63f54265cf127fae73f0837a8/LICENSE
-	$(WGET) -O $@/HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFonts/44a23f1296c892d63f54265cf127fae73f0837a8/HaranoAjiGothic-ExtraLight.otf
+	$(SAVEURL) $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFonts/44a23f1296c892d63f54265cf127fae73f0837a8/LICENSE
+	$(SAVEURL) $@/HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFonts/44a23f1296c892d63f54265cf127fae73f0837a8/HaranoAjiGothic-ExtraLight.otf
 local/opentype/haranoajicn-20220220:
 	mkdir -p $@
-	$(WGET) -O $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsCN/a99536d0ec64e6c0e1ece276064136a15dd41b87/LICENSE
-	$(WGET) -O $@/HaranoAjiGothicCN-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsCN/a99536d0ec64e6c0e1ece276064136a15dd41b87/HaranoAjiGothicCN-ExtraLight.otf
+	$(SAVEURL) $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsCN/a99536d0ec64e6c0e1ece276064136a15dd41b87/LICENSE
+	$(SAVEURL) $@/HaranoAjiGothicCN-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsCN/a99536d0ec64e6c0e1ece276064136a15dd41b87/HaranoAjiGothicCN-ExtraLight.otf
 local/opentype/haranoajitw-20220220:
 	mkdir -p $@
-	$(WGET) -O $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsTW/d48499ce7b819817046d23e1bb9b469e43bafd65/LICENSE
-	$(WGET) -O $@/HaranoAjiGothicTW-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsTW/d48499ce7b819817046d23e1bb9b469e43bafd65/HaranoAjiGothicTW-ExtraLight.otf
+	$(SAVEURL) $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsTW/d48499ce7b819817046d23e1bb9b469e43bafd65/LICENSE
+	$(SAVEURL) $@/HaranoAjiGothicTW-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsTW/d48499ce7b819817046d23e1bb9b469e43bafd65/HaranoAjiGothicTW-ExtraLight.otf
 local/opentype/haranoajikr-20220220:
 	mkdir -p $@
-	$(WGET) -O $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsKR/1937089673c70826c05e7c792f37b13436c61cd7/LICENSE
-	$(WGET) -O $@/HaranoAjiGothicKR-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsKR/1937089673c70826c05e7c792f37b13436c61cd7/HaranoAjiGothicKR-ExtraLight.otf
+	$(SAVEURL) $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsKR/1937089673c70826c05e7c792f37b13436c61cd7/LICENSE
+	$(SAVEURL) $@/HaranoAjiGothicKR-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsKR/1937089673c70826c05e7c792f37b13436c61cd7/HaranoAjiGothicKR-ExtraLight.otf
 local/opentype/haranoajik1-20220220:
 	mkdir -p $@
-	$(WGET) -O $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/LICENSE
-	$(WGET) -O $@/HaranoAjiGothicK1-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/HaranoAjiGothicK1-ExtraLight.otf
+	$(SAVEURL) $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/LICENSE
+	$(SAVEURL) $@/HaranoAjiGothicK1-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/HaranoAjiGothicK1-ExtraLight.otf
 local/opentype/SourceHanSerifAKR9-20190729:
 	mkdir -p $@
-	$(WGET) -O $@/SourceHanSerifAKR9-Regular.otf https://github.com/adobe-type-tools/Adobe-KR/releases/download/20190729/SourceHanSerifAKR9-Regular.otf
+	$(SAVEURL) $@/SourceHanSerifAKR9-Regular.otf https://github.com/adobe-type-tools/Adobe-KR/releases/download/20190729/SourceHanSerifAKR9-Regular.otf
 
 local/opentype/cns11643-20221114:
-	$(WGET) -O local/cns.zip https://www.cns11643.gov.tw/AIDB/Open_Data.zip
+	$(SAVEURL) local/cns.zip https://www.cns11643.gov.tw/AIDB/Open_Data.zip
 	-cd local && unzip cns.zip
 	rm -f local/Open_Data/Fonts/*.txt
 	mv local/Open_Data/Fonts $@
-	$(WGET) -O $@/license.html.txt https://data.gov.tw/license
+	$(SAVEURL) $@/license.html.txt https://data.gov.tw/license
 
 local/opentype/uk:
 	mkdir -p local/opentype/uk
-	$(WGET) -O $@/IRGN2107.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2107.ttf
-	$(WGET) -O $@/IRGN2232.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2232.ttf
-	$(WGET) -O $@/LICENSE.md https://github.com/unicode-org/uk-source-ideographs/blob/main/LICENSE.md
+	$(SAVEURL) $@/IRGN2107.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2107.ttf
+	$(SAVEURL) $@/IRGN2232.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2232.ttf
+	$(SAVEURL) $@/LICENSE.md https://github.com/unicode-org/uk-source-ideographs/blob/main/LICENSE.md
 
 local/opentype/nom-506:
 	mkdir -p $@
-	$(WGET) -O $@/NomNaTong-Regular.ttf https://github.com/nomfoundation/font/releases/download/v5.06/NomNaTong-Regular.ttf
-	$(WGET) -O $@/LICENSE https://github.com/nomfoundation/font/blob/master/LICENSE
+	$(SAVEURL) $@/NomNaTong-Regular.ttf https://github.com/nomfoundation/font/releases/download/v5.06/NomNaTong-Regular.ttf
+	$(SAVEURL) $@/LICENSE https://github.com/nomfoundation/font/blob/master/LICENSE
 
 local/opentype/unifont-15006:
 	mkdir -p $@
-	$(WGET) -O $@/unifont.ttf https://unifoundry.com/pub/unifont/unifont-15.0.06/font-builds/unifont-15.0.06.ttf
-	$(WGET) -O $@/unifont_upper.ttf https://unifoundry.com/pub/unifont/unifont-15.0.06/font-builds/unifont_upper-15.0.06.ttf
-	$(WGET) -O $@/unifont_csur.ttf https://unifoundry.com/pub/unifont/unifont-15.0.06/font-builds/unifont_csur-15.0.06.ttf
-	$(WGET) -O $@/index.html.txt https://unifoundry.com/unifont/index.html
+	$(SAVEURL) $@/unifont.ttf https://unifoundry.com/pub/unifont/unifont-15.0.06/font-builds/unifont-15.0.06.ttf
+	$(SAVEURL) $@/unifont_upper.ttf https://unifoundry.com/pub/unifont/unifont-15.0.06/font-builds/unifont_upper-15.0.06.ttf
+	$(SAVEURL) $@/unifont_csur.ttf https://unifoundry.com/pub/unifont/unifont-15.0.06/font-builds/unifont_csur-15.0.06.ttf
+	$(SAVEURL) $@/index.html.txt https://unifoundry.com/unifont/index.html
 
 local/GenEiKoburiMin_v6.1.zip:
-	$(WGET) -O $@.gz https://okoneya.jp/font/GenEiKoburiMin_v6.1.zip
+	$(SAVEURL) $@.gz https://okoneya.jp/font/GenEiKoburiMin_v6.1.zip
 	gzip -d $@.gz
 local/GenEiKoburiMin_v6.1a: local/GenEiKoburiMin_v6.1.zip
 	cd local && unzip GenEiKoburiMin_v6.1.zip
@@ -203,10 +205,10 @@ local/bin/lhasa: local/lhasa-0.2.0.tar.gz
 	cp local/lhasa-0.2.0/src/lha local/bin/lhasa
 local/lhasa-0.2.0.tar.gz:
 	mkdir -p local
-	$(WGET) -O $@ https://soulsphere.org/projects/lhasa/lhasa-0.2.0.tar.gz
+	$(SAVEURL) $@ https://soulsphere.org/projects/lhasa/lhasa-0.2.0.tar.gz
 
 local/JIS-Engraving-080803.lzh:
-	$(WGET) -O $@ http://izumilib.web.fc2.com/jis-engraving/JIS-Engraving-080803.lzh
+	$(SAVEURL) $@ http://izumilib.web.fc2.com/jis-engraving/JIS-Engraving-080803.lzh
 local/opentype/jis-engraving-080803:
 	$(MAKE) local/bin/lhasa local/JIS-Engraving-080803.lzh
 	mkdir -p $@
@@ -215,11 +217,11 @@ local/opentype/jis-engraving-080803:
 
 local/opentype/hentaigana-r50630:
 	mkdir -p $@
-	$(WGET) -O $@/hentaigana-r50630.ttf https://wakaba.github.io/nemui/local/data/hentaigana-r50630.ttf
-	$(WGET) -O $@/4889029.html.txt https://hentaigana.booth.pm/items/4889029
+	$(SAVEURL) $@/hentaigana-r50630.ttf https://wakaba.github.io/nemui/local/data/hentaigana-r50630.ttf
+	$(SAVEURL) $@/4889029.html.txt https://hentaigana.booth.pm/items/4889029
 
 local/kml.zip:
-	$(WGET) -O $@ http://www.akenotsuki.com/eyeben/fonts/files/KiriMinL4_002.zip
+	$(SAVEURL) $@ http://www.akenotsuki.com/eyeben/fonts/files/KiriMinL4_002.zip
 local/KiriMinL.otf: local/kml.zip
 	cd local && unzip kml.zip
 	touch $@
@@ -227,31 +229,42 @@ local/opentype/KiriMinL4002:
 	$(MAKE) local/KiriMinL.otf
 	mkdir -p $@
 	cp local/KiriMinL.otf $@/KiriMinL.otf
-	$(WGET) -O $@/kirimin.html.txt http://www.akenotsuki.com/eyeben/fonts/kirimin.html
+	$(SAVEURL) $@/kirimin.html.txt http://www.akenotsuki.com/eyeben/fonts/kirimin.html
 
 local/opentype/DroidSansFallback:
 	mkdir -p $@
-	$(WGET) -O $@/DroidSansFallback-ff.ttf https://raw.githubusercontent.com/jenskutilek/free-fonts/master/Droid/Droid%20Sans%20Fallback/DroidSansFallback.ttf
-	$(WGET) -O $@/LICENSE-ff.txt https://raw.githubusercontent.com/jenskutilek/free-fonts/master/LICENSE.txt
-	$(WGET) -O $@/DroidSansFallback-aosp.ttf https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/master/data/fonts/DroidSansFallback.ttf
-	$(WGET) -O $@/DroidSansFallbackFull-aosp.ttf https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/master/data/fonts/DroidSansFallbackFull.ttf
-	$(WGET) -O $@/LICENSE-aosp.txt https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/master/data/fonts/README.txt
+	$(SAVEURL) $@/DroidSansFallback-ff.ttf https://raw.githubusercontent.com/jenskutilek/free-fonts/master/Droid/Droid%20Sans%20Fallback/DroidSansFallback.ttf
+	$(SAVEURL) $@/LICENSE-ff.txt https://raw.githubusercontent.com/jenskutilek/free-fonts/master/LICENSE.txt
+	$(SAVEURL) $@/DroidSansFallback-aosp.ttf https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/master/data/fonts/DroidSansFallback.ttf
+	$(SAVEURL) $@/DroidSansFallbackFull-aosp.ttf https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/master/data/fonts/DroidSansFallbackFull.ttf
+	$(SAVEURL) $@/LICENSE-aosp.txt https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/master/data/fonts/README.txt
 
 local/opentype/hannomrcv:
 	mkdir -p $@
-	$(WGET) -O $@/MinhNguyenExtraLight.ttf https://github.com/TKYKmori/Minh-Nguyen/raw/main/Minh%20Nguyen%20ExtraLight.ttf
-	$(WGET) -O $@/GothicNguyenRegular.ttf https://github.com/TKYKmori/Gothic-Nguyen/raw/main/Gothic%20Nguyen%20Regular.ttf
-	$(WGET) -O $@/HanNomKhaiRegular300623.ttf https://x0.at/XLFz.ttf
-	$(WGET) -O $@/README.md.minh https://github.com/TKYKmori/Minh-Nguyen/raw/main/README.md
-	$(WGET) -O $@/README.md.gothic https://github.com/TKYKmori/Gothic-Nguyen/blob/main/README.md
+	$(SAVEURL) $@/MinhNguyenExtraLight.ttf https://github.com/TKYKmori/Minh-Nguyen/raw/main/Minh%20Nguyen%20ExtraLight.ttf
+	$(SAVEURL) $@/GothicNguyenRegular.ttf https://github.com/TKYKmori/Gothic-Nguyen/raw/main/Gothic%20Nguyen%20Regular.ttf
+	$(SAVEURL) $@/HanNomKhaiRegular300623.ttf https://x0.at/XLFz.ttf
+	$(SAVEURL) $@/README.md.minh https://github.com/TKYKmori/Minh-Nguyen/raw/main/README.md
+	$(SAVEURL) $@/README.md.gothic https://github.com/TKYKmori/Gothic-Nguyen/blob/main/README.md
 
 local/opentype/iming-800:
 	mkdir -p $@
-	$(WGET) -O $@/IMing.ttf https://github.com/ichitenfont/I.Ming/raw/master/8.00/I.Ming-8.00.ttf
-	$(WGET) -O $@/LICENSE.md.txt https://github.com/ichitenfont/I.Ming/raw/master/8.00/IPA_Font_License_Agreement_v1.0.md
+	$(SAVEURL) $@/IMing.ttf https://github.com/ichitenfont/I.Ming/raw/master/8.00/I.Ming-8.00.ttf
+	$(SAVEURL) $@/LICENSE.md.txt https://github.com/ichitenfont/I.Ming/raw/master/8.00/IPA_Font_License_Agreement_v1.0.md
+
+local/opentype.js:
+	$(SAVEURL) $@ https://raw.githubusercontent.com/manakai/opentypejs/master/dist/opentype.js
+
+local/fallback-question.ttf: bin/create-fallback-question.js local/opentype.js
+	docker run -i -v `pwd`:/app node bash -c 'cd /app && node bin/create-fallback-question.js'
+
+local/opentype/fallback-question/fallback-question.ttf:
+	mkdir -p local/opentype/fallback-question
+	$(MAKE) local/fallback-question.ttf
+	mv local/fallback-question.ttf $@
 
 local/bdf/intlfonts-1.4.2:
-	$(WGET) -O local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
+	$(SAVEURL) local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
 	mkdir -p $@
 	cd local/bdf && tar zxf ../intlfonts-1.4.2.tar.gz
 local/bdf/intlfonts-1.4.2/Chinese/sish16-etl.dat \
@@ -305,7 +318,7 @@ local/bdf/intlfonts-1.4.2/Asian/tib1c24-mule.dat \
 	$(PERL) bin/bdftodat.pl $< $@ 9494 24/2
 
 local/cgreek-2.tar.gz:
-	$(WGET) -O $@ http://ring.ix.oita-u.ac.jp/archives/pc/meadow/2.00/packages/cgreek-2-pkg.tar.gz
+	$(SAVEURL) $@ http://ring.ix.oita-u.ac.jp/archives/pc/meadow/2.00/packages/cgreek-2-pkg.tar.gz
 local/cgreek-2:
 	$(MAKE) local/cgreek-2.tar.gz
 	mkdir -p $@
@@ -321,7 +334,7 @@ local/bdf/cgreek/cgreek16.dat:
 	$(PERL) bin/bdftodat.pl $< $@ raw 16/2
 
 local/unibit110.tar.gz:
-	$(WGET) -O $@ https://master.dl.sourceforge.net/project/wqy/wqy-unibit/1.1.0/wqy-unibit-bdf-1.1.0-1.tar.gz?viasf=1
+	$(SAVEURL) $@ https://master.dl.sourceforge.net/project/wqy/wqy-unibit/1.1.0/wqy-unibit-bdf-1.1.0-1.tar.gz?viasf=1
 local/wqy-unibit: local/unibit110.tar.gz
 	cd local && tar zxf ../$<
 local/bdf/wqy-unibit110:
@@ -336,27 +349,27 @@ local/bdf/wqy-unibit110/wqy-unibit.dat: \
 
 local/glyphwiki:
 	mkdir -p local/glyphwiki
-	$(WGET) -O $@/dump-1.tar.gz https://glyphwiki.org/dump.tar.gz
+	$(SAVEURL) $@/dump-1.tar.gz https://glyphwiki.org/dump.tar.gz
 
 local/imageset/wakan:
 	cd local && $(WGET) -r -l 1 -np https://wakaba.github.io/nemui/local/data/wakan/index.html
 	mv local/wakaba.github.io/nemui/local/data/wakan/ $@
-	$(WGET) -O $@/wakan.html.txt https://kana.aa-ken.jp/wakan/
-	#$(WGET) -O $@ https://wakaba.github.io/nemui/local/data/wakan/image-index.json
+	$(SAVEURL) $@/wakan.html.txt https://kana.aa-ken.jp/wakan/
+	#$(SAVEURL) $@ https://wakaba.github.io/nemui/local/data/wakan/image-index.json
 
 local/imageset/tensho:
 	mkdir -p $@
-	$(WGET) -O $@/image-index.json https://x0.at/sdve.json
+	$(SAVEURL) $@/image-index.json https://x0.at/sdve.json
 
 local/imageset/kuzushiji:
 	mkdir -p $@
-	$(WGET) -O local/kuzushiji-images.tar.gz https://x0.at/Pzis.tar.gz
+	$(SAVEURL) local/kuzushiji-images.tar.gz https://x0.at/Pzis.tar.gz
 	cd $@ && tar zxf ../../kuzushiji-images.tar.gz
 	mv $@/kuzushiji-images $@/image-index
 
 local/imageset/modmag:
 	mkdir -p $@
-	$(WGET) -O local/modmag-images.tar.gz https://wakaba.github.io/nemui/modmag-image.tar.gz
+	$(SAVEURL) local/modmag-images.tar.gz https://wakaba.github.io/nemui/modmag-image.tar.gz
 	cd $@ && tar zxf ../../modmag-images.tar.gz
 	mv $@/modmag-images $@/image-index
 

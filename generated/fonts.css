@@ -21,6 +21,13 @@
         
 
           @font-face {
+            font-family: 'Fallback Red Question';
+            src: url(../fallback-question/fallback-question.ttf);
+            
+          }
+        
+
+          @font-face {
             font-family: 'GNU Unifont';
             src: url(../unifont-15006/unifont.ttf);
             unicode-range: U+0000-FFFF;

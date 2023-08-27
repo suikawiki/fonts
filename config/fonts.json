@@ -231,6 +231,14 @@
     "license_path": "iming-800/LICENSE.md.txt",
     "sw_url": "https://wiki.suikawiki.org/n/I.Ming"
   },
+  "Fallback Red Question": {
+    "type": "opentype",
+    "font_family": "Fallback Red Question",
+    "webfont": true,
+    "path": "fallback-question/fallback-question.ttf",
+    "license_url": "https://github.com/suikawiki/fonts/blob/master/bin/create-fallback-question.pl",
+    "sw_url": "https://github.com/suikawiki/fonts/blob/master/bin/create-fallback-question.pl"
+  },
   
   "jiskan16": {
     "type": "bitmap",

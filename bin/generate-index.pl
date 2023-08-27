@@ -68,9 +68,11 @@ my $Fonts;
     if ($v->{type} eq 'opentype') {
       $r = sprintf q{
         <li><a href="opentype/%s">%s</a>
-        (<a href="opentype/%s">license</a>, 
+        (<a href="%s">license</a>, 
          <a href="%s">SuikaWiki</a>)
-      }, $v->{path}, $_, $v->{license_path}, $v->{sw_url};
+      }, $v->{path}, $_,
+          $v->{license_url} // ('opentype/' . $v->{license_path}),
+          $v->{sw_url};
     } elsif ($v->{type} eq 'bitmap') {
       $r = sprintf q{
         <li><a href="bdf/%s">%s</a>
