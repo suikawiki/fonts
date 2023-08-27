@@ -261,7 +261,7 @@ local/fallback-question.ttf: bin/create-fallback-question.js local/opentype.js
 local/opentype/fallback-question/fallback-question.ttf:
 	mkdir -p local/opentype/fallback-question
 	$(MAKE) local/fallback-question.ttf
-	mv local/fallback-question.ttf $@
+	cp local/fallback-question.ttf $@
 
 local/bdf/intlfonts-1.4.2:
 	$(SAVEURL) local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
