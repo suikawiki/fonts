@@ -64,6 +64,8 @@ build-gp-main:
 
 build-for-docker: build-for-docker-from-old \
     local/opentype/ipamjm00601 \
+    local/opentype/ipamjm00101 \
+    local/opentype/ipaexfont00401 \
     local/opentype/haranoaji-20220220 \
     local/opentype/haranoajicn-20220220 \
     local/opentype/haranoajitw-20220220 \
@@ -137,6 +139,18 @@ local/opentype/ipamjm00601:
 	$(SAVEURL) local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
 	mkdir -p $@
 	cd $@ && unzip ../../ipamjm00601.zip
+
+local/opentype/ipamjm00101:
+	$(SAVEURL) local/ipamjm00101.zip https://github.com/mandel59/MJView/raw/master/data/ipamjm00101.zip
+	mkdir -p $@
+	cd local && unzip ipamjm00101.zip
+	mv local/ipamjm00101/* $@/
+
+local/opentype/ipaexfont00401:
+	$(SAVEURL) local/ipaexfont00401.zip https://moji.or.jp/wp-content/ipafont/IPAexfont/IPAexfont00401.zip
+	mkdir -p $@
+	cd local && unzip ipaexfont00401.zip
+	mv local/IPAexfont00401/* $@/
 
 local/opentype/haranoaji-20220220:
 	mkdir -p $@

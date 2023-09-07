@@ -34,6 +34,24 @@
     "license_path": "ipamjm00601/IPA_Font_License_Agreement_v1.0.txt",
     "sw_url": "https://wiki.suikawiki.org/n/IPAmj%E6%98%8E%E6%9C%9D"
   },
+  "IPAmj明朝 Ver.001.01": {
+    "type": "opentype",
+    "path": "ipamjm00101/ipamjm.ttf",
+    "license_path": "ipamjm00101/IPA_Font_License_Agreement_v1.0.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/IPAmj%E6%98%8E%E6%9C%9D"
+  },
+  "IPAex明朝": {
+    "type": "opentype",
+    "path": "ipaexfont00401/ipaexm.ttf",
+    "license_path": "ipaexfont00401/IPA_Font_License_Agreement_v1.0.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/IPAex%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "IPAexゴシック": {
+    "type": "opentype",
+    "path": "ipaexfont00401/ipaexg.ttf",
+    "license_path": "ipaexfont00401/IPA_Font_License_Agreement_v1.0.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/IPAex%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
   "原ノ味角ゴシック": {
     "type": "opentype",
     "path": "haranoaji-20220220/HaranoAjiGothic-ExtraLight.otf",
@@ -236,8 +254,8 @@
     "font_family": "Fallback Red Question",
     "webfont": true,
     "path": "fallback-question/fallback-question.ttf",
-    "license_url": "https://github.com/suikawiki/fonts/blob/master/bin/create-fallback-question.pl",
-    "sw_url": "https://github.com/suikawiki/fonts/blob/master/bin/create-fallback-question.pl"
+    "license_url": "https://github.com/suikawiki/fonts/blob/master/bin/create-fallback-question.js",
+    "sw_url": "https://github.com/suikawiki/fonts/blob/master/bin/create-fallback-question.js"
   },
   
   "jiskan16": {
