@@ -52,35 +52,105 @@
     "license_path": "ipaexfont00401/IPA_Font_License_Agreement_v1.0.txt",
     "sw_url": "https://wiki.suikawiki.org/n/IPAex%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
-  "原ノ味角ゴシック": {
+  "原ノ味角ゴシック (20220220)": {
     "type": "opentype",
     "path": "haranoaji-20220220/HaranoAjiGothic-ExtraLight.otf",
     "license_path": "haranoaji-20220220/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
-  "原ノ味角ゴシック (CN)": {
+  "原ノ味角ゴシック (CN, 20220220)": {
     "type": "opentype",
     "path": "haranoajicn-20220220/HaranoAjiGothicCN-ExtraLight.otf",
     "license_path": "haranoajicn-20220220/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
-  "原ノ味角ゴシック (TW)": {
+  "原ノ味角ゴシック (TW, 20220220)": {
     "type": "opentype",
     "path": "haranoajitw-20220220/HaranoAjiGothicTW-ExtraLight.otf",
     "license_path": "haranoajitw-20220220/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
-  "原ノ味角ゴシック (KR)": {
+  "原ノ味角ゴシック (KR, 20220220)": {
     "type": "opentype",
     "path": "haranoajikr-20220220/HaranoAjiGothicKR-ExtraLight.otf",
     "license_path": "haranoajikr-20220220/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
-  "原ノ味角ゴシック (K1)": {
+  "原ノ味角ゴシック (K1, 20220220)": {
     "type": "opentype",
     "path": "haranoajik1-20220220/HaranoAjiGothicK1-ExtraLight.otf",
     "license_path": "haranoajik1-20220220/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "原ノ味角ゴシック": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "haranoaji-20230610/HaranoAjiGothic-ExtraLight.otf",
+    "license_path": "haranoaji-20230610/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "原ノ味角ゴシック (CN)": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "haranoaji-20230610/HaranoAjiGothicCN-ExtraLight.otf",
+    "license_path": "haranoaji-20230610/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "原ノ味角ゴシック (TW)": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "haranoaji-20230610/HaranoAjiGothicTW-ExtraLight.otf",
+    "license_path": "haranoaji-20230610/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "原ノ味角ゴシック (KR)": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "haranoaji-20230610/HaranoAjiGothicKR-ExtraLight.otf",
+    "license_path": "haranoaji-20230610/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "原ノ味角ゴシック (K1)": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "haranoaji-20230610/HaranoAjiGothicK1-ExtraLight.otf",
+    "license_path": "haranoaji-20230610/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
+  },
+  "原ノ味明朝": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "haranoaji-20230610/HaranoAjiMincho-ExtraLight.otf",
+    "license_path": "haranoaji-20230610/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
+  },
+  "原ノ味明朝 (CN)": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "haranoaji-20230610/HaranoAjiMinchoCN-ExtraLight.otf",
+    "license_path": "haranoaji-20230610/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
+  },
+  "原ノ味明朝 (TW)": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "haranoaji-20230610/HaranoAjiMinchoTW-ExtraLight.otf",
+    "license_path": "haranoaji-20230610/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
+  },
+  "原ノ味明朝 (KR)": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "haranoaji-20230610/HaranoAjiMinchoKR-ExtraLight.otf",
+    "license_path": "haranoaji-20230610/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
+  },
+  "原ノ味明朝 (K1)": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "haranoaji-20230610/HaranoAjiMinchoK1-ExtraLight.otf",
+    "license_path": "haranoaji-20230610/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
   },
   "Source Han Serif (AKR9)": {
     "type": "opentype",

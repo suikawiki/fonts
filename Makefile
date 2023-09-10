@@ -71,6 +71,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/haranoajitw-20220220 \
     local/opentype/haranoajikr-20220220 \
     local/opentype/haranoajik1-20220220 \
+    local/opentype/haranoaji-20230610 \
     local/opentype/SourceHanSerifAKR9-20190729 \
     local/opentype/cns11643-20221114 \
     local/opentype/uk \
@@ -125,7 +126,9 @@ build-for-docker: build-for-docker-from-old \
     local/imageset/wakan \
     local/imageset/tensho \
     local/imageset/modmag \
-    local/imageset/kuzushiji
+    local/imageset/kuzushiji \
+    local/opentype/uk/LICENSE
+	#XXX
 	chmod ugo+r -R local/opentype local/bdf local/glyphwiki local/imageset
 
 build-for-docker-from-old:
@@ -172,6 +175,20 @@ local/opentype/haranoajik1-20220220:
 	mkdir -p $@
 	$(SAVEURL) $@/LICENSE https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/LICENSE
 	$(SAVEURL) $@/HaranoAjiGothicK1-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/519e99bd545948726636359e71bb43ff51c0bf33/HaranoAjiGothicK1-ExtraLight.otf
+local/opentype/haranoaji-20230610:
+	mkdir -p $@
+	$(SAVEURL) $@/LICENSE  https://raw.githubusercontent.com/trueroad/HaranoAjiFonts/6984b4483e055b0cbdfcc0333789481a35792652/LICENSE
+	$(SAVEURL) $@/HaranoAjiMincho-Regular.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFonts/6984b4483e055b0cbdfcc0333789481a35792652/HaranoAjiMincho-Regular.otf
+	$(SAVEURL) $@/HaranoAjiGothic-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFonts/6984b4483e055b0cbdfcc0333789481a35792652/HaranoAjiGothic-ExtraLight.otf
+	$(SAVEURL) $@/HaranoAjiMinchoCN-Regular.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsCN/43637fb3cb2453b44e344b9cf31bf06e71f88767/HaranoAjiMinchoCN-Regular.otf
+	$(SAVEURL) $@/HaranoAjiGothicCN-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsCN/43637fb3cb2453b44e344b9cf31bf06e71f88767/HaranoAjiGothicCN-ExtraLight.otf
+	$(SAVEURL) $@/HaranoAjiMinchoKR-Regular.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsKR/554759cd1d0b72785753b278f5fb5598a99a6545/HaranoAjiMinchoKR-Regular.otf
+	$(SAVEURL) $@/HaranoAjiGothicKR-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsKR/554759cd1d0b72785753b278f5fb5598a99a6545/HaranoAjiGothicKR-ExtraLight.otf
+	$(SAVEURL) $@/HaranoAjiMinchoTW-Regular.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsTW/b42aa02a4f8b5369ee130260a8f7c00f7ef2f9f5/HaranoAjiMinchoTW-Regular.otf
+	$(SAVEURL) $@/HaranoAjiGothicTW-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsTW/b42aa02a4f8b5369ee130260a8f7c00f7ef2f9f5/HaranoAjiGothicTW-ExtraLight.otf
+	$(SAVEURL) $@/HaranoAjiMinchoK1-Regular.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/e106eddb29fa0cb81ee95dddb70437f580681512/HaranoAjiMinchoK1-Regular.otf
+	$(SAVEURL) $@/HaranoAjiGothicK1-ExtraLight.otf https://raw.githubusercontent.com/trueroad/HaranoAjiFontsK1/e106eddb29fa0cb81ee95dddb70437f580681512/HaranoAjiGothicK1-ExtraLight.otf
+
 local/opentype/SourceHanSerifAKR9-20190729:
 	mkdir -p $@
 	$(SAVEURL) $@/SourceHanSerifAKR9-Regular.otf https://github.com/adobe-type-tools/Adobe-KR/releases/download/20190729/SourceHanSerifAKR9-Regular.otf
@@ -187,7 +204,8 @@ local/opentype/uk:
 	mkdir -p local/opentype/uk
 	$(SAVEURL) $@/IRGN2107.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2107.ttf
 	$(SAVEURL) $@/IRGN2232.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2232.ttf
-	$(SAVEURL) $@/LICENSE.md https://github.com/unicode-org/uk-source-ideographs/blob/main/LICENSE.md
+local/opentype/uk/LICENSE: # XXX
+	$(SAVEURL) local/opentype/uk/LICENSE.md https://github.com/unicode-org/uk-source-ideographs/blob/main/LICENSE.md
 
 local/opentype/nom-506:
 	mkdir -p $@

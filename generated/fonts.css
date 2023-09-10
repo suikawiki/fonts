@@ -192,9 +192,79 @@
           }
         
 
+          @font-face {
+            font-family: '原ノ味明朝';
+            src: url(../haranoaji-20230610/HaranoAjiMincho-ExtraLight.otf);
+            
+          }
+        
+
+          @font-face {
+            font-family: '原ノ味明朝 (CN)';
+            src: url(../haranoaji-20230610/HaranoAjiMinchoCN-ExtraLight.otf);
+            
+          }
+        
+
+          @font-face {
+            font-family: '原ノ味明朝 (K1)';
+            src: url(../haranoaji-20230610/HaranoAjiMinchoK1-ExtraLight.otf);
+            
+          }
+        
+
+          @font-face {
+            font-family: '原ノ味明朝 (KR)';
+            src: url(../haranoaji-20230610/HaranoAjiMinchoKR-ExtraLight.otf);
+            
+          }
+        
+
+          @font-face {
+            font-family: '原ノ味明朝 (TW)';
+            src: url(../haranoaji-20230610/HaranoAjiMinchoTW-ExtraLight.otf);
+            
+          }
+        
+
+          @font-face {
+            font-family: '原ノ味角ゴシック';
+            src: url(../haranoaji-20230610/HaranoAjiGothic-ExtraLight.otf);
+            
+          }
+        
 
 
+          @font-face {
+            font-family: '原ノ味角ゴシック (CN)';
+            src: url(../haranoaji-20230610/HaranoAjiGothicCN-ExtraLight.otf);
+            
+          }
+        
 
+
+          @font-face {
+            font-family: '原ノ味角ゴシック (K1)';
+            src: url(../haranoaji-20230610/HaranoAjiGothicK1-ExtraLight.otf);
+            
+          }
+        
+
+
+          @font-face {
+            font-family: '原ノ味角ゴシック (KR)';
+            src: url(../haranoaji-20230610/HaranoAjiGothicKR-ExtraLight.otf);
+            
+          }
+        
+
+
+          @font-face {
+            font-family: '原ノ味角ゴシック (TW)';
+            src: url(../haranoaji-20230610/HaranoAjiGothicTW-ExtraLight.otf);
+            
+          }
+        
 
 
           @font-face {
