@@ -205,7 +205,8 @@ local/opentype/uk:
 	$(SAVEURL) $@/IRGN2107.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2107.ttf
 	$(SAVEURL) $@/IRGN2232.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2232.ttf
 local/opentype/uk/LICENSE: # XXX
-	$(SAVEURL) local/opentype/uk/LICENSE.md https://github.com/unicode-org/uk-source-ideographs/blob/main/LICENSE.md
+	rm -fr local/opentype/uk/LICENSE.md
+	$(SAVEURL) local/opentype/uk/LICENSE https://raw.githubusercontent.com/unicode-org/uk-source-ideographs/main/LICENSE
 
 local/opentype/nom-506:
 	mkdir -p $@

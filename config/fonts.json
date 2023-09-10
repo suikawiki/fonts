@@ -3,14 +3,14 @@
     "type": "opentype",
     "webfont": true,
     "path": "uk/IRGN2107.ttf",
-    "license_path": "uk/LICENSE.md",
+    "license_path": "uk/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/UK-Source%20Ideographs"
   },
   "IRGN2232": {
     "type": "opentype",
     "webfont": true,
     "path": "uk/IRGN2232.ttf",
-    "license_path": "uk/LICENSE.md",
+    "license_path": "uk/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/UK-Source%20Ideographs"
   },
   "JIS-Engraving-080803": {
