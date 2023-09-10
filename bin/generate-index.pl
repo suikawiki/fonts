@@ -34,7 +34,7 @@ my $Fonts;
         '';
       }
     } elsif ($v->{type} eq 'images' or $v->{type} eq 'bitmap' or
-             $v->{type} eq 'imageset') {
+             $v->{type} eq 'imageset' or $v->{type} eq 'kage') {
       '';
     } else {
       die $v->{type};
@@ -92,6 +92,11 @@ my $Fonts;
         <li><a href="images/%s">%s</a>
         (<a href="%s">license</a>, <a href="%s">SuikaWiki</a>)
       }, $v->{index_path}, $_, $v->{license_url}, $v->{sw_url};
+    } elsif ($v->{type} eq 'kage') {
+      $r = sprintf q{
+        <li><a href="%s">%s</a>
+        (<a href="%s">license</a>, <a href="%s">SuikaWiki</a>)
+      }, $v->{dump_path}, $_, $v->{license_path}, $v->{sw_url};
     } else {
       die $v->{type};
     }

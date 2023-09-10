@@ -120,35 +120,35 @@
   "原ノ味明朝": {
     "type": "opentype",
     "webfont": true,
-    "path": "haranoaji-20230610/HaranoAjiMincho-ExtraLight.otf",
+    "path": "haranoaji-20230610/HaranoAjiMincho-Regular.otf",
     "license_path": "haranoaji-20230610/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
   },
   "原ノ味明朝 (CN)": {
     "type": "opentype",
     "webfont": true,
-    "path": "haranoaji-20230610/HaranoAjiMinchoCN-ExtraLight.otf",
+    "path": "haranoaji-20230610/HaranoAjiMinchoCN-Regular.otf",
     "license_path": "haranoaji-20230610/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
   },
   "原ノ味明朝 (TW)": {
     "type": "opentype",
     "webfont": true,
-    "path": "haranoaji-20230610/HaranoAjiMinchoTW-ExtraLight.otf",
+    "path": "haranoaji-20230610/HaranoAjiMinchoTW-Regular.otf",
     "license_path": "haranoaji-20230610/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
   },
   "原ノ味明朝 (KR)": {
     "type": "opentype",
     "webfont": true,
-    "path": "haranoaji-20230610/HaranoAjiMinchoKR-ExtraLight.otf",
+    "path": "haranoaji-20230610/HaranoAjiMinchoKR-Regular.otf",
     "license_path": "haranoaji-20230610/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
   },
   "原ノ味明朝 (K1)": {
     "type": "opentype",
     "webfont": true,
-    "path": "haranoaji-20230610/HaranoAjiMinchoK1-ExtraLight.otf",
+    "path": "haranoaji-20230610/HaranoAjiMinchoK1-Regular.otf",
     "license_path": "haranoaji-20230610/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
   },
@@ -656,5 +656,12 @@
     "index_path": "glyphs/",
     "license_url": "https://wiki.suikawiki.org/n/WikiPageLicense",
     "sw_url": "https://wiki.suikawiki.org/n/Wiki%2F%2F%E5%A4%96%E5%AD%97"
+  },
+
+  "glyphwiki": {
+    "type": "kage",
+    "dump_path": "glyphwiki/dump-1.tar.gz",
+    "license_path": "glyphwiki/LICENSE.html.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/GlyphWiki"
   }
 }

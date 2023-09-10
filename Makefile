@@ -126,9 +126,8 @@ build-for-docker: build-for-docker-from-old \
     local/imageset/wakan \
     local/imageset/tensho \
     local/imageset/modmag \
-    local/imageset/kuzushiji \
-    local/opentype/uk/LICENSE
-	#XXX
+    local/imageset/kuzushiji\
+    local/glyphwiki/LICENSE.html.txt 
 	chmod ugo+r -R local/opentype local/bdf local/glyphwiki local/imageset
 
 build-for-docker-from-old:
@@ -204,8 +203,6 @@ local/opentype/uk:
 	mkdir -p local/opentype/uk
 	$(SAVEURL) $@/IRGN2107.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2107.ttf
 	$(SAVEURL) $@/IRGN2232.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2232.ttf
-local/opentype/uk/LICENSE: # XXX
-	rm -fr local/opentype/uk/LICENSE.md
 	$(SAVEURL) local/opentype/uk/LICENSE https://raw.githubusercontent.com/unicode-org/uk-source-ideographs/main/LICENSE
 
 local/opentype/nom-506:
@@ -383,6 +380,8 @@ local/bdf/wqy-unibit110/wqy-unibit.dat: \
 local/glyphwiki:
 	mkdir -p local/glyphwiki
 	$(SAVEURL) $@/dump-1.tar.gz https://glyphwiki.org/dump.tar.gz
+local/glyphwiki/LICENSE.html.txt: # XXX
+	$(SAVEURL) $@/LICENSE.html.txt https://glyphwiki.org/wiki/GlyphWiki:%e3%83%87%e3%83%bc%e3%82%bf%e3%83%bb%e8%a8%98%e4%ba%8b%e3%81%ae%e3%83%a9%e3%82%a4%e3%82%bb%e3%83%b3%e3%82%b9
 
 local/imageset/wakan:
 	cd local && $(WGET) -r -l 1 -np https://wakaba.github.io/nemui/local/data/wakan/index.html

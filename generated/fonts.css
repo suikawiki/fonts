@@ -150,6 +150,7 @@
 
 
 
+
           @font-face {
             font-family: '全字庫正宋體';
             src: url(../cns11643-20221114/TW-Sung-98_1.ttf);
@@ -194,35 +195,35 @@
 
           @font-face {
             font-family: '原ノ味明朝';
-            src: url(../haranoaji-20230610/HaranoAjiMincho-ExtraLight.otf);
+            src: url(../haranoaji-20230610/HaranoAjiMincho-Regular.otf);
             
           }
         
 
           @font-face {
             font-family: '原ノ味明朝 (CN)';
-            src: url(../haranoaji-20230610/HaranoAjiMinchoCN-ExtraLight.otf);
+            src: url(../haranoaji-20230610/HaranoAjiMinchoCN-Regular.otf);
             
           }
         
 
           @font-face {
             font-family: '原ノ味明朝 (K1)';
-            src: url(../haranoaji-20230610/HaranoAjiMinchoK1-ExtraLight.otf);
+            src: url(../haranoaji-20230610/HaranoAjiMinchoK1-Regular.otf);
             
           }
         
 
           @font-face {
             font-family: '原ノ味明朝 (KR)';
-            src: url(../haranoaji-20230610/HaranoAjiMinchoKR-ExtraLight.otf);
+            src: url(../haranoaji-20230610/HaranoAjiMinchoKR-Regular.otf);
             
           }
         
 
           @font-face {
             font-family: '原ノ味明朝 (TW)';
-            src: url(../haranoaji-20230610/HaranoAjiMinchoTW-ExtraLight.otf);
+            src: url(../haranoaji-20230610/HaranoAjiMinchoTW-Regular.otf);
             
           }
         
