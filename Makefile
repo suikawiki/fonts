@@ -383,7 +383,7 @@ local/glyphwiki:
 	$(SAVEURL) $@/dump-1.tar.gz https://glyphwiki.org/dump.tar.gz
 	$(SAVEURL) $@ https://glyphwiki.org/wiki/GlyphWiki:%e3%83%87%e3%83%bc%e3%82%bf%e3%83%bb%e8%a8%98%e4%ba%8b%e3%81%ae%e3%83%a9%e3%82%a4%e3%82%bb%e3%83%b3%e3%82%b9
 local/glyphwiki/dump-2.tar.gz:
-	$(SAVEURL) $@/dump-2.tar.gz https://glyphwiki.org/dump.tar.gz
+	$(SAVEURL) $@ https://glyphwiki.org/dump.tar.gz
 
 local/imageset/wakan:
 	cd local && $(WGET) -r -l 1 -np https://wakaba.github.io/nemui/local/data/wakan/index.html
