@@ -660,7 +660,7 @@
 
   "glyphwiki": {
     "type": "kage",
-    "dump_path": "glyphwiki/dump-1.tar.gz",
+    "dump_path": "glyphwiki/dump-2.tar.gz",
     "license_path": "glyphwiki/LICENSE.html.txt",
     "sw_url": "https://wiki.suikawiki.org/n/GlyphWiki"
   }

@@ -92,9 +92,10 @@ sub generate ($$$$) {
         for (@value) {
           $_ = pack 'B' . $width, $_;
         }
-        $data->[$index] = join '', @value;
+        ## Some 9494 bdf font has ENCODING 32
+        $data->[$index] = join '', @value if $index >= 0;
       } else {
-        $data->[$index] = join '', @value;
+        $data->[$index] = join '', @value if $index >= 0;
       }
     } elsif (/^STARTCHAR (.+)/) {
       $name = $1;

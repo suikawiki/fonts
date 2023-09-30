@@ -126,8 +126,9 @@ build-for-docker: build-for-docker-from-old \
     local/imageset/wakan \
     local/imageset/tensho \
     local/imageset/modmag \
-    local/imageset/kuzushiji\
-    local/glyphwiki/LICENSE.html.txt 
+    local/imageset/kuzushiji \
+    local/glyphwiki/dump-2.tar.gz
+	# XXX
 	chmod ugo+r -R local/opentype local/bdf local/glyphwiki local/imageset
 
 build-for-docker-from-old:
@@ -380,8 +381,9 @@ local/bdf/wqy-unibit110/wqy-unibit.dat: \
 local/glyphwiki:
 	mkdir -p local/glyphwiki
 	$(SAVEURL) $@/dump-1.tar.gz https://glyphwiki.org/dump.tar.gz
-local/glyphwiki/LICENSE.html.txt: # XXX
-	$(SAVEURL) $@/LICENSE.html.txt https://glyphwiki.org/wiki/GlyphWiki:%e3%83%87%e3%83%bc%e3%82%bf%e3%83%bb%e8%a8%98%e4%ba%8b%e3%81%ae%e3%83%a9%e3%82%a4%e3%82%bb%e3%83%b3%e3%82%b9
+	$(SAVEURL) $@ https://glyphwiki.org/wiki/GlyphWiki:%e3%83%87%e3%83%bc%e3%82%bf%e3%83%bb%e8%a8%98%e4%ba%8b%e3%81%ae%e3%83%a9%e3%82%a4%e3%82%bb%e3%83%b3%e3%82%b9
+local/glyphwiki/dump-2.tar.gz:
+	$(SAVEURL) $@/dump-2.tar.gz https://glyphwiki.org/dump.tar.gz
 
 local/imageset/wakan:
 	cd local && $(WGET) -r -l 1 -np https://wakaba.github.io/nemui/local/data/wakan/index.html
