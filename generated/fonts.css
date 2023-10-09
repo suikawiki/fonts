@@ -1,5 +1,12 @@
 
           @font-face {
+            font-family: 'CJK Symbols';
+            src: url(../cjksymbols-1001/CJKSymbols-Regular.otf);
+            
+          }
+        
+
+          @font-face {
             font-family: 'DroidSansFallback';
             src: url(../DroidSansFallback/DroidSansFallback-aosp.ttf);
             

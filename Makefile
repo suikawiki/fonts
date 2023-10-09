@@ -73,6 +73,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/haranoajik1-20220220 \
     local/opentype/haranoaji-20230610 \
     local/opentype/SourceHanSerifAKR9-20190729 \
+    local/opentype/cjksymbols-1001 \
     local/opentype/cns11643-20221114 \
     local/opentype/uk \
     local/opentype/nom-506 \
@@ -126,9 +127,7 @@ build-for-docker: build-for-docker-from-old \
     local/imageset/wakan \
     local/imageset/tensho \
     local/imageset/modmag \
-    local/imageset/kuzushiji \
-    local/glyphwiki/dump-2.tar.gz
-	# XXX
+    local/imageset/kuzushiji
 	chmod ugo+r -R local/opentype local/bdf local/glyphwiki local/imageset
 
 build-for-docker-from-old:
@@ -192,6 +191,11 @@ local/opentype/haranoaji-20230610:
 local/opentype/SourceHanSerifAKR9-20190729:
 	mkdir -p $@
 	$(SAVEURL) $@/SourceHanSerifAKR9-Regular.otf https://github.com/adobe-type-tools/Adobe-KR/releases/download/20190729/SourceHanSerifAKR9-Regular.otf
+
+local/opentype/cjksymbols-1001:
+	mkdir -p $@
+	$(SAVEURL) $@/CJKSymbols-Regular.otf https://github.com/unicode-org/cjk-symbols/releases/download/1.001/CJKSymbols-Regular.otf
+	$(SAVEURL) $@/LICENSE https://raw.githubusercontent.com/unicode-org/cjk-symbols/main/LICENSE
 
 local/opentype/cns11643-20221114:
 	$(SAVEURL) local/cns.zip https://www.cns11643.gov.tw/AIDB/Open_Data.zip
@@ -380,10 +384,11 @@ local/bdf/wqy-unibit110/wqy-unibit.dat: \
 
 local/glyphwiki:
 	mkdir -p local/glyphwiki
-	$(SAVEURL) $@/dump-1.tar.gz https://glyphwiki.org/dump.tar.gz
 	$(SAVEURL) $@ https://glyphwiki.org/wiki/GlyphWiki:%e3%83%87%e3%83%bc%e3%82%bf%e3%83%bb%e8%a8%98%e4%ba%8b%e3%81%ae%e3%83%a9%e3%82%a4%e3%82%bb%e3%83%b3%e3%82%b9
-local/glyphwiki/dump-2.tar.gz:
-	$(SAVEURL) $@ https://glyphwiki.org/dump.tar.gz
+	#$(SAVEURL) $@/dump-1.tar.gz https://glyphwiki.org/dump.tar.gz
+	#$(SAVEURL) $@/dump-2.tar.gz https://glyphwiki.org/dump.tar.gz
+#local/glyphwiki/dump-2.tar.gz:
+#	$(SAVEURL) $@ https://glyphwiki.org/dump.tar.gz
 
 local/imageset/wakan:
 	cd local && $(WGET) -r -l 1 -np https://wakaba.github.io/nemui/local/data/wakan/index.html
