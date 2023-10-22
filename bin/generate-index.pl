@@ -96,7 +96,7 @@ my $Fonts;
       $r = sprintf q{
         <li><a href="%s">%s</a>
         (<a href="%s">license</a>, <a href="%s">SuikaWiki</a>)
-      }, $v->{dump_path}, $_, $v->{license_path}, $v->{sw_url};
+      }, $v->{dump_path} // $v->{patch_json_path}, $_, $v->{license_path}, $v->{sw_url};
     } else {
       die $v->{type};
     }
