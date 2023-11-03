@@ -13,6 +13,13 @@
     "license_path": "uk/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/UK-Source%20Ideographs"
   },
+  "BabelStoneHan": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "babelstonehan-1512/BabelStoneHan.ttf",
+    "license_path": "babelstonehan-1512/LICENSE.html.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/BabelStone"
+  },
   "JIS-Engraving-080803": {
     "type": "opentype",
     "webfont": true,

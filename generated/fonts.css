@@ -1,5 +1,12 @@
 
           @font-face {
+            font-family: 'BabelStoneHan';
+            src: url(../babelstonehan-1512/BabelStoneHan.ttf);
+            
+          }
+        
+
+          @font-face {
             font-family: 'CJK Symbols';
             src: url(../cjksymbols-1001/CJKSymbols-Regular.otf);
             

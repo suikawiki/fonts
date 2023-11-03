@@ -76,6 +76,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/cjksymbols-1001 \
     local/opentype/cns11643-20221114 \
     local/opentype/uk \
+    local/opentype/babelstonehan-1512 \
     local/opentype/nom-506 \
     local/opentype/jis-engraving-080803 \
     local/opentype/unifont-15006 \
@@ -209,6 +210,10 @@ local/opentype/uk:
 	$(SAVEURL) $@/IRGN2107.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2107.ttf
 	$(SAVEURL) $@/IRGN2232.ttf https://github.com/unicode-org/uk-source-ideographs/releases/download/20210303/IRGN2232.ttf
 	$(SAVEURL) local/opentype/uk/LICENSE https://raw.githubusercontent.com/unicode-org/uk-source-ideographs/main/LICENSE
+local/opentype/babelstonehan-1512:
+	mkdir -p $@
+	$(SAVEURL) $@/BabelStoneHan.ttf https://www.babelstone.co.uk/Fonts/Download/BabelStoneHan.ttf
+	$(SAVEURL) $@/LICENSE.html.txt https://www.babelstone.co.uk/Fonts/Han.html
 
 local/opentype/nom-506:
 	mkdir -p $@
