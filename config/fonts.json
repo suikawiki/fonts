@@ -13,7 +13,7 @@
     "license_path": "uk/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/UK-Source%20Ideographs"
   },
-  "BabelStoneHan": {
+  "BabelStone Han": {
     "type": "opentype",
     "webfont": true,
     "path": "babelstonehan-1512/BabelStoneHan.ttf",
