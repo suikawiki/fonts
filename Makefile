@@ -75,6 +75,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/SourceHanSerifAKR9-20190729 \
     local/opentype/cjksymbols-1001 \
     local/opentype/cns11643-20221114 \
+    local/opentype/cns11643-20221114/XXX \
     local/opentype/uk \
     local/opentype/babelstonehan-1512 \
     local/opentype/nom-506 \
@@ -204,6 +205,8 @@ local/opentype/cns11643-20221114:
 	rm -f local/Open_Data/Fonts/*.txt
 	mv local/Open_Data/Fonts $@
 	$(SAVEURL) $@/license.html.txt https://data.gov.tw/license
+local/opentype/cns11643-20221114/XXX:
+	cp data/cns11643-20220713/cns-*.txt local/opentype/cns11643-20221114/
 
 local/opentype/uk:
 	mkdir -p local/opentype/uk
