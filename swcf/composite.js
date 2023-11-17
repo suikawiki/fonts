@@ -151,7 +151,8 @@
       df.ascender = json.ascender;
       df.descender = json.descender;
       df.xMax = df.upem;
-      df.yMax = df.upem;
+      df.yMax = df.ascender;
+      df.yMin = df.descender;
     }
     df.ranges.push (json.ranges);
   }; // loadComponent
