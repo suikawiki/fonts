@@ -850,11 +850,12 @@ if (this.document && this.document.currentScript) {
 
 ((base, install) => {
   if (install === null) return;
-  let gzipped = install === 'gzip' || location.hostname === 'fonts.suikawiki.org';
+  let cssURL = new URL ('all.css', base);
+  let gzipped = install === 'gzip' || cssURL.hostname === 'fonts.suikawiki.org';
 
   let link = document.createElement ('link');
   link.rel = 'stylesheet';
-  link.href = new URL ('all.css', base);
+  link.href = cssURL;
   document.head.appendChild (link);
   
   swComposeFont ({
