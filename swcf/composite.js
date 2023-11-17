@@ -849,7 +849,7 @@ if (this.document && this.document.currentScript) {
 
 ((base, install) => {
   if (install === null) return;
-  let gzipped = install === 'gzip';
+  let gzipped = install === 'gzip' || location.hostname === 'fonts.suikawiki.org';
 
   let link = document.createElement ('link');
   link.rel = 'stylesheet';

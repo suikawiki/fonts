@@ -10,6 +10,7 @@ build: \
     ../local/swcf/hanmin/p.ttf \
     ../local/swcf/hanmin/q.ttf \
     ../local/swcf/hanmin/r.ttf \
+    ../local/swcf/hanmin/s.ttf \
     ../local/swcf/hanmin/pqr0.dat.gz \
     ../local/swcf/hanmin/pqr1.dat.gz \
     ../local/swcf/hanmin/pqr2.dat.gz \
