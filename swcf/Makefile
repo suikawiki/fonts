@@ -75,7 +75,7 @@ SWDATA_URL_PREFIX=https://swdata-items-3.netlify.app/chars/
     gwmissing-extracted.txt \
     ../swg/glyphs.json
 	mkdir -p ../local/swcf
-	docker run -it \
+	docker run -i \
 	    -v `pwd`:/app \
 	    -v `pwd`/../local/swcf:/app/fonts \
 	    -v `pwd`/../swg/glyphs.json:/app/fonts/glyphs.json \
@@ -89,9 +89,9 @@ SWDATA_URL_PREFIX=https://swdata-items-3.netlify.app/chars/
     ../local/swcf/gwglyphs.ttf \
     ../local/swcf/swcf-hanmin-mapping.json
 	mkdir -p ../local/swcf/hanmin
-	docker run -it -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
+	docker run -i -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
 	    node bash -c 'cd /app && node extract.js p'
-	docker run -it -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
+	docker run -i -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
 	    node bash -c 'cd /app && node composite.js p'
 	rm -f ../local/swcf/hanmin/p.dat ../local/swcf/hanmin/p.json
 ../local/swcf/hanmin/q.ttf: \
@@ -103,9 +103,9 @@ SWDATA_URL_PREFIX=https://swdata-items-3.netlify.app/chars/
     ../local/swcf/gwglyphs.ttf \
     ../local/swcf/swcf-hanmin-mapping.json
 	mkdir -p ../local/swcf/hanmin
-	docker run -it -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
+	docker run -i -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
 	    node bash -c 'cd /app && node extract.js q'
-	docker run -it -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
+	docker run -i -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
 	    node bash -c 'cd /app && node composite.js q'
 	rm -f ../local/swcf/hanmin/q.dat ../local/swcf/hanmin/q.json
 ../local/swcf/hanmin/r.ttf: \
@@ -119,9 +119,9 @@ SWDATA_URL_PREFIX=https://swdata-items-3.netlify.app/chars/
     ../local/swcf/gwglyphs.ttf \
     ../local/swcf/swcf-hanmin-mapping.json
 	mkdir -p ../local/swcf/hanmin
-	docker run -it -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
+	docker run -i -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
 	    node bash -c 'cd /app && node extract.js r'
-	docker run -it -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
+	docker run -i -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
 	    node bash -c 'cd /app && node composite.js r'
 	rm -f ../local/swcf/hanmin/r.dat ../local/swcf/hanmin/r.json
 ../local/swcf/hanmin/s.ttf: \
@@ -135,9 +135,9 @@ SWDATA_URL_PREFIX=https://swdata-items-3.netlify.app/chars/
     ../local/swcf/gwglyphs.ttf \
     ../local/swcf/swcf-hanmin-mapping.json
 	mkdir -p ../local/swcf/hanmin
-	docker run -it -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
+	docker run -i -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
 	    node bash -c 'cd /app && node extract.js s'
-	docker run -it -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
+	docker run -i -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
 	    node bash -c 'cd /app && node composite.js s'
 	rm -f ../local/swcf/hanmin/s.dat ../local/swcf/hanmin/s.json
 ../local/swcf/hanmin/pqr0.dat.gz: \
@@ -147,7 +147,7 @@ SWDATA_URL_PREFIX=https://swdata-items-3.netlify.app/chars/
     ../local/swcf/gwglyphs.ttf \
     ../local/swcf/swcf-hanmin-mapping.json
 	mkdir -p ../local/swcf/hanmin
-	docker run -it -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
+	docker run -i -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
 	    node bash -c 'cd /app && node extract.js pqr0'
 	gzip -f ../local/swcf/hanmin/pqr0.dat
 	gzip -f ../local/swcf/hanmin/pqr0.json
@@ -160,7 +160,7 @@ SWDATA_URL_PREFIX=https://swdata-items-3.netlify.app/chars/
     ../local/swcf/gwglyphs.ttf \
     ../local/swcf/swcf-hanmin-mapping.json
 	mkdir -p ../local/swcf/hanmin
-	docker run -it -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
+	docker run -i -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
 	    node bash -c 'cd /app && node extract.js pqr1'
 	gzip -f ../local/swcf/hanmin/pqr1.dat
 	gzip -f ../local/swcf/hanmin/pqr1.json
@@ -175,7 +175,7 @@ SWDATA_URL_PREFIX=https://swdata-items-3.netlify.app/chars/
     ../local/swcf/gwglyphs.ttf \
     ../local/swcf/swcf-hanmin-mapping.json
 	mkdir -p ../local/swcf/hanmin
-	docker run -it -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
+	docker run -i -v `pwd`:/app -v `pwd`/../local/swcf:/app/fonts \
 	    node bash -c 'cd /app && node extract.js pqr2'
 	gzip -f ../local/swcf/hanmin/pqr2.dat
 	gzip -f ../local/swcf/hanmin/pqr2.json
