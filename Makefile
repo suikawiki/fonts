@@ -59,7 +59,9 @@ build-gp-main:
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/glyphwiki /local/glyphwiki
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/imageset /local/imageset
+	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/swcf /local/swcf
 	mv local/opentype local/bdf local/glyphwiki local/imageset ./
+	mv local/swcf/* ./swcf/
 	rm -fr ./bin/modules ./modules ./local
 
 build-for-docker: build-for-docker-from-old \
@@ -129,15 +131,18 @@ build-for-docker: build-for-docker-from-old \
     local/imageset/wakan \
     local/imageset/tensho \
     local/imageset/modmag \
-    local/imageset/kuzushiji
+    local/imageset/kuzushiji \
+    local/swcf
 	chmod ugo+r -R local/opentype local/bdf local/glyphwiki local/imageset
+	chmod ugo+r -R local/swcf
 
 build-for-docker-from-old:
 	mkdir -p local
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/opentype /local/opentype
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/bdf /local/bdf
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/glyphwiki /local/glyphwiki
-	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/imageset /local/imageset || mkdir -p local/imageset
+	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/imageset /local/imageset
+	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/swcf /local/swcf || mkdir -p local/swcf
 
 local/opentype/ipamjm00601:
 	$(SAVEURL) local/ipamjm00601.zip https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip
@@ -419,6 +424,9 @@ local/imageset/modmag:
 	$(SAVEURL) local/modmag-images.tar.gz https://wakaba.github.io/nemui/modmag-image.tar.gz
 	cd $@ && tar zxf ../../modmag-images.tar.gz
 	mv $@/modmag-images $@/image-index
+
+local/swcf: always
+	cd swcf && $(MAKE)
 
 build-index: generated/fonts.css local/opentype/index/all.css
 

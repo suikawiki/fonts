@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'SuikaWiki Composed Han p';
+  src: url(hanmin/p.ttf);
+  unicode-range: U+200D,U+3005-3099,U+3400-9FEF,U+F91B-FAD9,U+16FF0-16FF1,U+20000-2EBE0,U+2F81F,U+2F9B2;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'SuikaWiki Composed Han q';
+  src: url(hanmin/q.ttf);
+  unicode-range: U+200D,U+302A-3099,U+9FBB-9FFF,U+16FF0-16FF1,U+2A7A4-2A8B6,U+2B065,U+2B345,U+2B5A0,U+2B6B7-2EE5D,U+30000-323AE;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'SuikaWiki Composed Han r';
+  src: url(hanmin/r.ttf);
+  unicode-range: U+200D,U+2E80-3099,U+31C0-31E1,U+3403-9FCC,U+16FF0-16FF1,U+2008A,U+25AD7,U+27D73,U+2A002-2CE9E,U+2D3DC,U+2F89C,U+2F9A7-2FA13;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'SuikaWiki Composed Han s';
+  src: url(hanmin/s.ttf);
+  unicode-range: U+200D,U+302A-3099,U+9FEB-9FF3,U+16FF0-16FF1,U+20002-29FFE,U+2A6DE,U+2B74E,U+2C254,U+2C816,U+2F906,U+30035-3003A,U+302E7-30362,U+305C0-30F04,U+31003-3134A,U+31586,U+31968-319F7,U+31B34-31DA7,U+31F55-31F9D,U+321A6-321CA,U+200D,U+302A-3099,U+6AF8,U+16FF0-16FF1,U+200B0-200F5,U+20611,U+216EA,U+22B0C,U+22E42,U+2300A,U+237F1,U+23F8E,U+24FF2,U+2569A,U+26523,U+267B5,U+279B4,U+28BFA,U+2F861-2F9ED,U+200D,U+2F07-3099,U+31CA-31E3,U+346B,U+35D1-3658,U+3A18-3BA0,U+3CC9,U+3DDD-3EAF,U+40C4,U+41C4,U+4DB6-4E54,U+5569,U+56D5-5786,U+58B6,U+5FC6-60AD,U+62E5-63B8,U+680D-68C2,U+713E-71F6,U+7597,U+8254-827A,U+8E2D-8E7E,U+95F9,U+9AC5,U+9FA6-9FFD,U+16FF0-16FF1,U+1D372-1D376,U+2000E-279EF,U+27AFC-28665,U+28809-2A2DF,U+2A422-2ECFC,U+30002-323AF;
+  font-display: fallback;
+}
+:root {
+  --suikawiki-composed-font-family: 'SuikaWiki Composed Han p', 'SuikaWiki Composed Han pqr', 'SuikaWiki Composed Han q', 'SuikaWiki Composed Han r', 'SuikaWiki Composed Han s';
+}
+/* License: Public Domain. */

@@ -7,3 +7,6 @@
 /Makefile.setupenv
 /cin
 /config/perl/libs.txt
+/swcf/node_modules/
+/swcf/package-lock.json
+/swcf/package.json
