@@ -20,7 +20,7 @@ build: \
 	$(SAVEURL) $@ https://raw.githubusercontent.com/manakai/opentypejs/master/dist/opentype.js
 ../local/swcf/kage.js:
 	mkdir -p ../local/swcf
-	$(SAVEURL) $@ https://data.suikawiki.org/js/kage.js
+	$(SAVEURL) $@ https://raw.githubusercontent.com/suikawiki/swdata/master/js/kage.js
 ../local/swcf/ajm.ttf:
 	mkdir -p ../local/swcf
 	$(SAVEURL) $@ https://fonts.suikawiki.org/opentype/haranoaji-20230610/HaranoAjiMincho-Regular.otf
