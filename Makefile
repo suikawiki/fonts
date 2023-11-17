@@ -133,8 +133,8 @@ build-for-docker: build-for-docker-from-old \
     local/imageset/modmag \
     local/imageset/kuzushiji \
     local/swcf
-	chmod ugo+r -R local/opentype local/bdf local/glyphwiki local/imageset
-	chmod ugo+r -R local/swcf
+	-chmod ugo+r -R local/opentype local/bdf local/glyphwiki local/imageset
+	-chmod ugo+r -R local/swcf
 
 build-for-docker-from-old:
 	mkdir -p local
