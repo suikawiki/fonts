@@ -76,8 +76,8 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/haranoaji-20230610 \
     local/opentype/SourceHanSerifAKR9-20190729 \
     local/opentype/cjksymbols-1001 \
+    local/opentype/cjksymbols-2000 \
     local/opentype/cns11643-20221114 \
-    local/opentype/cns11643-20221114/XXX \
     local/opentype/uk \
     local/opentype/babelstonehan-1512 \
     local/opentype/nom-506 \
@@ -203,6 +203,10 @@ local/opentype/cjksymbols-1001:
 	mkdir -p $@
 	$(SAVEURL) $@/CJKSymbols-Regular.otf https://github.com/unicode-org/cjk-symbols/releases/download/1.001/CJKSymbols-Regular.otf
 	$(SAVEURL) $@/LICENSE https://raw.githubusercontent.com/unicode-org/cjk-symbols/main/LICENSE
+local/opentype/cjksymbols-2000:
+	mkdir -p $@
+	$(SAVEURL) $@/CJKSymbols-Regular.otf https://github.com/unicode-org/cjk-symbols/releases/download/2.000/CJKSymbols-Regular.otf
+	$(SAVEURL) $@/LICENSE https://raw.githubusercontent.com/unicode-org/cjk-symbols/main/LICENSE
 
 local/opentype/cns11643-20221114:
 	$(SAVEURL) local/cns.zip https://www.cns11643.gov.tw/AIDB/Open_Data.zip
@@ -210,7 +214,6 @@ local/opentype/cns11643-20221114:
 	rm -f local/Open_Data/Fonts/*.txt
 	mv local/Open_Data/Fonts $@
 	$(SAVEURL) $@/license.html.txt https://data.gov.tw/license
-local/opentype/cns11643-20221114/XXX:
 	cp data/cns11643-20220713/cns-*.txt local/opentype/cns11643-20221114/
 
 local/opentype/uk:
