@@ -8,6 +8,13 @@
 
           @font-face {
             font-family: 'CJK Symbols';
+            src: url(../cjksymbols-2000/CJKSymbols-Regular.otf);
+            
+          }
+        
+
+          @font-face {
+            font-family: 'CJK Symbols 1.001';
             src: url(../cjksymbols-1001/CJKSymbols-Regular.otf);
             
           }
