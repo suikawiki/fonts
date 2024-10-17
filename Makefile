@@ -209,14 +209,14 @@ local/opentype/notoserif-2014:
 	cd local && unzip notoserif2014.zip NotoSerif/googlefonts/variable-ttf/NotoSerif*.ttf
 	cd local && unzip notoserif2014.zip OFL.txt
 	mv local/NotoSerif/googlefonts/variable-ttf/*.ttf $@/
-	mv OFL.txt $@/
+	mv local/OFL.txt $@/
 local/opentype/notosans-2014:
 	mkdir -p $@
 	$(SAVEURL) local/notosans2014.zip https://github.com/notofonts/latin-greek-cyrillic/releases/download/NotoSans-v2.014/NotoSans-v2.014.zip
 	cd local && unzip notosans2014.zip NotoSans/googlefonts/variable-ttf/NotoSans*.ttf
 	cd local && unzip notosans2014.zip OFL.txt
 	mv local/NotoSans/googlefonts/variable-ttf/*.ttf $@/
-	mv OFL.txt $@/
+	mv local/OFL.txt $@/
 
 local/opentype/cjksymbols-1001:
 	mkdir -p $@
