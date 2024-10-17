@@ -84,7 +84,7 @@ my $Fonts;
     my $p = '';
     $p = 'opentype/' if $v->{type} eq 'opentype';
     $p = 'bdf/' if $v->{type} eq 'bdf';
-    for my $K (qw(path bdf_path dat_path dump_path license_path)) {
+    for my $K (qw(path italic_path bdf_path dat_path dump_path license_path)) {
       if (defined $v->{$K}) {
         $v->{$K} =~ m{^([^/]+)/} or die "Bad path |$v->{$K}|";
         $file_key //= $1;
