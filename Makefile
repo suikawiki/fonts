@@ -13,6 +13,8 @@ updatenightly: build-index
 	perl local/bin/pmbp.pl --update
 	$(GIT) add config
 	$(CURL) -sSLf https://raw.githubusercontent.com/wakaba/ciconfig/master/ciconfig | RUN_GIT=1 REMOVE_UNUSED=1 perl
+	#
+	$(MAKE) updatebyhook
 
 updatebyhook: data
 	$(GIT) add images/

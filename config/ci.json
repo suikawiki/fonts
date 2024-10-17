@@ -10,7 +10,6 @@
     ]},
     "pages": true,
     "merger": 1,
-    "gaa": true,
-    "updatebyhook": true
+    "gaa": true
   }
 }
