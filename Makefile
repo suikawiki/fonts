@@ -204,8 +204,8 @@ local/opentype/SourceHanSerifAKR9-20190729:
 local/opentype/notoserif-2014:
 	mkdir -p $@
 	$(SAVEURL) local/notoserif2014.zip https://github.com/notofonts/latin-greek-cyrillic/releases/download/NotoSerif-v2.014/NotoSerif-v2.014.zip
-	cd local && unzip notoserif2014.zip NotoSans/googlefonts/variable-ttf/NotoSerif\[wdth,wght\].ttf
-	cd local && unzip notoserif2014.zip NotoSans/googlefonts/variable-ttf/NotoSerif-Italic\[wdth,wght\].ttf
+	cd local && unzip notoserif2014.zip NotoSerif/googlefonts/variable-ttf/NotoSerif\[wdth,wght\].ttf
+	cd local && unzip notoserif2014.zip NotoSerif/googlefonts/variable-ttf/NotoSerif-Italic\[wdth,wght\].ttf
 	cd local && unzip notoserif2014.zip OFL.txt
 	mv local/NotoSerif/googlefonts/variable-ttf/*.ttf $@/
 	mv OFL.txt $@/
