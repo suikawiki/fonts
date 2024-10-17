@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/BabelStone",
+      "title" : "BabelStone Han"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/babelstonehan-1512/LICENSE.html.txt"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/babelstonehan-1512/BabelStoneHan.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

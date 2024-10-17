@@ -56,6 +56,54 @@ my $Fonts;
   $path->spew_utf8 ($css);
 }
 
+
+{
+  my $dir_path = $RootPath->child ('packref');
+  $dir_path->mkpath;
+
+  for my $key (keys %$Fonts) {
+    my $v = $Fonts->{$key};
+
+    my $def = {
+      type => 'packref',
+      source => {
+        type => 'files',
+        files => {},
+      },
+      #"content_license" => ...,
+      "packref_license" => "CC0-1.0",
+      "meta" => {
+        "lang" => "en",
+        "title" => $key,
+        "author" => "",
+        "page_url" => $v->{sw_url},
+      },
+    };
+
+    my $file_key = $v->{key};
+    my $p = '';
+    $p = 'opentype/' if $v->{type} eq 'opentype';
+    $p = 'bdf/' if $v->{type} eq 'bdf';
+    for my $K (qw(path bdf_path dat_path dump_path license_path)) {
+      if (defined $v->{$K}) {
+        $v->{$K} =~ m{^([^/]+)/} or die "Bad path |$v->{$K}|";
+        $file_key //= $1;
+        $def->{source}->{files}->{"file:r:$K"}->{url} = "https://fonts.suikawiki.org/$p$v->{$K}";
+      }
+    }
+
+    next unless grep { $_ ne "file:r:license_path" } keys %{$def->{source}->{files}};
+    die "Bad path for |$key|" unless defined $file_key;
+    die "Bad path for |$key| ($file_key)"
+        unless $file_key =~ m{\A[0-9a-zA-Z][0-9a-zA-Z_.-]*\z};
+
+    my $path = $dir_path->child ("$file_key.json");
+    $path->spew (perl2json_bytes_for_record $def);
+
+    $v->{packref_path} = "$file_key.json";
+  }
+}
+
 {
   my $path = $RootPath->child ('index.html');
   $path->parent->mkpath;
@@ -87,16 +135,17 @@ my $Fonts;
             $v->{italic_path};
       }
       $r .= sprintf q{<a href="%s">license</a>, 
-         <a href="%s">SuikaWiki</a>)
+         <a href="%s">SuikaWiki</a>, <a href="packref/%s">packref</a>)
       }, $v->{license_url} // ('opentype/' . $v->{license_path}),
-          $v->{sw_url};
+          $v->{sw_url}, $v->{packref_path};
     } elsif ($v->{type} eq 'bitmap') {
       $r = sprintf q{
         <li><a href="bdf/%s">%s</a>
         (<a href="bdf/%s">BDF</a>, 
          <a href="bdf/%s">license</a>, 
-         <a href="%s">SuikaWiki</a>)
-      }, $v->{dat_path}, $_, $v->{bdf_path}, $v->{license_path}, $v->{sw_url};
+         <a href="%s">SuikaWiki</a>, <a href="packref/%s">packref</a>)
+      }, $v->{dat_path}, $_, $v->{bdf_path}, $v->{license_path}, $v->{sw_url},
+          $v->{packref_path};
     } elsif ($v->{type} eq 'imageset') {
       $r = sprintf q{
         <li><a href="imageset/%s">%s</a>
@@ -112,8 +161,10 @@ my $Fonts;
     } elsif ($v->{type} eq 'kage') {
       $r = sprintf q{
         <li><a href="%s">%s</a>
-        (<a href="%s">license</a>, <a href="%s">SuikaWiki</a>)
-      }, $v->{dump_path} // $v->{patch_json_path}, $_, $v->{license_path}, $v->{sw_url};
+        (<a href="%s">license</a>, <a href="%s">SuikaWiki</a>,
+         <a href="packref/%s">packref</a>)
+      }, $v->{dump_path} // $v->{patch_json_path}, $_, $v->{license_path},
+          $v->{sw_url}, $v->{packref_path};
     } else {
       die $v->{type};
     }

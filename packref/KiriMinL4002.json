@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/%E9%9C%A7%E6%98%8E%E6%9C%9D",
+      "title" : "霧明朝"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/KiriMinL4002/kirimin.html.txt"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/KiriMinL4002/KiriMinL.otf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

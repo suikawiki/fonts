@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/IPAmj%E6%98%8E%E6%9C%9D",
+      "title" : "IPAmj明朝 Ver.001.01"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/ipamjm00101/IPA_Font_License_Agreement_v1.0.txt"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/ipamjm00101/ipamjm.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

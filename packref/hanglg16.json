@@ -1,0 +1,24 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/GNU%20Intlfonts",
+      "title" : "hanglg16"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:bdf_path" : {
+            "url" : "https://fonts.suikawiki.org/intlfonts-1.4.2/Korean.X/hanglg16.bdf"
+         },
+         "file:r:dat_path" : {
+            "url" : "https://fonts.suikawiki.org/intlfonts-1.4.2/Korean.X/hanglg16.dat"
+         },
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/intlfonts-1.4.2/Korean.X/README"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

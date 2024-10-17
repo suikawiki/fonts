@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/GNU%20Unifont",
+      "title" : "GNU Unifont"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/unifont-15006/index.html.txt"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/unifont-15006/unifont.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

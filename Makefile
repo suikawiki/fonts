@@ -17,7 +17,7 @@ updatenightly: build-index
 	$(MAKE) updatebyhook
 
 updatebyhook: data
-	$(GIT) add images/
+	$(GIT) add images/ packref/
 
 ## ------ Setup ------
 

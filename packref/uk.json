@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/UK-Source%20Ideographs",
+      "title" : "IRGN2232"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/uk/LICENSE"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/uk/IRGN2232.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

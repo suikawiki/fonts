@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/I.Ming",
+      "title" : "I.Ming"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/iming-800/LICENSE.md.txt"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/iming-800/IMing.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

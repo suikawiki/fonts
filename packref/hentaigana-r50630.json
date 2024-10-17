@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/%E5%AD%97%E8%BA%B0%E5%B8%B3%E5%A4%89%E4%BD%93%E4%BB%AE%E5%90%8D",
+      "title" : "字躰帳変体仮名"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/hentaigana-r50630/4889029.html.txt"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/hentaigana-r50630/hentaigana-r50630.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

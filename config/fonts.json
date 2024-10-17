@@ -366,6 +366,7 @@
   },
   
   "jiskan16": {
+    "key": "jiskan16",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese.X/jiskan16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese.X/jiskan16.bdf",
@@ -374,6 +375,7 @@
     "desc": "GNU Intlfonts"
   },
   "j78-16": {
+    "key": "j78-16",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese/j78-16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese/j78-16.bdf",
@@ -382,6 +384,7 @@
     "desc": "GNU Intlfonts"
   },
   "j90-16": {
+    "key": "j90-16",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese/j90-16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese/j90-16.bdf",
@@ -390,6 +393,7 @@
     "desc": "GNU Intlfonts"
   },
   "jksp16": {
+    "key": "jksp16",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese/jksp16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese/jksp16.bdf",
@@ -398,6 +402,7 @@
     "desc": "GNU Intlfonts"
   },
   "j00-1-16": {
+    "key": "j00-1-16",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese/j00-1-16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese/j00-1-16.bdf",
@@ -406,6 +411,7 @@
     "desc": "GNU Intlfonts"
   },
   "j00-2-16": {
+    "key": "j00-2-16",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese/j00-2-16.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese/j00-2-16.bdf",
@@ -414,6 +420,7 @@
     "desc": "GNU Intlfonts"
   },
   "jiskan24": {
+    "key": "jiskan24",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Japanese.X/jiskan24.dat",
     "bdf_path": "intlfonts-1.4.2/Japanese.X/jiskan24.bdf",
@@ -422,6 +429,7 @@
     "desc": "GNU Intlfonts"
   },
   "sish16-etl": {
+    "key": "sish16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Chinese/sish16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Chinese/sish16-etl.bdf",
@@ -430,6 +438,7 @@
     "desc": "GNU Intlfonts"
   },
   "guob16": {
+    "key": "guob16",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Chinese/guob16.dat",
     "bdf_path": "intlfonts-1.4.2/Chinese/guob16.bdf",
@@ -438,6 +447,7 @@
     "desc": "GNU Intlfonts"
   },
   "gb16fs": {
+    "key": "gb16fs",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Chinese.X/gb16fs.dat",
     "bdf_path": "intlfonts-1.4.2/Chinese.X/gb16fs.bdf",
@@ -446,6 +456,7 @@
     "desc": "GNU Intlfonts"
   },
   "hanglg16": {
+    "key": "hanglg16",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Korean.X/hanglg16.dat",
     "bdf_path": "intlfonts-1.4.2/Korean.X/hanglg16.bdf",
@@ -454,6 +465,7 @@
     "desc": "GNU Intlfonts"
   },
   "taipei16": {
+    "key": "taipei16",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Chinese/taipei16.dat",
     "bdf_path": "intlfonts-1.4.2/Chinese/taipei16.bdf",
@@ -462,6 +474,7 @@
     "desc": "GNU Intlfonts"
   },
   "sish16-etl": {
+    "key": "sish16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Chinese/sish16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Chinese/sish16-etl.bdf",
@@ -470,6 +483,7 @@
     "desc": "GNU Intlfonts"
   },
   "ind1c24-mule": {
+    "key": "ind1c24-mule",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/ind1c24-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/ind1c24-mule.bdf",
@@ -478,6 +492,7 @@
     "desc": "GNU Intlfonts"
   },
   "ind24-mule": {
+    "key": "ind24-mule",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/ind24-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/ind24-mule.bdf",
@@ -486,6 +501,7 @@
     "desc": "GNU Intlfonts"
   },
   "isci24-mule": {
+    "key": "isci24-mule",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/isci24-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/isci24-mule.bdf",
@@ -494,6 +510,7 @@
     "desc": "GNU Intlfonts"
   },
   "lao16-mule": {
+    "key": "lao16-mule",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lao16-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lao16-mule.bdf",
@@ -502,6 +519,7 @@
     "desc": "GNU Intlfonts"
   },
   "thai16": {
+    "key": "thai16",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/thai16.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/thai16.bdf",
@@ -510,6 +528,7 @@
     "desc": "GNU Intlfonts"
   },
   "xtis24": {
+    "key": "xtis24",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/xtis24.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/xtis24.bdf",
@@ -518,6 +537,7 @@
     "desc": "GNU Intlfonts"
   },
   "visc16-etl": {
+    "key": "visc16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/visc16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/visc16-etl.bdf",
@@ -526,6 +546,7 @@
     "desc": "GNU Intlfonts"
   },
   "tib24-mule": {
+    "key": "tib24-mule",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/tib24-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/tib24-mule.bdf",
@@ -534,6 +555,7 @@
     "desc": "GNU Intlfonts"
   },
   "tib1c24-mule": {
+    "key": "tib1c24-mule",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/tib1c24-mule.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/tib1c24-mule.bdf",
@@ -542,6 +564,7 @@
     "desc": "GNU Intlfonts"
   },
   "ipa16-etl": {
+    "key": "ipa16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/ipa16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/ipa16-etl.bdf",
@@ -550,6 +573,7 @@
     "desc": "GNU Intlfonts"
   },
   "cyr16-etl": {
+    "key": "cyr16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/cyr16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/cyr16-etl.bdf",
@@ -558,6 +582,7 @@
     "desc": "GNU Intlfonts"
   },
   "grk16-etl": {
+    "key": "grk16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/grk16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/grk16-etl.bdf",
@@ -566,6 +591,7 @@
     "desc": "GNU Intlfonts"
   },
   "koi16-etl": {
+    "key": "koi16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/koi16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/koi16-etl.bdf",
@@ -574,6 +600,7 @@
     "desc": "GNU Intlfonts"
   },
   "lt1-16-etl": {
+    "key": "lt1-16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lt1-16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lt1-16-etl.bdf",
@@ -582,6 +609,7 @@
     "desc": "GNU Intlfonts"
   },
   "lt2-16-etl": {
+    "key": "lt2-16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lt2-16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lt2-16-etl.bdf",
@@ -590,6 +618,7 @@
     "desc": "GNU Intlfonts"
   },
   "lt3-16-etl": {
+    "key": "lt3-16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lt3-16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lt3-16-etl.bdf",
@@ -598,6 +627,7 @@
     "desc": "GNU Intlfonts"
   },
   "lt4-16-etl": {
+    "key": "lt4-16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lt4-16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lt4-16-etl.bdf",
@@ -606,6 +636,7 @@
     "desc": "GNU Intlfonts"
   },
   "lt5-16-etl": {
+    "key": "lt5-16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Asian/lt5-16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Asian/lt5-16-etl.bdf",
@@ -614,6 +645,7 @@
     "desc": "GNU Intlfonts"
   },
   "heb16-etl": {
+    "key": "heb16-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Misc/heb16-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Misc/heb16-etl.bdf",
@@ -622,6 +654,7 @@
     "desc": "GNU Intlfonts"
   },
   "arab16-0-etl": {
+    "key": "arab16-0-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Misc/arab16-0-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Misc/arab16-0-etl.bdf",
@@ -630,6 +663,7 @@
     "desc": "GNU Intlfonts"
   },
   "arab16-1-etl": {
+    "key": "arab16-1-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Misc/arab16-1-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Misc/arab16-1-etl.bdf",
@@ -638,6 +672,7 @@
     "desc": "GNU Intlfonts"
   },
   "arab16-2-etl": {
+    "key": "arab16-2-etl",
     "type": "bitmap",
     "dat_path": "intlfonts-1.4.2/Misc/arab16-2-etl.dat",
     "bdf_path": "intlfonts-1.4.2/Misc/arab16-2-etl.bdf",

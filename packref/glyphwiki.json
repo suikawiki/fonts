@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/GlyphWiki",
+      "title" : "glyphwiki"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:dump_path" : {
+            "url" : "https://fonts.suikawiki.org/glyphwiki/dump-2.tar.gz"
+         },
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/glyphwiki/LICENSE.html.txt"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

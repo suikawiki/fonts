@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/Adobe-KR",
+      "title" : "Source Han Serif (AKR9)"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/SourceHanSerifAKR9-20190729/SourceHanSerifAKR9-Regular.otf"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/SourceHanSerifAKR9-20190729/SourceHanSerifAKR9-Regular.otf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

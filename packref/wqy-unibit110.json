@@ -1,0 +1,24 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/Unibit",
+      "title" : "wqy-unibit110"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:bdf_path" : {
+            "url" : "https://fonts.suikawiki.org/wqy-unibit110/wqy-unibit.bdf"
+         },
+         "file:r:dat_path" : {
+            "url" : "https://fonts.suikawiki.org/wqy-unibit110/wqy-unibit.dat"
+         },
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/wqy-unibit110/README"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

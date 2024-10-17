@@ -1,0 +1,18 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://github.com/suikawiki/fonts/blob/master/bin/create-fallback-question.js",
+      "title" : "Fallback Red Question"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/fallback-question/fallback-question.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

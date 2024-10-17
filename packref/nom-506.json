@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/N%C3%B4m%20Na%20T%E1%BB%91ng",
+      "title" : "NomNaTong"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/nom-506/LICENSE"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/nom-506/NomNaTong-Regular.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}
