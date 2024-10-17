@@ -129,6 +129,34 @@
           }
         
 
+          @font-face {
+            font-family: 'Noto Sans';
+            src: url(../notosans-2014/NotoSans[wdth,wght].ttf);
+            
+          }
+        
+          @font-face {
+            font-family: 'Noto Sans';
+            font-style: italic;
+            src: url(../notosans-2014/NotoSans-Italic[wdth,wght].ttf);
+            
+          }
+        
+
+          @font-face {
+            font-family: 'Noto Serif';
+            src: url(../notoserif-2014/NotoSerif[wdth,wght].ttf);
+            
+          }
+        
+          @font-face {
+            font-family: 'Noto Serif';
+            font-style: italic;
+            src: url(../notoserif-2014/NotoSerif-Italic[wdth,wght].ttf);
+            
+          }
+        
+
 
 
 

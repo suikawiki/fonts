@@ -90,6 +90,8 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/hannomrcv \
     local/opentype/iming-800 \
     local/opentype/fallback-question/fallback-question.ttf \
+    local/opentype/notoserif-2014 \
+    local/opentype/notosans-2014 \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
@@ -198,6 +200,23 @@ local/opentype/haranoaji-20230610:
 local/opentype/SourceHanSerifAKR9-20190729:
 	mkdir -p $@
 	$(SAVEURL) $@/SourceHanSerifAKR9-Regular.otf https://github.com/adobe-type-tools/Adobe-KR/releases/download/20190729/SourceHanSerifAKR9-Regular.otf
+
+local/opentype/notoserif-2014:
+	mkdir -p $@
+	$(SAVEURL) local/notoserif2014.zip https://github.com/notofonts/latin-greek-cyrillic/releases/download/NotoSerif-v2.014/NotoSerif-v2.014.zip
+	cd local && unzip notoserif2014.zip NotoSans/googlefonts/variable-ttf/NotoSerif\[wdth,wght\].ttf
+	cd local && unzip notoserif2014.zip NotoSans/googlefonts/variable-ttf/NotoSerif-Italic\[wdth,wght\].ttf
+	cd local && unzip notoserif2014.zip OFL.txt
+	mv local/NotoSerif/googlefonts/variable-ttf/*.ttf $@/
+	mv OFL.txt $@/
+local/opentype/notosans-2014:
+	mkdir -p $@
+	$(SAVEURL) local/notosans2014.zip https://github.com/notofonts/latin-greek-cyrillic/releases/download/NotoSans-v2.014/NotoSans-v2.014.zip
+	cd local && unzip notosans2014.zip NotoSans/googlefonts/variable-ttf/NotoSans\[wdth,wght\].ttf
+	cd local && unzip notosans2014.zip NotoSans/googlefonts/variable-ttf/NotoSans-Italic\[wdth,wght\].ttf
+	cd local && unzip notosans2014.zip OFL.txt
+	mv local/NotoSans/googlefonts/variable-ttf/*.ttf $@/
+	mv OFL.txt $@/
 
 local/opentype/cjksymbols-1001:
 	mkdir -p $@

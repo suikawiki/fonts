@@ -165,6 +165,22 @@
     "license_path": "SourceHanSerifAKR9-20190729/SourceHanSerifAKR9-Regular.otf",
     "sw_url": "https://wiki.suikawiki.org/n/Adobe-KR"
   },
+  "Noto Serif": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "notoserif-2014/NotoSerif[wdth,wght].ttf",
+    "italic_path": "notoserif-2014/NotoSerif-Italic[wdth,wght].ttf",
+    "license_path": "notoserif-2014/OFL.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/Noto"
+  },
+  "Noto Sans": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "notosans-2014/NotoSans[wdth,wght].ttf",
+    "italic_path": "notosans-2014/NotoSans-Italic[wdth,wght].ttf",
+    "license_path": "notosans-2014/OFL.txt",
+    "sw_url": "https://wiki.suikawiki.org/n/Noto"
+  },
   "CJK Symbols 1.001": {
     "type": "opentype",
     "webfont": true,

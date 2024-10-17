@@ -20,7 +20,7 @@ my $Fonts;
     my $v = $Fonts->{$_};
     if ($v->{type} eq 'opentype') {
       if ($v->{webfont}) {
-        sprintf q{
+        my $c = sprintf q{
           @font-face {
             font-family: '%s';
             src: url(../%s);
@@ -30,6 +30,18 @@ my $Fonts;
             $v->{font_family} // $_, $v->{path},
             ($v->{unicode_range} ? 'unicode-range: ' . $v->{unicode_range} . ';' : ''),
         ;
+        $c .= sprintf q{
+          @font-face {
+            font-family: '%s';
+            font-style: italic;
+            src: url(../%s);
+            %s
+          }
+        },
+            $v->{font_family} // $_, $v->{italic_path},
+            ($v->{unicode_range} ? 'unicode-range: ' . $v->{unicode_range} . ';' : ''),
+            if defined $v->{italic_path};
+        $c;
       } else {
         '';
       }
@@ -68,10 +80,15 @@ my $Fonts;
     if ($v->{type} eq 'opentype') {
       $r = sprintf q{
         <li><a href="opentype/%s">%s</a>
-        (<a href="%s">license</a>, 
+        (}, $v->{path}, $_,
+      ;
+      if (defined $v->{italic_path}) {
+        $r .= sprintf q{<a href="opentype/%s">Italic</a>, },
+            $v->{italic_path};
+      }
+      $r .= sprintf q{<a href="%s">license</a>, 
          <a href="%s">SuikaWiki</a>)
-      }, $v->{path}, $_,
-          $v->{license_url} // ('opentype/' . $v->{license_path}),
+      }, $v->{license_url} // ('opentype/' . $v->{license_path}),
           $v->{sw_url};
     } elsif ($v->{type} eq 'bitmap') {
       $r = sprintf q{
