@@ -135,7 +135,8 @@ my $Fonts;
             $v->{italic_path};
       }
       $r .= sprintf q{<a href="%s">license</a>, 
-         <a href="%s">SuikaWiki</a>, <a href="packref/%s">packref</a>)
+         <a href="%s">SuikaWiki</a>,
+         <a href="https://raw.githubusercontent.com/suikawiki/fonts/refs/heads/master/packref/%s">packref</a>)
       }, $v->{license_url} // ('opentype/' . $v->{license_path}),
           $v->{sw_url}, $v->{packref_path};
     } elsif ($v->{type} eq 'bitmap') {
@@ -143,7 +144,8 @@ my $Fonts;
         <li><a href="bdf/%s">%s</a>
         (<a href="bdf/%s">BDF</a>, 
          <a href="bdf/%s">license</a>, 
-         <a href="%s">SuikaWiki</a>, <a href="packref/%s">packref</a>)
+         <a href="%s">SuikaWiki</a>,
+         <a href="https://raw.githubusercontent.com/suikawiki/fonts/refs/heads/master/packref/%s">packref</a>)
       }, $v->{dat_path}, $_, $v->{bdf_path}, $v->{license_path}, $v->{sw_url},
           $v->{packref_path};
     } elsif ($v->{type} eq 'imageset') {
@@ -162,7 +164,7 @@ my $Fonts;
       $r = sprintf q{
         <li><a href="%s">%s</a>
         (<a href="%s">license</a>, <a href="%s">SuikaWiki</a>,
-         <a href="packref/%s">packref</a>)
+         <a href="https://raw.githubusercontent.com/suikawiki/fonts/refs/heads/master/packref/%s">packref</a>)
       }, $v->{dump_path} // $v->{patch_json_path}, $_, $v->{license_path},
           $v->{sw_url}, $v->{packref_path};
     } else {
