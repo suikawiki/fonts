@@ -1,0 +1,30 @@
+{
+   "notosans" : {
+      "files" : {
+         "file:r:italic_path" : {
+            "name" : "NotoSans-Italic_wdth_wght_.ttf"
+         },
+         "file:r:license_path" : {
+         },
+         "file:r:path" : {
+            "name" : "NotoSans_wdth_wght_.ttf"
+         }
+      },
+      "type" : "packref",
+      "url" : "https://raw.githubusercontent.com/suikawiki/fonts/master/packref/notosans-2014.json"
+   },
+   "notoserif" : {
+      "files" : {
+         "file:r:italic_path" : {
+            "name" : "NotoSerif-Italic_wdth_wght_.ttf"
+         },
+         "file:r:license_path" : {
+         },
+         "file:r:path" : {
+            "name" : "NotoSerif_wdth_wght_.ttf"
+         }
+      },
+      "type" : "packref",
+      "url" : "https://raw.githubusercontent.com/suikawiki/fonts/master/packref/notoserif-2014.json"
+   }
+}

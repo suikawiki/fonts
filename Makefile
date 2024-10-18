@@ -39,6 +39,12 @@ pmbp-install: pmbp-upgrade
 	perl local/bin/pmbp.pl --install \
             --create-perl-command-shortcut perl
 
+ddsd-booter:
+#XXX    $(CURL) -sSLf https://raw.githubusercontent.com/geocol/ddsd/master/bin/booter | bash
+	$(CURL) -sSLf https://raw.githubusercontent.com/geocol/ddsd/staging/bin/booter.staging | bash
+ddsd-pull: ddsd-booter
+	./ddsd pull
+
 ## ------ Build ------
 
 build: build-index data
@@ -92,6 +98,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/hannomrcv \
     local/opentype/iming-800 \
     local/opentype/fallback-question/fallback-question.ttf \
+    local/opentype/namelogos \
     local/opentype/notoserif-2014 \
     local/opentype/notosans-2014 \
     local/bdf/intlfonts-1.4.2 \
@@ -332,6 +339,10 @@ local/opentype/fallback-question/fallback-question.ttf:
 	mkdir -p local/opentype/fallback-question
 	$(MAKE) local/fallback-question.ttf
 	cp local/fallback-question.ttf $@
+local/opentype/namelogos:
+	mkdir -p $@
+	cp namelogos/*.ttf $@/
+	cp namelogos/LICENSE.* $@/
 
 local/bdf/intlfonts-1.4.2:
 	$(SAVEURL) local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
