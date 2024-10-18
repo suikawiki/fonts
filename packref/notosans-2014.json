@@ -8,6 +8,9 @@
    "packref_license" : "CC0-1.0",
    "source" : {
       "files" : {
+         "file:r:italic_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/notosans-2014/NotoSans-Italic[wdth,wght].ttf"
+         },
          "file:r:license_path" : {
             "url" : "https://fonts.suikawiki.org/opentype/notosans-2014/OFL.txt"
          },

@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/Wiki%2F%2F%E5%A4%96%E5%AD%97",
+      "title" : "swg"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/glyphwiki/LICENSE.html.txt"
+         },
+         "file:r:patch_json_path" : {
+            "url" : "https://fonts.suikawiki.org/swg/glyphs.json"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

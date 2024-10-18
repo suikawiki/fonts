@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/CNS%2011643",
+      "title" : "全字庫正宋體 (BMP)"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/cns11643-20221114/license.html.txt"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/cns11643-20221114/TW-Sung-98_1.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

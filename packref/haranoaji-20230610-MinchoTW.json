@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876",
+      "title" : "原ノ味明朝 (TW)"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/haranoaji-20230610/LICENSE"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/haranoaji-20230610/HaranoAjiMinchoTW-Regular.otf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

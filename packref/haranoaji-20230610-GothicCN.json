@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88",
+      "title" : "原ノ味角ゴシック (CN)"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/haranoaji-20230610/LICENSE"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/haranoaji-20230610/HaranoAjiGothicCN-ExtraLight.otf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

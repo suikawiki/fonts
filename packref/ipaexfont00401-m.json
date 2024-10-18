@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/IPAex%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88",
+      "title" : "IPAex明朝"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/ipaexfont00401/IPA_Font_License_Agreement_v1.0.txt"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/ipaexfont00401/ipaexm.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

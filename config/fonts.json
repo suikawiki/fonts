@@ -1,5 +1,6 @@
 {
   "IRGN2107": {
+    "key": "IRGN2107",
     "type": "opentype",
     "webfont": true,
     "path": "uk/IRGN2107.ttf",
@@ -7,6 +8,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/UK-Source%20Ideographs"
   },
   "IRGN2232": {
+    "key": "IRGN2232",
     "type": "opentype",
     "webfont": true,
     "path": "uk/IRGN2232.ttf",
@@ -48,48 +50,56 @@
     "sw_url": "https://wiki.suikawiki.org/n/IPAmj%E6%98%8E%E6%9C%9D"
   },
   "IPAex明朝": {
+    "key": "ipaexfont00401-m",
     "type": "opentype",
     "path": "ipaexfont00401/ipaexm.ttf",
     "license_path": "ipaexfont00401/IPA_Font_License_Agreement_v1.0.txt",
     "sw_url": "https://wiki.suikawiki.org/n/IPAex%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "IPAexゴシック": {
+    "key": "ipaexfont00401-g",
     "type": "opentype",
     "path": "ipaexfont00401/ipaexg.ttf",
     "license_path": "ipaexfont00401/IPA_Font_License_Agreement_v1.0.txt",
     "sw_url": "https://wiki.suikawiki.org/n/IPAex%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "原ノ味角ゴシック (20220220)": {
+    "key": "haranoaji-20220220-Gothic",
     "type": "opentype",
     "path": "haranoaji-20220220/HaranoAjiGothic-ExtraLight.otf",
     "license_path": "haranoaji-20220220/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "原ノ味角ゴシック (CN, 20220220)": {
+    "key": "haranoaji-20220220-GothicCN",
     "type": "opentype",
     "path": "haranoajicn-20220220/HaranoAjiGothicCN-ExtraLight.otf",
     "license_path": "haranoajicn-20220220/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "原ノ味角ゴシック (TW, 20220220)": {
+    "key": "haranoaji-20220220-GothicTW",
     "type": "opentype",
     "path": "haranoajitw-20220220/HaranoAjiGothicTW-ExtraLight.otf",
     "license_path": "haranoajitw-20220220/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "原ノ味角ゴシック (KR, 20220220)": {
+    "key": "haranoaji-20220220-GothicKR",
     "type": "opentype",
     "path": "haranoajikr-20220220/HaranoAjiGothicKR-ExtraLight.otf",
     "license_path": "haranoajikr-20220220/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "原ノ味角ゴシック (K1, 20220220)": {
+    "key": "haranoaji-20220220-GothicK1",
     "type": "opentype",
     "path": "haranoajik1-20220220/HaranoAjiGothicK1-ExtraLight.otf",
     "license_path": "haranoajik1-20220220/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "原ノ味角ゴシック": {
+    "key": "haranoaji-20230610-Gothic",
     "type": "opentype",
     "webfont": true,
     "path": "haranoaji-20230610/HaranoAjiGothic-ExtraLight.otf",
@@ -97,6 +107,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "原ノ味角ゴシック (CN)": {
+    "key": "haranoaji-20230610-GothicCN",
     "type": "opentype",
     "webfont": true,
     "path": "haranoaji-20230610/HaranoAjiGothicCN-ExtraLight.otf",
@@ -104,6 +115,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "原ノ味角ゴシック (TW)": {
+    "key": "haranoaji-20230610-GothicTW",
     "type": "opentype",
     "webfont": true,
     "path": "haranoaji-20230610/HaranoAjiGothicTW-ExtraLight.otf",
@@ -111,6 +123,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "原ノ味角ゴシック (KR)": {
+    "key": "haranoaji-20230610-GothicKR",
     "type": "opentype",
     "webfont": true,
     "path": "haranoaji-20230610/HaranoAjiGothicKR-ExtraLight.otf",
@@ -118,6 +131,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "原ノ味角ゴシック (K1)": {
+    "key": "haranoaji-20230610-GothicK1",
     "type": "opentype",
     "webfont": true,
     "path": "haranoaji-20230610/HaranoAjiGothicK1-ExtraLight.otf",
@@ -125,6 +139,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88"
   },
   "原ノ味明朝": {
+    "key": "haranoaji-20230610-Mincho",
     "type": "opentype",
     "webfont": true,
     "path": "haranoaji-20230610/HaranoAjiMincho-Regular.otf",
@@ -132,6 +147,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
   },
   "原ノ味明朝 (CN)": {
+    "key": "haranoaji-20230610-MinchoCN",
     "type": "opentype",
     "webfont": true,
     "path": "haranoaji-20230610/HaranoAjiMinchoCN-Regular.otf",
@@ -139,6 +155,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
   },
   "原ノ味明朝 (TW)": {
+    "key": "haranoaji-20230610-MinchoTW",
     "type": "opentype",
     "webfont": true,
     "path": "haranoaji-20230610/HaranoAjiMinchoTW-Regular.otf",
@@ -146,6 +163,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
   },
   "原ノ味明朝 (KR)": {
+    "key": "haranoaji-20230610-MinchoKR",
     "type": "opentype",
     "webfont": true,
     "path": "haranoaji-20230610/HaranoAjiMinchoKR-Regular.otf",
@@ -153,6 +171,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/%E5%8E%9F%E3%83%8E%E5%91%B3%E6%98%8E%E6%9C%9D$37876"
   },
   "原ノ味明朝 (K1)": {
+    "key": "haranoaji-20230610-MinchoK1",
     "type": "opentype",
     "webfont": true,
     "path": "haranoaji-20230610/HaranoAjiMinchoK1-Regular.otf",
@@ -196,6 +215,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/%E4%BB%A3%E8%A1%A8%E5%AD%97%E5%BD%A2$38085"
   },
   "全字庫正宋體 (BMP)": {
+    "key": "TW-Sung",
     "type": "opentype",
     "path": "cns11643-20221114/TW-Sung-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
@@ -205,6 +225,7 @@
     "webfont": true
   },
   "全字庫正宋體 (SIP)": {
+    "key": "TW-Sung-Ext-B",
     "type": "opentype",
     "path": "cns11643-20221114/TW-Sung-Ext-B-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
@@ -214,6 +235,7 @@
     "webfont": true
   },
   "全字庫正宋體 (PUP)": {
+    "key": "TW-Sung-Plus",
     "type": "opentype",
     "path": "cns11643-20221114/TW-Sung-Plus-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
@@ -223,6 +245,7 @@
     "webfont": true
   },
   "全字庫正楷體 (BMP)": {
+    "key": "TW-Kai",
     "type": "opentype",
     "path": "cns11643-20221114/TW-Kai-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
@@ -232,6 +255,7 @@
     "webfont": true
   },
   "全字庫正楷體 (SIP)": {
+    "key": "TW-Kai-Ext-B",
     "type": "opentype",
     "path": "cns11643-20221114/TW-Kai-Ext-B-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
@@ -241,6 +265,7 @@
     "webfont": true
   },
   "全字庫正楷體 (PUP)": {
+    "key": "TW-Kai-Plus",
     "type": "opentype",
     "path": "cns11643-20221114/TW-Kai-Plus-98_1.ttf",
     "license_path": "cns11643-20221114/license.html.txt",
@@ -250,6 +275,7 @@
     "webfont": true
   },
   "GNU Unifont": {
+    "key": "unifont-15006",
     "type": "opentype",
     "font_family": "GNU Unifont",
     "unicode_range": "U+0000-FFFF",
@@ -259,6 +285,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/GNU%20Unifont"
   },
   "GNU Unifont (upper)": {
+    "key": "unifont-15006-upper",
     "type": "opentype",
     "font_family": "GNU Unifont",
     "unicode_range": "U+10000-10FFFF",
@@ -301,6 +328,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/%E9%9C%A7%E6%98%8E%E6%9C%9D"
   },
   "DroidSansFallback (free-fonts)": {
+    "key": "DroidSansFallback-ff",
     "type": "opentype",
     "font_family": "DroidSansFallback (free-fonts)",
     "webfont": true,
@@ -309,6 +337,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/Droid%20Sans%20Fallback"
   },
   "DroidSansFallback": {
+    "key": "DroidSansFallback-aosp",
     "type": "opentype",
     "font_family": "DroidSansFallback",
     "webfont": true,
@@ -317,6 +346,7 @@
     "sw_url": "https://wiki.suikawiki.org/n/Droid%20Sans%20Fallback"
   },
   "DroidSansFallbackFull": {
+    "key": "DroidSansFallbackFull-aosp",
     "type": "opentype",
     "font_family": "DroidSansFallbackFull",
     "webfont": true,

@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/Droid%20Sans%20Fallback",
+      "title" : "DroidSansFallbackFull"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/DroidSansFallback/LICENSE-aosp.txt"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/DroidSansFallback/DroidSansFallbackFull-aosp.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}
