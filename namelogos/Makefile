@@ -10,7 +10,8 @@ build: ddsd-pull build-main
 build-main: \
     namelogosserif.ttf namelogosserif-italic.ttf \
     namelogossans.ttf namelogossans-italic.ttf \
-    LICENSE.ttf.txt
+    namelogosserif2.ttf \
+    LICENSE.ttf.txt LICENSE.ttf2.txt
 
 ddsd-booter:
 	cd .. && $(MAKE) ddsd-booter
@@ -55,6 +56,18 @@ namelogossans-italic.ttf: \
 	    node bash -c 'cd /app && node generate.js sansitalic'
 
 LICENSE.ttf.txt: ../local/data/notoserif/files/OFL.txt
+	cp $< $@
+
+namelogosserif2.ttf: \
+    ../local/namelogos/opentype.js generate.js \
+    ../local/data/haranoajim/files/HaranoAjiMincho-Regular.otf
+	mkdir -p ../local/namelogos
+	docker run -i -v `pwd`:/app \
+	    -v `pwd`/../local/namelogos:/app/namelogos \
+	    -v `pwd`/../local/data:/app/data \
+	    node bash -c 'cd /app && node generate.js haranoajim'
+
+LICENSE.ttf2.txt: ../local/data/haranoajim/files/LICENSE
 	cp $< $@
 
 ## License: Public Domain.

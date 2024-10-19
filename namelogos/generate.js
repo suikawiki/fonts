@@ -256,6 +256,16 @@ const createDestFont = (sf) => {
       aRight: 0.11,
       eRight: 0.05,
     },
+    haranoajim: {
+      name: 'NameLogos Serif 2',
+      outPath: 'namelogosserif2.ttf',
+      inPath: "data/haranoajim/files/HaranoAjiMincho-Regular.otf",
+      aScale: 0.65,
+      aDeltaYFactor: 0.8,
+      aLeft: 0.36,
+      aRight: 0.15,
+      eRight: 0.125,
+    },
   }[key];
   if (!def) throw new Error ("Bad key |"+key+"|");
 

@@ -8,4 +8,15 @@ Supported ligatures:
 
 See: <https://wiki.suikawiki.org/n/%E3%83%AD%E3%82%B4%E6%96%87%E5%AD%97%E5%88%97$46131#header-section-TEX-%E5%9E%8B>.
 
-License of fonts: See |LICENSE.ttf.txt|.
+License of fonts:
+
+  namelogosans.ttf :  See |LICENSE.ttf.txt|.
+  namelogosans-italic.ttf :  See |LICENSE.ttf.txt|.
+  namelogoserif.ttf :  See |LICENSE.ttf.txt|.
+  namelogoserif-italic.ttf :  See |LICENSE.ttf.txt|.
+
+    Derived from: <https://github.com/notofonts/latin-greek-cyrillic>.
+
+  namelogosans2.ttf :  See |LICENSE.ttf2.txt|.
+
+    Derived from: <https://github.com/trueroad/HaranoAjiFonts>.

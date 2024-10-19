@@ -123,6 +123,41 @@
         
 
           @font-face {
+            font-family: 'NameLogos Sans';
+            src: url(../namelogos/namelogossans.ttf);
+            
+          }
+        
+          @font-face {
+            font-family: 'NameLogos Sans';
+            font-style: italic;
+            src: url(../namelogos/namelogossans-italic.ttf);
+            
+          }
+        
+
+          @font-face {
+            font-family: 'NameLogos Serif';
+            src: url(../namelogos/namelogosserif.ttf);
+            
+          }
+        
+          @font-face {
+            font-family: 'NameLogos Serif';
+            font-style: italic;
+            src: url(../namelogos/namelogosserif-italic.ttf);
+            
+          }
+        
+
+          @font-face {
+            font-family: 'NameLogos Serif2';
+            src: url(../namelogos/namelogosserif2.ttf);
+            
+          }
+        
+
+          @font-face {
             font-family: 'NomNaTong';
             src: url(../nom-506/NomNaTong-Regular.ttf);
             

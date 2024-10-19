@@ -1,4 +1,8 @@
 {
+   "haranoajim" : {
+      "type" : "packref",
+      "url" : "https://raw.githubusercontent.com/suikawiki/fonts/refs/heads/master/packref/haranoaji-20230610-Mincho.json"
+   },
    "notosans" : {
       "files" : {
          "file:r:italic_path" : {

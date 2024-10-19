@@ -1,0 +1,24 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/%E3%83%AD%E3%82%B4%E6%96%87%E5%AD%97%E5%88%97$46131#header-section-TEX-%E5%9E%8B",
+      "title" : "NameLogos Serif"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:italic_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/namelogos/namelogosserif-italic.ttf"
+         },
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/namelogos/LICENSE.ttf.txt"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/namelogos/namelogosserif.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}
