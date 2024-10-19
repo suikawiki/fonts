@@ -239,9 +239,6 @@ local/opentype/notoemoji-20230907:
 	mv local/NotoEmoji-VariableFont_wght.ttf $@/
 	mv local/OFL.txt $@/
 
-	# XXX
-	rm -fr local/opentype-notoemoji-20230907
-
 local/opentype/cjksymbols-1001:
 	mkdir -p $@
 	$(SAVEURL) $@/CJKSymbols-Regular.otf https://github.com/unicode-org/cjk-symbols/releases/download/1.001/CJKSymbols-Regular.otf
@@ -357,9 +354,10 @@ local/opentype/fallback-question/fallback-question.ttf:
 	$(MAKE) local/fallback-question.ttf
 	cp local/fallback-question.ttf $@
 local/opentype/namelogos/XXX:
-	mkdir -p $@
-	cp namelogos/*.ttf $@/
-	cp namelogos/LICENSE.* $@/
+	mkdir -p $@/../
+	cp namelogos/*.ttf $@/../
+	cp namelogos/LICENSE.* $@/../
+	rm -fr local/opentype/namelogos/XXX
 
 local/bdf/intlfonts-1.4.2:
 	$(SAVEURL) local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
