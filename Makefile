@@ -101,6 +101,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/namelogos \
     local/opentype/notoserif-2014 \
     local/opentype/notosans-2014 \
+    local/opentype/notosanskr-2004 \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
@@ -224,6 +225,12 @@ local/opentype/notosans-2014:
 	cd local && unzip notosans2014.zip OFL.txt
 	mv local/NotoSans/googlefonts/variable-ttf/*.ttf $@/
 	mv local/OFL.txt $@/
+local/opentype/notosanskr-2004:
+	mkdir -p $@
+	$(SAVEURL) local/notosanskr2004.zip https://github.com/notofonts/noto-cjk/releases/download/Sans2.004/17_NotoSansKR.zip
+	cd local && unzip notosanskr2004.zip NotoSansKR-Regular.otf LICENSE
+	mv local/NotoSansKR-Regular.otf $@/
+	mv local/LICENSE $@/
 
 local/opentype/cjksymbols-1001:
 	mkdir -p $@

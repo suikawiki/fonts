@@ -179,6 +179,13 @@
         
 
           @font-face {
+            font-family: 'Noto Sans KR';
+            src: url(../notosanskr-2004/NotoSansKR-Regular.otf);
+            
+          }
+        
+
+          @font-face {
             font-family: 'Noto Serif';
             src: url(../notoserif-2014/NotoSerif[wdth,wght].ttf);
             
