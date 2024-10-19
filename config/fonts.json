@@ -207,6 +207,13 @@
     "license_path": "notosanskr-2014/LICENSE",
     "sw_url": "https://wiki.suikawiki.org/n/Noto"
   },
+  "Noto Emoji": {
+    "type": "opentype",
+    "webfont": true,
+    "path": "notoemoji-20230907/NotoEmoji-VariableFont_wght.ttf",
+    "license_path": "notoemoji-20230907/LICENSE",
+    "sw_url": "https://wiki.suikawiki.org/n/Noto"
+  },
   "NameLogos Serif": {
     "key": "namelogos-serif",
     "type": "opentype",
