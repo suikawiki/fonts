@@ -102,7 +102,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/notoserif-2014 \
     local/opentype/notosans-2014 \
     local/opentype/notosanskr-2004 \
-    local/opentype-notoemoji-20230907 \
+    local/opentype/notoemoji-20230907 \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
@@ -232,12 +232,15 @@ local/opentype/notosanskr-2004:
 	cd local && unzip notosanskr2004.zip NotoSansKR-Regular.otf LICENSE
 	mv local/NotoSansKR-Regular.otf $@/
 	mv local/LICENSE $@/
-local/opentype-notoemoji-20230907:
+local/opentype/notoemoji-20230907:
 	mkdir -p $@
 	$(SAVEURL) local/notoemoji20230907.zip https://github.com/googlefonts/noto-emoji/files/15046272/Noto_Emoji.zip
 	cd local && unzip notoemoji20230907.zip NotoEmoji-VariableFont_wght.ttf OFL.txt
 	mv local/NotoEmoji-VariableFont_wght.ttf $@/
 	mv local/OFL.txt $@/
+
+	# XXX
+	rm -fr local/opentype-notoemoji-20230907
 
 local/opentype/cjksymbols-1001:
 	mkdir -p $@
