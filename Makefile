@@ -98,7 +98,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/hannomrcv \
     local/opentype/iming-800 \
     local/opentype/fallback-question/fallback-question.ttf \
-    local/opentype/namelogos/XXX \
+    local/opentype/namelogos/XXX2 \
     local/opentype/notoserif-2014 \
     local/opentype/notosans-2014 \
     local/opentype/notosanskr-2004 \
@@ -353,11 +353,15 @@ local/opentype/fallback-question/fallback-question.ttf:
 	mkdir -p local/opentype/fallback-question
 	$(MAKE) local/fallback-question.ttf
 	cp local/fallback-question.ttf $@
-local/opentype/namelogos/XXX:
-	mkdir -p $@/../
-	cp namelogos/*.ttf $@/../
-	cp namelogos/LICENSE.* $@/../
+local/opentype/namelogos/XXX2:
+	mkdir -p $@
+	cp namelogos/*.ttf $@/
+	cp namelogos/LICENSE.* $@/
+
 	rm -fr local/opentype/namelogos/XXX
+	mkdir -p local/opentype/namelogos/
+	cp namelogos/*.ttf local/opentype/namelogos/
+	cp namelogos/LICENSE.* local/opentype/namelogos/
 
 local/bdf/intlfonts-1.4.2:
 	$(SAVEURL) local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
