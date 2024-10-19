@@ -98,7 +98,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/hannomrcv \
     local/opentype/iming-800 \
     local/opentype/fallback-question/fallback-question.ttf \
-    local/opentype/namelogos \
+    local/opentype/namelogos/XXX \
     local/opentype/notoserif-2014 \
     local/opentype/notosans-2014 \
     local/opentype/notosanskr-2004 \
@@ -356,7 +356,7 @@ local/opentype/fallback-question/fallback-question.ttf:
 	mkdir -p local/opentype/fallback-question
 	$(MAKE) local/fallback-question.ttf
 	cp local/fallback-question.ttf $@
-local/opentype/namelogos:
+local/opentype/namelogos/XXX:
 	mkdir -p $@
 	cp namelogos/*.ttf $@/
 	cp namelogos/LICENSE.* $@/
