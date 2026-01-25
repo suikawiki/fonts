@@ -1,9 +1,9 @@
-all: fallback-question.ttf
+all: frq0.ttf
 
 ../local/opentype.js:
 	cd .. && $(MAKE) local/opentype.js
 
-fallback-question.ttf: create-fallback-question.js ../local/opentype.js
-	docker run -i -v `pwd`:/app -v `pwd`/../local/opentype.js:/app/opentype.js -w /app node node create-fallback-question.js
+frq0.ttf: create-fallback-question.js ../local/opentype.js otwriter.js
+	docker run -i -v `pwd`:/app -v `pwd`/../local/:/app/local/ -w /app node node create-fallback-question.js
 
 ## License: Public Domain.

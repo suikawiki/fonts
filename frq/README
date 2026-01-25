@@ -1,0 +1,18 @@
+Fallback Red Question
+~~~~~~~~~~~~~~~~~~~~~
+
+A font of only a red question mark.
+
+* Usage
+
+See |frq-demo.html|.
+
+* Files
+
+frq*.ttf                     The current version.
+fallback-question.ttf        The first version with no VS support.
+create-fallback-question.js  The font generator.
+
+* License
+
+Public Domain.

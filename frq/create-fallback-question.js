@@ -1,11 +1,13 @@
 const fs = require ('fs/promises');
-const opentype = require ("./opentype.js");
+const opentype = require ("./local/opentype.js");
+const OTWriter = require ('./otwriter.js');
 
-const notdefGlyph = new opentype.Glyph ({
-  name: '.notdef',
-  advanceWidth: 900,
-  path: new opentype.Path,
-});
+function generate (vsStart, fileName) {
+  const notdefGlyph = new opentype.Glyph ({
+    name: '.notdef',
+    advanceWidth: 900,
+    path: new opentype.Path,
+  });
 
 const question = new opentype.Path;
 {
@@ -33,41 +35,138 @@ const question = new opentype.Path;
   }
 } // question
     
-const questionGlyph = new opentype.Glyph ({
-  name: 'question',
-  advanceWidth: 900,
-  path: question,
-});
-questionGlyph.addUnicodeRange (0x0000, 0x10FFFF);
+  const questionGlyph = new opentype.Glyph ({
+    name: 'question',
+    advanceWidth: 900,
+    path: question,
+  });
 
-const font = new opentype.Font ({
-  familyName: 'Fallback Red Question',
-  license: 'Public Domain.',
-  styleName: 'Regular',
-  unitsPerEm: 900,
-  ascender: 900,
-  descender: 0,
-  glyphs: [notdefGlyph, questionGlyph],
-  tables: {
-    colr: {
-      baseGlyphRecords: [
-        {glyphID: 1, firstLayerIndex: 0, numLayers: 1},
-      ],
-      layerRecords: [
-        {glyphID: 1, paletteIndex: 0},
-      ]
-    },
-    cpal: {
-      colorRecords: [0x0000FFFF], // 0xBBGGRRAA
-    },
-  },        
-});
-font.names = {
-  fontFamily: {en: 'Fallback Red Question'},
-  fullName: {en: 'Fallback Red Question'},
-  license: {en: 'Public Domain.'},
-};
+  let cmapOTW = new OTWriter;
+  {
+    let table = cmapOTW.startTable ([]);
 
-fs.writeFile ('./fallback-question.ttf', new DataView (font.toArrayBuffer ()));
+    let r13 = [];
+    let r14 = [];
+
+    cmapOTW.add ([
+      ['uint16', 0], // version
+      ['uint16', 2], // numTables
+
+      // EncodingRecord encodingRecords[0]
+      ['uint16', 3], // platformID (Windows)
+      ['uint16', 10], // encodingID (Unicode full)
+      table.offset32 (r13, ['cmap', '13']),
+
+      // EncodingRecord encodingRecords[1]
+      ['uint16', 0], // platformID (Unicode)
+      ['uint16', 5], // encodingID (UVS)
+      table.offset32 (r14, ['cmap', '14']),
+    ]);
+
+    {
+      let sub = cmapOTW.startTable (r13);
+
+      cmapOTW.add ([
+        ['uint16', 13], // format
+        ['uint16', 0], // reserved
+        ['uint32', 28], // length
+        ['uint32', 0], // language
+        ['uint32', 1], // numGroups
+
+        // group[0]
+        ['uint32', 0x0000], // startCharCode
+        ['uint32', 0x10FFFF], // endCharCode
+        ['uint32', 1], // glyphID
+      ]);
+    }
+
+    {
+      let sub = cmapOTW.startTable (r14);
+      let uvs = [];
+      let rr = [];
+      let rs = [];
+      for (let r = vsStart; r < vsStart + 236; r++) {
+        let count = 0xFF;
+        if (r * 0x100 + 1 + count > 0x10FFFF) {
+          count = 0x10FFFF - r * 0x100 + 1 - 2;
+        }
+        if (count < 0) break;
+        rr.push ([r * 0x100 + 1, count]);
+      }
+
+      cmapOTW.add ([
+        ['uint16', 14], // format
+        ['uint32', 2+4+4+256*(3+4+4)+4+(3+1)*rr.length], // length
+        ['uint32', 256], // numVarSelectorRecords
+      ]);
+
+      // VariationSelector varSelector[]
+      let vsList = [];
+      for (let i = 0xFE00; i <= 0xFE0F; i++) vsList.push (i);
+      for (let i = 0xE0100; i <= 0xE01EF; i++) vsList.push (i);
+      for (let vs of vsList) {
+        cmapOTW.add ([
+          ['uint24', vs], // varSelector
+          sub.offset32 (uvs, ['cmap', '14', 'defaultUVS']),
+          ['uint32', 0], // nonDefaultUVSOffset
+        ]);
+      }
+      {
+        let du = cmapOTW.startTable (uvs);
+        cmapOTW.add ([
+          ['uint32', rr.length], // numUnicodeValueRanges
+        ]);
+        rr.forEach ((_, i) => {
+          cmapOTW.add ([
+            // UnicodeRange ranges[i]
+            ['uint24', _[0]], // startUnicodeValue
+            // U+0000 is not allowed by Chrome/Firefox
+            ['uint8', _[1]], // additionalCount
+          ]);
+        });
+      }
+    }
+  }
+
+  const font = new opentype.Font ({
+    familyName: 'Fallback Red Question',
+    license: 'Public Domain.',
+    styleName: 'Regular',
+    unitsPerEm: 900,
+    ascender: 900,
+    descender: 0,
+    glyphs: [notdefGlyph, questionGlyph],
+    tables: {
+      colr: {
+        baseGlyphRecords: [
+          {glyphID: 1, firstLayerIndex: 0, numLayers: 1},
+        ],
+        layerRecords: [
+          {glyphID: 1, paletteIndex: 0},
+        ]
+      },
+      cpal: {
+        colorRecords: [0x0000FFFF], // 0xBBGGRRAA
+      },
+      cmap: {
+        arrayBufferList: cmapOTW.getArrayBufferList (),
+      },
+    },
+  });
+  font.names = {
+    fontFamily: {en: 'Fallback Red Question'},
+    fullName: {en: 'Fallback Red Question'},
+    license: {en: 'Public Domain.'},
+  };
+
+  console.log (`Write |${fileName}|...`);
+  fs.writeFile (fileName, new DataView (font.toArrayBuffer ()));
+} // generate
+
+let start = 0x00;
+for (let i = 0; i < 19; i++) {
+  generate (start, `frq${i}.ttf`);
+  start += 236;
+}
 
 // License: Public Domain.

@@ -348,7 +348,7 @@ local/opentype.js:
 
 #local/fallback-question.ttf: bin/create-fallback-question.js local/opentype.js
 #	docker run -i -v `pwd`:/app node bash -c 'cd /app && node bin/create-fallback-question.js'
-local/opentype/fallback-question/fallback-question.ttf: frq/fallback-question.ttf
+local/opentype/fallback-question/fallback-question.ttf: frq/frq0.ttf
 	mkdir -p local/opentype/fallback-question
 	cp $< $@
 	#$(MAKE) local/fallback-question.ttf
