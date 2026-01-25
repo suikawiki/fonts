@@ -13,6 +13,12 @@ frq*.ttf                     The current version.
 fallback-question.ttf        The first version with no VS support.
 create-fallback-question.js  The font generator.
 
+* Web sites
+
+SuikaWiki <https://wiki.suikawiki.org/n/Fallback%20Red%20Question>.
+
+GitHub <https://github.com/suikawiki/fonts/tree/master/frq>.
+
 * License
 
 Public Domain.
