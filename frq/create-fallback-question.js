@@ -1,5 +1,5 @@
 const fs = require ('fs/promises');
-const opentype = require ("../local/opentype.js");
+const opentype = require ("./opentype.js");
 
 const notdefGlyph = new opentype.Glyph ({
   name: '.notdef',
@@ -68,6 +68,6 @@ font.names = {
   license: {en: 'Public Domain.'},
 };
 
-fs.writeFile ('local/fallback-question.ttf', new DataView (font.toArrayBuffer ()));
+fs.writeFile ('./fallback-question.ttf', new DataView (font.toArrayBuffer ()));
 
 // License: Public Domain.

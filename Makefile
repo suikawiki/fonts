@@ -98,7 +98,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/hannomrcv \
     local/opentype/iming-800 \
     local/opentype/fallback-question/fallback-question.ttf \
-    local/opentype/namelogos/XXX2 \
+    local/opentype/namelogos/ \
     local/opentype/notoserif-2014 \
     local/opentype/notosans-2014 \
     local/opentype/notosanskr-2004 \
@@ -346,14 +346,15 @@ local/opentype/iming-800:
 local/opentype.js:
 	$(SAVEURL) $@ https://raw.githubusercontent.com/manakai/opentypejs/master/dist/opentype.js
 
-local/fallback-question.ttf: bin/create-fallback-question.js local/opentype.js
-	docker run -i -v `pwd`:/app node bash -c 'cd /app && node bin/create-fallback-question.js'
-
-local/opentype/fallback-question/fallback-question.ttf:
+#local/fallback-question.ttf: bin/create-fallback-question.js local/opentype.js
+#	docker run -i -v `pwd`:/app node bash -c 'cd /app && node bin/create-fallback-question.js'
+local/opentype/fallback-question/fallback-question.ttf: frq/fallback-question.ttf
 	mkdir -p local/opentype/fallback-question
-	$(MAKE) local/fallback-question.ttf
-	cp local/fallback-question.ttf $@
-local/opentype/namelogos/XXX2:
+	cp $< $@
+	#$(MAKE) local/fallback-question.ttf
+	#cp local/fallback-question.ttf $@
+
+local/opentype/namelogos/:
 	mkdir -p $@
 	cp namelogos/*.ttf $@/
 	cp namelogos/LICENSE.* $@/
