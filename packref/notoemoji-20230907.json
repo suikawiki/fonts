@@ -1,0 +1,21 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/Noto",
+      "title" : "Noto Emoji"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:license_path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/notoemoji-20230907/LICENSE"
+         },
+         "file:r:path" : {
+            "url" : "https://fonts.suikawiki.org/opentype/notoemoji-20230907/NotoEmoji-VariableFont_wght.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}

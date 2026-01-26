@@ -1,0 +1,75 @@
+{
+   "meta" : {
+      "author" : "",
+      "lang" : "en",
+      "page_url" : "https://wiki.suikawiki.org/n/FRQ",
+      "title" : "Fallback Red Question"
+   },
+   "packref_license" : "CC0-1.0",
+   "source" : {
+      "files" : {
+         "file:r:css_url" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq.css"
+         },
+         "file:r:file_urls:0" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq0.ttf"
+         },
+         "file:r:file_urls:1" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq1.ttf"
+         },
+         "file:r:file_urls:10" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq10.ttf"
+         },
+         "file:r:file_urls:11" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq11.ttf"
+         },
+         "file:r:file_urls:12" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq12.ttf"
+         },
+         "file:r:file_urls:13" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq13.ttf"
+         },
+         "file:r:file_urls:14" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq14.ttf"
+         },
+         "file:r:file_urls:15" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq15.ttf"
+         },
+         "file:r:file_urls:16" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq16.ttf"
+         },
+         "file:r:file_urls:17" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq17.ttf"
+         },
+         "file:r:file_urls:18" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq18.ttf"
+         },
+         "file:r:file_urls:2" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq2.ttf"
+         },
+         "file:r:file_urls:3" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq3.ttf"
+         },
+         "file:r:file_urls:4" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq4.ttf"
+         },
+         "file:r:file_urls:5" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq5.ttf"
+         },
+         "file:r:file_urls:6" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq6.ttf"
+         },
+         "file:r:file_urls:7" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq7.ttf"
+         },
+         "file:r:file_urls:8" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq8.ttf"
+         },
+         "file:r:file_urls:9" : {
+            "url" : "https://fonts.suikawiki.org/frq/frq9.ttf"
+         }
+      },
+      "type" : "files"
+   },
+   "type" : "packref"
+}
