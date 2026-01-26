@@ -484,7 +484,7 @@ local/swcf: always
 build-index: generated/fonts.css local/opentype/index/all.css
 
 generated/fonts.css: bin/generate-index.pl \
-    config/fonts.json
+    config/fonts.json always
 	$(PERL) $<
 
 build-gp-index: opentype/index/all.css

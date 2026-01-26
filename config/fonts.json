@@ -435,9 +435,30 @@
     "type": "opentype",
     "font_family": "Fallback Red Question",
     "webfont": true,
-    "path": "fallback-question/fallback-question.ttf",
+    "css_url": "https://fonts.suikawiki.org/frq/frq.css",
+    "file_urls": [
+      "https://fonts.suikawiki.org/frq/frq0.ttf",
+      "https://fonts.suikawiki.org/frq/frq1.ttf",
+      "https://fonts.suikawiki.org/frq/frq2.ttf",
+      "https://fonts.suikawiki.org/frq/frq3.ttf",
+      "https://fonts.suikawiki.org/frq/frq4.ttf",
+      "https://fonts.suikawiki.org/frq/frq5.ttf",
+      "https://fonts.suikawiki.org/frq/frq6.ttf",
+      "https://fonts.suikawiki.org/frq/frq7.ttf",
+      "https://fonts.suikawiki.org/frq/frq8.ttf",
+      "https://fonts.suikawiki.org/frq/frq9.ttf",
+      "https://fonts.suikawiki.org/frq/frq10.ttf",
+      "https://fonts.suikawiki.org/frq/frq11.ttf",
+      "https://fonts.suikawiki.org/frq/frq12.ttf",
+      "https://fonts.suikawiki.org/frq/frq13.ttf",
+      "https://fonts.suikawiki.org/frq/frq14.ttf",
+      "https://fonts.suikawiki.org/frq/frq15.ttf",
+      "https://fonts.suikawiki.org/frq/frq16.ttf",
+      "https://fonts.suikawiki.org/frq/frq17.ttf",
+      "https://fonts.suikawiki.org/frq/frq18.ttf"
+    ],
     "license_url": "https://github.com/suikawiki/fonts/blob/master/bin/create-fallback-question.js",
-    "sw_url": "https://github.com/suikawiki/fonts/blob/master/bin/create-fallback-question.js"
+    "sw_url": "https://wiki.suikawiki.org/n/FRQ"
   },
   
   "jiskan16": {

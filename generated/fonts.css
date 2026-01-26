@@ -1,4 +1,102 @@
 
+
+
+
+
+
+
+        @import 'https://fonts.suikawiki.org/frq/frq.css';
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           @font-face {
             font-family: 'BabelStone Han';
             src: url(../babelstonehan-1512/BabelStoneHan.ttf);
@@ -41,12 +139,6 @@
           }
         
 
-          @font-face {
-            font-family: 'Fallback Red Question';
-            src: url(../fallback-question/fallback-question.ttf);
-            
-          }
-        
 
           @font-face {
             font-family: 'GNU Unifont';
@@ -160,6 +252,13 @@
           @font-face {
             font-family: 'NomNaTong';
             src: url(../nom-506/NomNaTong-Regular.ttf);
+            
+          }
+        
+
+          @font-face {
+            font-family: 'Noto Emoji';
+            src: url(../notoemoji-20230907/NotoEmoji-VariableFont_wght.ttf);
             
           }
         

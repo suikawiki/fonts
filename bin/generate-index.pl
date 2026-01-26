@@ -18,8 +18,20 @@ my $Fonts;
 
   my $css = join "\n", map {
     my $v = $Fonts->{$_};
+    if (defined $v->{css_url}) {
+      sprintf q{
+        @import '%s';
+      }, $v->{css_url};
+    } else {
+      '';
+    }
+  } sort { $a cmp $b } keys %$Fonts;
+  $css .= join "\n", map {
+    my $v = $Fonts->{$_};
     if ($v->{type} eq 'opentype') {
-      if ($v->{webfont}) {
+      if (defined $v->{css_url}) {
+        '';
+      } elsif ($v->{webfont}) {
         my $c = sprintf q{
           @font-face {
             font-family: '%s';
@@ -92,6 +104,18 @@ my $Fonts;
         $def->{source}->{files}->{"file:r:$K"}->{url} = "https://fonts.suikawiki.org/$p$v->{$K}";
       }
     }
+    for my $K (qw(css_url)) {
+      if (defined $v->{$K}) {
+        $v->{$K} =~ m{/(\w+)\.css$} or die "Bad path |$v->{$K}|";
+        $file_key //= $1;
+        $def->{source}->{files}->{"file:r:$K"}->{url} = $v->{$K};
+      }
+    }
+    for my $K (qw(file_urls)) {
+      for my $i (0..$#{$v->{$K} or []}) {
+        $def->{source}->{files}->{"file:r:$K:$i"}->{url} = $v->{$K}->[$i];
+      }
+    }
 
     next unless grep { $_ ne "file:r:license_path" } keys %{$def->{source}->{files}};
     die "Bad path for |$key|" unless defined $file_key;
@@ -128,8 +152,8 @@ my $Fonts;
     my $r;
     if ($v->{type} eq 'opentype') {
       $r = sprintf q{
-        <li><a href="opentype/%s">%s</a>
-        (}, $v->{path}, $_,
+        <li><a href="%s">%s</a>
+        (}, $v->{css_url} // "opentype/$v->{path}", $_,
       ;
       if (defined $v->{italic_path}) {
         $r .= sprintf q{<a href="opentype/%s">Italic</a>, },
