@@ -59,7 +59,7 @@ glyph-images: bin/generate-images.pl local/glyphs.json
 local/glyphs.json:
 	$(SAVEURL) $@ https://raw.githubusercontent.com/suikawiki/extracted/master/data/extracted/data-glyph-.json
 
-build-github-pages: deps build-gp-index build-gp-main
+build-github-pages: deps build-gp-main build-gp-index build-gp-cleanup
 
 build-gp-main:
 	mkdir -p local
@@ -70,6 +70,7 @@ build-gp-main:
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/swcf /local/swcf
 	mv local/opentype local/bdf local/glyphwiki local/imageset ./
 	mv local/swcf/hanmin local/swcf/*.* ./swcf/
+build-gp-cleanup:
 	rm -fr ./bin/modules ./modules ./local
 
 build-for-docker: build-for-docker-from-old \
