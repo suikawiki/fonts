@@ -14,6 +14,8 @@ build: \
     ../local/swcf/hanmin/pqr0.dat.gz \
     ../local/swcf/hanmin/pqr1.dat.gz \
     ../local/swcf/hanmin/pqr2.dat.gz \
+    ../local/swcf/kana/unia.ttf \
+    ../local/swcf/kana/unib.ttf \
     all.css
 
 ../local/swcf/opentype.js:
@@ -62,7 +64,8 @@ build: \
 
 ../local/swcf/gwglyphcache.json:
 	mkdir -p ../local/swcf
-	$(SAVEURL) $@ https://wakaba.github.io/nemui/local/data/gwglyphcache.json
+	#$(SAVEURL) $@ https://wakaba.github.io/nemui/local/data/gwglyphcache.json
+	echo '{"dummy-1":""}' > $@
 
 #SWDATA_URL_PREFIX=https://data.suikawiki.org/data/
 SWDATA_URL_PREFIX=https://swdata-items-3.netlify.app/chars/
@@ -181,8 +184,16 @@ SWDATA_URL_PREFIX=https://swdata-items-3.netlify.app/chars/
 	gzip -f ../local/swcf/hanmin/pqr2.dat
 	gzip -f ../local/swcf/hanmin/pqr2.json
 
+../local/swcf/kana/unia.ttf: kana/unia.ttf
+	mkdir -p ../local/swcf/kana
+	cp $< $@
+../local/swcf/kana/unib.ttf: kana/unib.ttf
+	mkdir -p ../local/swcf/kana
+	cp $< $@
+
 all.css: generate-css.pl \
-    ../local/swcf/swcf-hanmin-mapping.json
+    ../local/swcf/swcf-hanmin-mapping.json \
+    kana/unia-ranges.txt kana/unib-ranges.txt
 	$(PERL) $< > $@
 
 always:

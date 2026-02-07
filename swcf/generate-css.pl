@@ -35,16 +35,27 @@ for my $name (sort { $a cmp $b } grep {
   font-display: fallback;
 }
 }, $name, $name, $range;
-    push @all, $name;
-  } else {
-    push @all, $name;
   }
+  push @all, "SuikaWiki Composed Han $name";
+}
+
+for my $key (qw(unib unia)) {
+  my $path = $ThisPath->child ("kana/$key-ranges.txt");
+  my $ranges = $path->slurp;
+  printf q{@font-face {
+  font-family: 'SuikaWiki Composed Kana %s';
+  src: url(kana/%s.ttf);
+  unicode-ranges: %s;
+  font-display: fallback;
+}
+}, $key, $key, $ranges;
+  push @all, "SuikaWiki Composed Kana $key";
 }
 
 printf q{:root {
   --suikawiki-composed-font-family: %s;
 }
-}, join ', ', map { "'SuikaWiki Composed Han $_'" } @all;
+}, join ', ', @all;
 
 print q{/* License: Public Domain. */};
 
