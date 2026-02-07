@@ -69,7 +69,7 @@ build-gp-main:
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/imageset /local/imageset
 	docker run -v `pwd`/local:/local --user `id --user` quay.io/suikawiki/swfonts cp -R /app/fonts/swcf /local/swcf
 	mv local/opentype local/bdf local/glyphwiki local/imageset ./
-	mv local/swcf/* ./swcf/
+	mv local/swcf/hanmin local/swcf/*.* ./swcf/
 	rm -fr ./bin/modules ./modules ./local
 
 build-for-docker: build-for-docker-from-old \
