@@ -71,7 +71,8 @@ build-gp-main:
 	mv local/opentype local/bdf local/glyphwiki local/imageset ./
 	mv local/swcf/hanmin local/swcf/*.* ./swcf/
 build-gp-cleanup:
-	rm -fr ./bin/modules ./modules ./local
+	rm -fr ./bin/modules ./modules ./local ./deps
+	rm config/perl/libs.txt
 
 build-for-docker: build-for-docker-from-old \
     local/opentype/ipamjm00601 \
