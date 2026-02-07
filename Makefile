@@ -59,7 +59,7 @@ glyph-images: bin/generate-images.pl local/glyphs.json
 local/glyphs.json:
 	$(SAVEURL) $@ https://raw.githubusercontent.com/suikawiki/extracted/master/data/extracted/data-glyph-.json
 
-build-github-pages: deps build-gp-main build-gp-index
+build-github-pages: deps build-gp-index build-gp-main
 
 build-gp-main:
 	mkdir -p local
