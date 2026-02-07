@@ -481,7 +481,7 @@ local/imageset/modmag:
 local/swcf: always
 	cd swcf && $(MAKE)
 
-build-index: generated/fonts.css local/opentype/index/all.css
+build-index: deps generated/fonts.css local/opentype/index/all.css
 
 generated/fonts.css: bin/generate-index.pl \
     config/fonts.json always
