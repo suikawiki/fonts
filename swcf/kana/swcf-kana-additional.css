@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "SWCF Kana 1a";
+  src: url(https://fonts.suikawiki.org/opentype/swcf-kana1/kana1a.ttf);
+}
+@font-face {
+  font-family: "SWCF Kana 1b";
+  src: url(https://fonts.suikawiki.org/opentype/swcf-kana1/kana1b.ttf);
+}
+@font-face {
+  font-family: "SWCF Kana 1c";
+  src: url(https://fonts.suikawiki.org/opentype/swcf-kana1/kana1c.ttf);
+}
+
+swcf-k[font="1"] { font-family: "SWCF Kana 1a", "Fallback Red Question" }
+swcf-k[font="2"] { font-family: "SWCF Kana 1b", "Fallback Red Question" }
+swcf-k[font="3"] { font-family: "SWCF Kana 1c", "Fallback Red Question" }
+
+/* License: Public Domain. */
