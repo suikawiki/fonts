@@ -105,6 +105,7 @@ build-for-docker: build-for-docker-from-old \
     local/opentype/notosans-2014 \
     local/opentype/notosanskr-2004 \
     local/opentype/notoemoji-20230907 \
+    local/opentype/swcf-kana1/ \
     local/bdf/intlfonts-1.4.2 \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan16.dat \
     local/bdf/intlfonts-1.4.2/Japanese.X/jiskan24.dat \
@@ -365,6 +366,11 @@ local/opentype/namelogos/:
 	mkdir -p local/opentype/namelogos/
 	cp namelogos/*.ttf local/opentype/namelogos/
 	cp namelogos/LICENSE.* local/opentype/namelogos/
+local/opentype/swcf-kana1/:
+	mkdir -p $@
+	curl -sSLf https://d4.tfdl.net/public/2026-02-08/b765610a-f253-45bc-8a2e-681e1d1f7207/kana1a.ttf > $@/kana1a.ttf
+	curl -sSLf https://d5.tfdl.net/public/2026-02-08/ba1e5d51-cfd0-463c-bcdf-14d12594bede/kana1b.ttf > $@/kana1b.ttf
+	curl -sSLf https://d6.tfdl.net/public/2026-02-08/e4e86cb8-fa90-46bf-b2cd-7c494c6a4b46/kana1c.ttf > $@/kana1c.ttf
 
 local/bdf/intlfonts-1.4.2:
 	$(SAVEURL) local/intlfonts-1.4.2.tar.gz https://ftp.gnu.org/gnu/intlfonts/intlfonts-1.4.2.tar.gz
@@ -482,7 +488,6 @@ local/imageset/modmag:
 
 local/swcf: always
 	cd swcf && $(MAKE)
-
 build-index: deps generated/fonts.css local/opentype/index/all.css
 
 generated/fonts.css: bin/generate-index.pl \
