@@ -3,7 +3,7 @@
   let kgmapPromise = null;
   function loadSWCFKGMap () {
     if (!kgmapPromise) {
-      kgmapPromise = fetch ('kana1-fontmap.json').then (r => {
+      kgmapPromise = fetch ('https://fonts.suikawiki.org/swcf/kana/kana1-fontmap.json').then (r => {
         if (r.status !== 200) throw r;
         return r.json();
       });
