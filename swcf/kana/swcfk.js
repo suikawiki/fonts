@@ -111,6 +111,7 @@
         this.removeAttribute('vert');
 
       this.style.fontFeatureSettings = feats;
+      this.setAttribute ('loaded', '');
     }
   }
   customElements.define('swcf-k', SWCFK);
