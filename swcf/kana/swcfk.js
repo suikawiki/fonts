@@ -57,7 +57,7 @@
         else k2.push(tag);
       });
 
-      [k2, k3, k4].forEach(k => k.sort((a, b) => a < b ? 1 : -1));
+      [k2, k3, k4].forEach(k => k.sort((a, b) => a > b ? 1 : -1));
 
       let {
         font_map: fontMap, feature_classes: featClasses,
