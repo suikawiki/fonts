@@ -17,7 +17,7 @@ updatenightly: build-index
 	$(MAKE) updatebyhook
 
 updatebyhook: data
-	$(GIT) add images/ packref/
+	$(GIT) add images/ packref/ swmlrefs/*.html
 
 ## ------ Setup ------
 
@@ -51,13 +51,16 @@ build: build-index data
 
 data: deps data-main
 
-data-main: glyph-images
+data-main: glyph-images swmlrefs-all
 
 glyph-images: bin/generate-images.pl local/glyphs.json
 	$(PERL) $<
 
 local/glyphs.json:
 	$(SAVEURL) $@ https://raw.githubusercontent.com/suikawiki/extracted/master/data/extracted/data-glyph-.json
+
+swmlrefs-all:
+	cd swmlrefs && $(MAKE) all
 
 build-github-pages: deps build-gp-main build-gp-index build-gp-cleanup
 

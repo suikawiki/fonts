@@ -202,6 +202,7 @@ my $Fonts;
   } sort { $a cmp $b } keys %$Fonts;
 
   $html .= q{
+  <li><a href=swmlrefs/list.html>List of references in SuikaWiki articles</a>
 </ul>
 
 <footer class=footer>
