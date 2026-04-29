@@ -68,7 +68,7 @@ build: \
 	echo '{"dummy-1":""}' > $@
 
 #SWDATA_URL_PREFIX=https://data.suikawiki.org/data/
-SWDATA_URL_PREFIX=https://swdata-items-3.netlify.app/chars/
+SWDATA_URL_PREFIX=https://swdata-items-3.suikawiki.org/chars/
 ../local/swcf/gwglyphs.ttf: \
     ../local/swcf/opentype.js \
     ../local/swcf/kage.js \
